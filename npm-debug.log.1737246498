@@ -1,0 +1,27 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'tsc:w' ]
+2 info using npm@3.9.5
+3 info using node@v6.2.2
+4 verbose run-script [ 'pretsc:w', 'tsc:w', 'posttsc:w' ]
+5 info lifecycle skeleton-ang2@0.0.0~pretsc:w: skeleton-ang2@0.0.0
+6 silly lifecycle skeleton-ang2@0.0.0~pretsc:w: no script for pretsc:w, continuing
+7 info lifecycle skeleton-ang2@0.0.0~tsc:w: skeleton-ang2@0.0.0
+8 verbose lifecycle skeleton-ang2@0.0.0~tsc:w: unsafe-perm in lifecycle true
+9 verbose lifecycle skeleton-ang2@0.0.0~tsc:w: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/home/james/PhpstormProjects/skeleton-ang2/node_modules/.bin:/usr/local/bin:/usr/local/lib/node_modules/npm/bin/node-gyp-bin:/home/james/PhpstormProjects/skeleton-ang2/node_modules/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+10 verbose lifecycle skeleton-ang2@0.0.0~tsc:w: CWD: /home/james/PhpstormProjects/skeleton-ang2
+11 silly lifecycle skeleton-ang2@0.0.0~tsc:w: Args: [ '-c', 'tsc -w --p client/tsconfig.json' ]
+12 verbose stack Error: write EPIPE
+12 verbose stack     at exports._errnoException (util.js:1007:11)
+12 verbose stack     at WriteWrap.afterWrite (net.js:793:14)
+13 verbose cwd /home/james/PhpstormProjects/skeleton-ang2
+14 error Linux 4.4.0-36-generic
+15 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "tsc:w"
+16 error node v6.2.2
+17 error npm  v3.9.5
+18 error code EPIPE
+19 error errno EPIPE
+20 error syscall write
+21 error write EPIPE
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]
