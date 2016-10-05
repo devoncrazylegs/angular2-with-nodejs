@@ -1,0 +1,12 @@
+var express = require('express');
+var router = express.Router();
+
+router.get('/login', function(req, res) {
+    console.log('here');
+});
+
+router.post('/login', function(req, res) {
+    res.send('here');
+});
+
+module.exports = router;

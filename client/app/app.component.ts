@@ -1,6 +1,32 @@
 import { Component } from '@angular/core';
+import { AuthService } from "./services/auth.service";
+
 @Component({
     selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+    moduleId: module.id,
+    templateUrl: 'views/login/login.html'
 })
-export class AppComponent { }
+
+export class AppComponent {
+    loginDetails: Object = {
+        email      : '',
+        password   : ''
+    };
+
+    constructor(
+        private _authService: AuthService
+    ) {
+
+    }
+
+    login() {
+        this._authService.login(this.loginDetails)
+            .subscribe(
+                response => { console.log(response); },
+                error    => {},
+                ()       => {
+
+                }
+            );
+    }
+}

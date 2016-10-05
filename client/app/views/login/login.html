@@ -1,0 +1,5 @@
+<form>
+    <input type="text" [(ngModel)]='loginDetails.email' name="email" />
+    <input type="password" [(ngModel)]='loginDetails.password' name="password" />
+    <input type="submit" value="send" (click)="login()" />
+</form>
