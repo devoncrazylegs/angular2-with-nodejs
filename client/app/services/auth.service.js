@@ -10,13 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
+var routes_1 = require('../routes');
+var HttpHelper_1 = require("../helpers/HttpHelper");
 var AuthService = (function () {
     function AuthService(_http) {
         this._http = _http;
     }
     AuthService.prototype.login = function (loginDetails) {
+        var body = JSON.stringify(loginDetails);
+        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader();
+        var options = new http_1.RequestOptions({ headers: headers });
         return this._http
-            .post('http://stdavids-brain.dev/api/v1/manufacturer', loginDetails)
+            .post(routes_1.routes.auth.login, body, options)
             .map(function (res) { return res.json(); });
         /*let body = JSON.stringify(loginDetails);
         let headers = new Headers({ 'Content-Type': 'application/json' });

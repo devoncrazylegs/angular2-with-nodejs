@@ -1,4 +1,9 @@
 module.exports = Config = {
+    brain: {
+        url: 'http://stdavids-brain.dev',
+        api: '/api',
+        apiVersion: '/v1'
+    },
     redis : {
         isEnabled: false,
         port: 6379,

@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var auth_service_1 = require("./services/auth.service");
+var tokenHelper_1 = require("./helpers/tokenHelper");
 var AppComponent = (function () {
     function AppComponent(_authService) {
         this._authService = _authService;
@@ -20,8 +21,15 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.login = function () {
         this._authService.login(this.loginDetails)
-            .subscribe(function (response) { console.log(response); }, function (error) { }, function () {
+            .subscribe(function (response) {
+            //if(JSON.parse(response.body).token && !tokenHelper.tokenExists) {
+            if (JSON.parse(response.body).token) {
+                tokenHelper_1.tokenHelper.token(JSON.parse(response.body).token);
+            }
+        }, function (error) { }, function () {
         });
+    };
+    AppComponent.prototype.storeToken = function (token) {
     };
     AppComponent = __decorate([
         core_1.Component({

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from "./services/auth.service";
+import { tokenHelper } from "./helpers/tokenHelper";
 
 @Component({
     selector: 'my-app',
@@ -22,11 +23,20 @@ export class AppComponent {
     login() {
         this._authService.login(this.loginDetails)
             .subscribe(
-                response => { console.log(response); },
+                response => {
+                    //if(JSON.parse(response.body).token && !tokenHelper.tokenExists) {
+                    if(JSON.parse(response.body).token) {
+                        tokenHelper.token(JSON.parse(response.body).token);
+                    }
+                },
                 error    => {},
                 ()       => {
 
                 }
             );
+    }
+
+    storeToken(token) {
+
     }
 }

@@ -6,6 +6,8 @@ import { AppComponent }   from './app.component';
 import { HttpModule } from "@angular/http";
 import { FormsModule } from "@angular/forms";
 import { AuthService } from "./services/auth.service";
+import { HttpHelper } from "./helpers/HttpHelper";
+
 
 @NgModule({
     imports: [
@@ -16,6 +18,7 @@ import { AuthService } from "./services/auth.service";
     declarations: [ AppComponent ],
     providers: [
         AuthService
+
     ],
     bootstrap:    [ AppComponent ]
 })
