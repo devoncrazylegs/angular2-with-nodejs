@@ -1,11 +1,11 @@
 "use strict";
 var http_1 = require("@angular/http");
-var tokenHelper_1 = require("./tokenHelper");
+var userHelper_1 = require("./userHelper");
 exports.HttpHelper = {
     createAuthorizationHeader: function () {
         var headers = new http_1.Headers({
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + tokenHelper_1.tokenHelper._token
+            'Authorization': 'Bearer ' + userHelper_1.userHelper.user.token
         });
         return headers;
     }

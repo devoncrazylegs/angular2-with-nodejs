@@ -9,12 +9,12 @@ function Auth() {
 }
 
 Auth.prototype.login = function(req, res) {
-    var self     = this,
-        email    = req.body.email,
-        password = req.body.password;
+    var self       = this,
+        email      = req.body.email,
+        password   = req.body.password,
+        requestUrl = self.requestBaseUrl + '/login';
 
-
-    //self.preRequestCheck(req, res, function(req, res) {
+    self.preRequestCheck(req, res, function(req, res) {
         self.makeRequest(
             'POST',
             {
@@ -24,11 +24,11 @@ Auth.prototype.login = function(req, res) {
                 email: email,
                 password: password
             },
-            this.requestBaseUrl + '/login'
+            requestUrl
         ).then(function(response) {
             res.json(response);
         });
-    //});
+    });
 
 };
 

@@ -12,10 +12,16 @@ var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var routes_1 = require('../routes');
 var HttpHelper_1 = require("../helpers/HttpHelper");
+var userHelper_1 = require("../helpers/userHelper");
 var AuthService = (function () {
     function AuthService(_http) {
         this._http = _http;
+        //Set token if saved in local storage
+        this.user = userHelper_1.userHelper.user;
     }
+    /**
+     * Login function
+     */
     AuthService.prototype.login = function (loginDetails) {
         var body = JSON.stringify(loginDetails);
         var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader();
@@ -23,11 +29,20 @@ var AuthService = (function () {
         return this._http
             .post(routes_1.routes.auth.login, body, options)
             .map(function (res) { return res.json(); });
-        /*let body = JSON.stringify(loginDetails);
-        let headers = new Headers({ 'Content-Type': 'application/json' });
-        let options = new RequestOptions({ headers: headers });
-        return this._http.post('http://stdavids-brain.dev/api/v1', body, options)
-            .map(res => res.json());*/
+        /*.map((response: Response) => {
+            let user = JSON.parse(response.body);
+            if(user.body && user.body.token) {
+                userHelper.user = user.body;
+            }
+            return user.json();
+        });*/
+    };
+    /**
+     * Logout function
+     */
+    AuthService.prototype.logout = function () {
+        // clear token
+        userHelper_1.userHelper.user = null;
     };
     AuthService = __decorate([
         core_1.Injectable(), 

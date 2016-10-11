@@ -15,6 +15,10 @@ var app_component_1 = require('./app.component');
 var http_1 = require("@angular/http");
 var forms_1 = require("@angular/forms");
 var auth_service_1 = require("./services/auth.service");
+var HomeComponent_1 = require("./components/home/HomeComponent");
+var LoginComponent_1 = require("./components/login/LoginComponent");
+var auth_guard_1 = require("./guards/auth.guard");
+var app_routing_1 = require("./app.routing");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -23,11 +27,17 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
-                forms_1.FormsModule
+                forms_1.FormsModule,
+                app_routing_1.routing
             ],
-            declarations: [app_component_1.AppComponent],
+            declarations: [
+                app_component_1.AppComponent,
+                HomeComponent_1.HomeComponent,
+                LoginComponent_1.LoginComponent
+            ],
             providers: [
-                auth_service_1.AuthService
+                auth_service_1.AuthService,
+                auth_guard_1.AuthGuard
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

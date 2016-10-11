@@ -8,19 +8,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var userHelper_1 = require("../helpers/userHelper");
+var AuthGuard = (function () {
+    function AuthGuard(router) {
+        this.router = router;
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            moduleId: module.id,
-            templateUrl: '/app/views/app.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    AuthGuard.prototype.canActivate = function () {
+        if (userHelper_1.userHelper.isLoggedIn()) {
+            return true;
+        }
+        this.router.navigate(['/login']);
+        return false;
+    };
+    AuthGuard = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [router_1.Router])
+    ], AuthGuard);
+    return AuthGuard;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.AuthGuard = AuthGuard;
+//# sourceMappingURL=auth.guard.js.map
