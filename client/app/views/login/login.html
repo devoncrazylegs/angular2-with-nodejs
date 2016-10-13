@@ -1,5 +1,12 @@
-<form>
-    <input type="text" [(ngModel)]='loginDetails.email' name="email" />
-    <input type="password" [(ngModel)]='loginDetails.password' name="password" />
-    <input type="submit" value="send" (click)="login()" />
+<form class='form-signin'>
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <input type="text" class='form-control' [(ngModel)]='loginDetails.email' placeholder='Email address' name="email" />
+    <input type="password" class='form-control' [(ngModel)]='loginDetails.password' placeholder='Password' name="password" />
+    <div class='checkbox'>
+        <label>
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
+    </div>
+    <button (click)="login()" class='btn btn-lg btn-primary btn-block'>Sign in</button>
+    <div class='spinner' *ngIf='showSpinner'></div>
 </form>

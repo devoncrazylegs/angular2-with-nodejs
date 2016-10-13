@@ -2,16 +2,25 @@ import 'app/rxjs-extensions';
 
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent }   from './app.component';
+
 import { HttpModule } from "@angular/http";
 import { FormsModule } from "@angular/forms";
-import { AuthService } from "./services/auth.service";
-import { HttpHelper } from "./helpers/HttpHelper";
-import { RouterModule } from "@angular/router";
-import { HomeComponent } from "./components/home/HomeComponent";
-import { LoginComponent } from "./components/login/LoginComponent";
+
 import { AuthGuard } from "./guards/auth.guard";
 import { routing } from "./app.routing";
+
+import { AppComponent }   from './app.component';
+
+import { HttpHelper } from "./helpers/HttpHelper";
+
+import { HomeComponent } from "./components/home/HomeComponent";
+import { LoginComponent } from "./components/login/LoginComponent";
+import { NavBarComponent } from "./components/navbar/NavBarComponent";
+import { ProductComponent } from "./components/products/ProductComponent";
+
+import { GlobalEventsManager } from "./services/globalEventsManager.service";
+import { AuthService } from "./services/auth.service";
+
 
 
 @NgModule({
@@ -24,11 +33,14 @@ import { routing } from "./app.routing";
     declarations: [
         AppComponent,
         HomeComponent,
-        LoginComponent
+        LoginComponent,
+        NavBarComponent,
+        ProductComponent
     ],
     providers: [
         AuthService,
-        AuthGuard
+        AuthGuard,
+        GlobalEventsManager
 
     ],
     bootstrap:    [ AppComponent ]

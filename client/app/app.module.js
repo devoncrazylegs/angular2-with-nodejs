@@ -11,14 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 require('app/rxjs-extensions');
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
 var http_1 = require("@angular/http");
 var forms_1 = require("@angular/forms");
-var auth_service_1 = require("./services/auth.service");
-var HomeComponent_1 = require("./components/home/HomeComponent");
-var LoginComponent_1 = require("./components/login/LoginComponent");
 var auth_guard_1 = require("./guards/auth.guard");
 var app_routing_1 = require("./app.routing");
+var app_component_1 = require('./app.component');
+var HomeComponent_1 = require("./components/home/HomeComponent");
+var LoginComponent_1 = require("./components/login/LoginComponent");
+var NavBarComponent_1 = require("./components/navbar/NavBarComponent");
+var ProductComponent_1 = require("./components/products/ProductComponent");
+var globalEventsManager_service_1 = require("./services/globalEventsManager.service");
+var auth_service_1 = require("./services/auth.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -33,11 +36,14 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 HomeComponent_1.HomeComponent,
-                LoginComponent_1.LoginComponent
+                LoginComponent_1.LoginComponent,
+                NavBarComponent_1.NavBarComponent,
+                ProductComponent_1.ProductComponent
             ],
             providers: [
                 auth_service_1.AuthService,
-                auth_guard_1.AuthGuard
+                auth_guard_1.AuthGuard,
+                globalEventsManager_service_1.GlobalEventsManager
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

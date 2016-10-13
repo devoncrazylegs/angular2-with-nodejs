@@ -1,6 +1,12 @@
 "use strict";
 exports.userHelper = {
     _user: Object,
+    get user() {
+        return this._user;
+    },
+    set user(user) {
+        window.sessionStorage.setItem('user', JSON.stringify(user));
+    },
     tokenExists: function () {
         if (window.sessionStorage.getItem('token') && window.sessionStorage.getItem('token') !== '') {
             return true;
@@ -13,11 +19,8 @@ exports.userHelper = {
         }
         return false;
     },
-    get user() {
-        return this._user;
-    },
-    set user(user) {
-        window.sessionStorage.setItem('user', JSON.stringify(user));
+    removeUserFromStorage: function () {
+        window.sessionStorage.removeItem('user');
     }
 };
 //# sourceMappingURL=userHelper.js.map

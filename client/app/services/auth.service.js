@@ -16,6 +16,7 @@ var userHelper_1 = require("../helpers/userHelper");
 var AuthService = (function () {
     function AuthService(_http) {
         this._http = _http;
+        this.isLoggedIn = new core_1.EventEmitter();
         //Set token if saved in local storage
         this.user = userHelper_1.userHelper.user;
     }
@@ -42,7 +43,7 @@ var AuthService = (function () {
      */
     AuthService.prototype.logout = function () {
         // clear token
-        userHelper_1.userHelper.user = null;
+        userHelper_1.userHelper.removeUserFromStorage();
     };
     AuthService = __decorate([
         core_1.Injectable(), 

@@ -4,13 +4,64 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
-    connect = require('gulp-connect');
+    connect = require('gulp-connect'),
+    useref = require('gulp-useref'),
     tsProject = ts.createProject("tsconfig.json");
 
-gulp.task('build', function() {
-    gutil.log('build css...');
-    gulp.src('src/css/*.scss')
+gulp.task('build-jquery', function() {
+    gutil.log('build jQuery');
+    gulp.src([
+        'node_modules/jquery/dist/jquery.min.js'
+    ])
+        .pipe(gulp.dest('assets/js'));
+});
+
+gulp.task('build-toastr', function() {
+    gutil.log('build toastr js');
+    gulp.src([
+        'node_modules/ng2-toastr/ng2-toastr.js'
+    ])
+        .pipe(gulp.dest('assets/js'));
+
+    gutil.log('build toastr CSS');
+    gulp.src([
+        'node_modules/ng2-toastr/ng2-toastr.css'
+    ])
+        .pipe(gulp.dest('assets/css'));
+});
+
+gulp.task('build-bootstrap', function() {
+    gutil.log('build Bootstrap CSS');
+    gulp.src([
+        'node_modules/bootstrap/dist/css/bootstrap.min.css'
+    ])
+        .pipe(gulp.dest('assets/css'));
+
+    gutil.log('build Bootstrap JS');
+    gulp.src([
+        'node_modules/bootstrap/dist/js/bootstrap.min.js'
+    ])
+        .pipe(gulp.dest('assets/js'));
+});
+
+gulp.task('build-SASS', function() {
+
+    gutil.log('build sass...');
+    gulp.src([
+        'src/css/*.scss'
+    ])
         .pipe(sass({style: 'expanded'}))
         .on('error', gutil.log)
         .pipe(gulp.dest('assets/css'));
 });
+
+gulp.task('watch', function() {
+    gulp.watch('src/css/*.scss', ['build-SASS']);
+});
+
+gulp.task('build', [
+    'build-jquery',
+    'build-bootstrap',
+    'build-SASS'
+]);
+
