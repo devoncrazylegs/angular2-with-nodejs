@@ -1,0 +1,17 @@
+<div *ngIf='showLeftNav' id='left-nav'>
+    <img src='assets/img/logo.png' class='logo' />
+    <nav>
+        <ul>
+            <li><i class='glyphicon glyphicon-dashboard'></i><a [routerLink]="['/']">Dashboard</a></li>
+            <li class='parent-item'><i class='glyphicon glyphicon-th'></i><a href='#'>Catalog</a>
+                <ul class='lower-menu'>
+                    <li><a [routerLink]="['/products']">Products</a></li>
+                    <li><a [routerLink]="['/options']">Options</a></li>
+                    <li><a [routerLink]="['/categories']">Categories</a></li>
+                    <li><a [routerLink]="['/manufacturers']">Manufacturers</a></li>
+                </ul>
+            </li>
+            <li><i class='glyphicon glyphicon-user'></i><a [routerLink]="['/users']">Users</a></li>
+        </ul>
+    </nav>
+</div>

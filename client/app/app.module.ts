@@ -11,16 +11,22 @@ import { routing } from "./app.routing";
 
 import { AppComponent }   from './app.component';
 
-import { HttpHelper } from "./helpers/HttpHelper";
-
 import { HomeComponent } from "./components/home/HomeComponent";
 import { LoginComponent } from "./components/login/LoginComponent";
 import { NavBarComponent } from "./components/navbar/NavBarComponent";
-import { ProductComponent } from "./components/products/ProductComponent";
+import { ProductComponent } from "./components/catalog/products/ProductComponent";
 
 import { GlobalEventsManager } from "./services/globalEventsManager.service";
 import { AuthService } from "./services/auth.service";
-
+import { ToastModule } from 'ng2-toastr/ng2-toastr';
+import { LeftNavComponent } from "./components/left-nav/left-nav-component";
+import { SettingsComponent } from "./components/settings/settings-component";
+import { UsersComponent } from "./components/users/users-component";
+import { OptionsComponent } from "./components/catalog/options/OptionsComponent";
+import { CategoriesComponent } from "./components/catalog/categories/CategoriesComponent";
+import { ManufacturersComponent } from "./components/catalog/manufacturers/ManufacturersComponent";
+import { ProductSearchComponent } from "./components/catalog/products/directives/ProductSearchComponent";
+import {ProductListComponent} from "./components/catalog/products/directives/ProductListComponent";
 
 
 @NgModule({
@@ -28,14 +34,23 @@ import { AuthService } from "./services/auth.service";
         BrowserModule,
         HttpModule,
         FormsModule,
-        routing
+        routing,
+        ToastModule
     ],
     declarations: [
         AppComponent,
         HomeComponent,
         LoginComponent,
         NavBarComponent,
-        ProductComponent
+        ProductComponent,
+        ProductSearchComponent,
+        ProductListComponent,
+        LeftNavComponent,
+        SettingsComponent,
+        UsersComponent,
+        OptionsComponent,
+        CategoriesComponent,
+        ManufacturersComponent
     ],
     providers: [
         AuthService,

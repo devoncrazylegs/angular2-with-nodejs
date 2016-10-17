@@ -1,5 +1,3 @@
-<nav *ngIf="showNavBar">
-    <a [routerLink]="['/']">Link</a>
-    <a [routerLink]="['/products']">Products</a>
+<nav *ngIf="showNavBar" id='top-bar'>
     <a href='#' (click)='logout()'>logout</a>
 </nav>

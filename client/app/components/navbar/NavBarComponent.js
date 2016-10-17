@@ -12,6 +12,7 @@ var core_1 = require("@angular/core");
 var globalEventsManager_service_1 = require("../../services/globalEventsManager.service");
 var auth_service_1 = require("../../services/auth.service");
 var router_1 = require("@angular/router");
+var userHelper_1 = require("../../helpers/userHelper");
 var NavBarComponent = (function () {
     function NavBarComponent(_globalEventsManager, _authService, _router) {
         var _this = this;
@@ -19,6 +20,9 @@ var NavBarComponent = (function () {
         this._authService = _authService;
         this._router = _router;
         this.showNavBar = false;
+        if (userHelper_1.userHelper.isLoggedIn()) {
+            this.showNavBar = true;
+        }
         _globalEventsManager.showNavBar.
             subscribe(function (state) {
             _this.showNavBar = state;

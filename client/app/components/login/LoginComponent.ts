@@ -3,6 +3,8 @@ import { AuthService } from "../../services/auth.service";
 import { userHelper } from "../../helpers/userHelper";
 import { Router } from "@angular/router";
 import { GlobalEventsManager } from "../../services/globalEventsManager.service";
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import {messages} from "../../helpers/messages";
 
 
 @Component({
@@ -22,7 +24,8 @@ export class LoginComponent {
     constructor(
         private _globalEventsManager: GlobalEventsManager,
         private _authService: AuthService,
-        private _router: Router
+        private _router: Router,
+        public _toastr: ToastsManager
     ) {
         if(userHelper.isLoggedIn()) {
             this._router.navigate(['/']);
@@ -42,11 +45,12 @@ export class LoginComponent {
                         this._globalEventsManager.showNavBar.emit(true);
                         this._router.navigate(['/']);
                     } else {
-                        this.errorMessage = userResponse;
+                        this.showSpinner = false;
+                        this._toastr.error(messages.messages.login.incorrectCreds, messages.titles.login.error + " : " + userResponse.responseCode);
                     }
                 },
                 error    => {
-                    alert('error');
+                    this._toastr.error(messages.messages.login.serverError, messages.titles.login.error);
                 }
             );
     }

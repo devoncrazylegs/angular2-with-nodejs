@@ -13,11 +13,14 @@ var auth_service_1 = require("../../services/auth.service");
 var userHelper_1 = require("../../helpers/userHelper");
 var router_1 = require("@angular/router");
 var globalEventsManager_service_1 = require("../../services/globalEventsManager.service");
+var ng2_toastr_1 = require('ng2-toastr/ng2-toastr');
+var messages_1 = require("../../helpers/messages");
 var LoginComponent = (function () {
-    function LoginComponent(_globalEventsManager, _authService, _router) {
+    function LoginComponent(_globalEventsManager, _authService, _router, _toastr) {
         this._globalEventsManager = _globalEventsManager;
         this._authService = _authService;
         this._router = _router;
+        this._toastr = _toastr;
         this.loginDetails = {
             email: '',
             password: ''
@@ -42,10 +45,11 @@ var LoginComponent = (function () {
                 _this._router.navigate(['/']);
             }
             else {
-                _this.errorMessage = userResponse;
+                _this.showSpinner = false;
+                _this._toastr.error(messages_1.messages.messages.login.incorrectCreds, messages_1.messages.titles.login.error + " : " + userResponse.responseCode);
             }
         }, function (error) {
-            alert('error');
+            _this._toastr.error(messages_1.messages.messages.login.serverError, messages_1.messages.titles.login.error);
         });
     };
     LoginComponent = __decorate([
@@ -53,7 +57,7 @@ var LoginComponent = (function () {
             moduleId: module.id,
             templateUrl: '/app/views/login/login.html'
         }), 
-        __metadata('design:paramtypes', [globalEventsManager_service_1.GlobalEventsManager, auth_service_1.AuthService, router_1.Router])
+        __metadata('design:paramtypes', [globalEventsManager_service_1.GlobalEventsManager, auth_service_1.AuthService, router_1.Router, ng2_toastr_1.ToastsManager])
     ], LoginComponent);
     return LoginComponent;
 }());

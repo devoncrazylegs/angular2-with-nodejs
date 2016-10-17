@@ -19,13 +19,13 @@ gulp.task('build-jquery', function() {
 gulp.task('build-toastr', function() {
     gutil.log('build toastr js');
     gulp.src([
-        'node_modules/ng2-toastr/ng2-toastr.js'
+        'node_modules/ng2-toastr/bundles/ng2-toastr.min.js'
     ])
         .pipe(gulp.dest('assets/js'));
 
     gutil.log('build toastr CSS');
     gulp.src([
-        'node_modules/ng2-toastr/ng2-toastr.css'
+        'node_modules/ng2-toastr/bundles/ng2-toastr.min.css'
     ])
         .pipe(gulp.dest('assets/css'));
 });

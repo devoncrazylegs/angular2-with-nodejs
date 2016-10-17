@@ -19,9 +19,18 @@ var app_component_1 = require('./app.component');
 var HomeComponent_1 = require("./components/home/HomeComponent");
 var LoginComponent_1 = require("./components/login/LoginComponent");
 var NavBarComponent_1 = require("./components/navbar/NavBarComponent");
-var ProductComponent_1 = require("./components/products/ProductComponent");
+var ProductComponent_1 = require("./components/catalog/products/ProductComponent");
 var globalEventsManager_service_1 = require("./services/globalEventsManager.service");
 var auth_service_1 = require("./services/auth.service");
+var ng2_toastr_1 = require('ng2-toastr/ng2-toastr');
+var left_nav_component_1 = require("./components/left-nav/left-nav-component");
+var settings_component_1 = require("./components/settings/settings-component");
+var users_component_1 = require("./components/users/users-component");
+var OptionsComponent_1 = require("./components/catalog/options/OptionsComponent");
+var CategoriesComponent_1 = require("./components/catalog/categories/CategoriesComponent");
+var ManufacturersComponent_1 = require("./components/catalog/manufacturers/ManufacturersComponent");
+var ProductSearchComponent_1 = require("./components/catalog/products/directives/ProductSearchComponent");
+var ProductListComponent_1 = require("./components/catalog/products/directives/ProductListComponent");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -31,14 +40,23 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
                 forms_1.FormsModule,
-                app_routing_1.routing
+                app_routing_1.routing,
+                ng2_toastr_1.ToastModule
             ],
             declarations: [
                 app_component_1.AppComponent,
                 HomeComponent_1.HomeComponent,
                 LoginComponent_1.LoginComponent,
                 NavBarComponent_1.NavBarComponent,
-                ProductComponent_1.ProductComponent
+                ProductComponent_1.ProductComponent,
+                ProductSearchComponent_1.ProductSearchComponent,
+                ProductListComponent_1.ProductListComponent,
+                left_nav_component_1.LeftNavComponent,
+                settings_component_1.SettingsComponent,
+                users_component_1.UsersComponent,
+                OptionsComponent_1.OptionsComponent,
+                CategoriesComponent_1.CategoriesComponent,
+                ManufacturersComponent_1.ManufacturersComponent
             ],
             providers: [
                 auth_service_1.AuthService,

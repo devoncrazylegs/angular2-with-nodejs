@@ -18,10 +18,14 @@ export class NavBarComponent {
         private _authService: AuthService,
         private _router: Router
     ) {
+        if(userHelper.isLoggedIn()) {
+            this.showNavBar = true;
+        }
         _globalEventsManager.showNavBar.
             subscribe((state) => {
                 this.showNavBar = state;
             });
+
     }
 
     logout() {

@@ -1,6 +1,27 @@
+@font-face {
+  font-family: 'GillSans';
+  src: url('../fonts/gillsans-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/gillsans-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/gillsans-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../fonts/gillsans-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/gillsans-webfont.svg#svgFontName') format('svg');
+}
+
+//Color stack
+$stdavids-purple: #b00930;
+$stdavids-purple-dark: #9a0000;
+$gray: #d8d8d8;
+
+//Font stack
+$gillSans: 'GillSans', sans-serif;
+
 * {
   margin:0;
   padding:0;
+}
+
+li, a, p, span, button {
+  font-family:$gillSans;
 }
 
 form {
@@ -22,12 +43,50 @@ ul {
   box-sizing: $boxSizing;
 }
 
-//Navbar
-nav {
+.initial-loading {
+  max-width:300px;
+  margin-left:-150px;
   width:100%;
-  height:50px;
-  background-color:red;
+  height:200px;
+  margin-top:-100px;
+  line-height:100px;
+  top:50%;
+  position:absolute;
+  left:50%;
+  text-align:center;
+  font-size:40px;
+  font-family:$gillSans;
 }
+
+.logo {
+  display:block;
+  margin:40px auto;
+}
+
+//Navbar
+nav#top-bar {
+  width:100%;
+  height:40px;
+  background-color:$gray;
+  @include box-sizing(border-box);
+  padding:0 40px;
+
+  ul {
+    display:inline-block;
+    width:100%;
+  }
+
+  li {
+
+  }
+
+  a {
+    float:right;
+  }
+}
+
+
+
 
 //Spinner
 .spinner {
@@ -61,5 +120,68 @@ nav {
   font-size: 16px;
 }
 
+#left-nav {
+  background-color:$stdavids-purple;
+  float:left;
+  width:222px;
+
+  ul {
+    width:100%;
+    display:inline-block;
+  }
+
+  li {
+    display:inline-block;
+    width:100%;
+    border-bottom:1px solid;
+    border-color: $stdavids-purple-dark;
+    cursor:pointer;
+  }
+
+  li i {
+    display:inline-block;
+    width:20px;
+    margin-left:10px;
+    color:#fff;
+    margin-top:5px;
+  }
+
+  li a {
+    padding:10px 20px 10px 10px;
+    display:inline-block;
+    color:#fff;
+    font-size:13px;
+    text-decoration:none;
+    @include box-sizing(border-box);
+  }
+
+  ul li:first-child {
+    border-top:1px solid;
+    border-color: $stdavids-purple-dark;
+  }
+
+  li:hover {
+    background-color:$stdavids-purple-dark;
+  }
+
+  ul.lower-menu {
+    display:none;
+    background-color:#ccc;
+  }
+
+  ul.lower-menu li {
+    border-color: $gray;
+  }
+
+  .parent-item:hover .lower-menu {
+    display:block;
+  }
+}
+
+router-outlet {
+  padding:15px;
+  @include box-sizing(border-box);
+  display:inline-block;
+}
 
 

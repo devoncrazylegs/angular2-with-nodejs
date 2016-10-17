@@ -26,6 +26,7 @@ export class AuthService {
 
         return this._http
             .post(routes.auth.login, body, options)
+            //.timeout(5000, new Error('delay exceeded'))
             .map(res => res.json());
             /*.map((response: Response) => {
                 let user = JSON.parse(response.body);

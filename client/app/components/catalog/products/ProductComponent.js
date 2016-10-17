@@ -15,7 +15,7 @@ var ProductComponent = (function () {
     ProductComponent = __decorate([
         core_1.Component({
             selector: 'product-component',
-            templateUrl: '/app/views/products/product-dashboard.html',
+            templateUrl: '/app/views/catalog/products/product-dashboard.html',
             moduleId: module.id
         }), 
         __metadata('design:paramtypes', [])
