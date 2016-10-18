@@ -1,4 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { Product } from "../../../../classes/Product";
+import { ProductService } from "../../../../services/product.service";
 
 @Component({
     selector: 'product-list',
@@ -7,5 +9,11 @@ import { Component } from "@angular/core";
 })
 
 export class ProductListComponent {
+    @Input() products:Product[];
 
+    constructor(
+
+    ) {
+
+    }
 }

@@ -30,13 +30,6 @@ var AuthService = (function () {
         return this._http
             .post(routes_1.routes.auth.login, body, options)
             .map(function (res) { return res.json(); });
-        /*.map((response: Response) => {
-            let user = JSON.parse(response.body);
-            if(user.body && user.body.token) {
-                userHelper.user = user.body;
-            }
-            return user.json();
-        });*/
     };
     /**
      * Logout function

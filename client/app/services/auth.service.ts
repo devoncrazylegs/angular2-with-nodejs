@@ -28,13 +28,6 @@ export class AuthService {
             .post(routes.auth.login, body, options)
             //.timeout(5000, new Error('delay exceeded'))
             .map(res => res.json());
-            /*.map((response: Response) => {
-                let user = JSON.parse(response.body);
-                if(user.body && user.body.token) {
-                    userHelper.user = user.body;
-                }
-                return user.json();
-            });*/
     }
 
     /**

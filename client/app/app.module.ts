@@ -26,7 +26,8 @@ import { OptionsComponent } from "./components/catalog/options/OptionsComponent"
 import { CategoriesComponent } from "./components/catalog/categories/CategoriesComponent";
 import { ManufacturersComponent } from "./components/catalog/manufacturers/ManufacturersComponent";
 import { ProductSearchComponent } from "./components/catalog/products/directives/ProductSearchComponent";
-import {ProductListComponent} from "./components/catalog/products/directives/ProductListComponent";
+import { ProductListComponent } from "./components/catalog/products/directives/ProductListComponent";
+import {ProductService} from "./services/product.service";
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import {ProductListComponent} from "./components/catalog/products/directives/Pro
     providers: [
         AuthService,
         AuthGuard,
-        GlobalEventsManager
+        GlobalEventsManager,
+        ProductService
 
     ],
     bootstrap:    [ AppComponent ]

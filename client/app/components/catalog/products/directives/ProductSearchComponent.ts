@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { Manufacturer } from "../../../../classes/Manufacturer";
+import { Category } from "../../../../classes/Category";
 
 @Component({
     selector: 'product-search',
@@ -7,5 +9,21 @@ import { Component } from "@angular/core";
 })
 
 export class ProductSearchComponent {
+    selectedManufacturer:Manufacturer = null;
+    manufacturers:Manufacturer[] = [];
+    selectedCategory:Category = null;
+    categories:Category[] = [];
+
+    productSearchPayload = {
+        searchTerm: null
+    };
+
+    filtersChange() {
+
+    }
+
+    resetFilters() {
+
+    }
 
 }

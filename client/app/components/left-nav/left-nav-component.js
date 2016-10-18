@@ -37,7 +37,8 @@ var LeftNavComponent = (function () {
         core_1.Component({
             selector: 'left-nav',
             templateUrl: '/app/views/left-nav/left-nav.html',
-            moduleId: module.id
+            moduleId: module.id,
+            styleUrls: ['/app/assets/css/left-nav/left-nav.css']
         }), 
         __metadata('design:paramtypes', [globalEventsManager_service_1.GlobalEventsManager, auth_service_1.AuthService, router_1.Router])
     ], LeftNavComponent);

@@ -6,6 +6,10 @@ export var userHelper = {
     set user(user) {
         window.sessionStorage.setItem('user', JSON.stringify(user));
     },
+    getToken:function(): String {
+        let user = JSON.parse(window.sessionStorage.getItem('user'));
+        return user.token;
+    },
     tokenExists: function() {
         if(window.sessionStorage.getItem('token') && window.sessionStorage.getItem('token') !== '') {
             return true;

@@ -5,7 +5,7 @@ exports.HttpHelper = {
     createAuthorizationHeader: function () {
         var headers = new http_1.Headers({
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + userHelper_1.userHelper.user.token
+            'Authorization': 'Bearer ' + userHelper_1.userHelper.getToken()
         });
         return headers;
     }

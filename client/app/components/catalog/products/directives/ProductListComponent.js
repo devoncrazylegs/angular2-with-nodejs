@@ -12,6 +12,10 @@ var core_1 = require("@angular/core");
 var ProductListComponent = (function () {
     function ProductListComponent() {
     }
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Array)
+    ], ProductListComponent.prototype, "products", void 0);
     ProductListComponent = __decorate([
         core_1.Component({
             selector: 'product-list',

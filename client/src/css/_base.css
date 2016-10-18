@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'GillSans';
+  src: url("../../assets/fonts/gillsans-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../../assets/fonts/gillsans-webfont.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/gillsans-webfont.woff") format("woff"), url("../../assets/fonts/gillsans-webfont.ttf") format("truetype"), url("../../assets/fonts/gillsans-webfont.svg#svgFontName") format("svg"); }
+* {
+  margin: 0;
+  padding: 0; }
+
+li, a, p, span, button {
+  font-family: "GillSans", sans-serif; }
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none; }
+
+/*# sourceMappingURL=_base.css.mapp */

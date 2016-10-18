@@ -1,1 +1,37 @@
-Here I am a search
+<div class='product-search'>
+    <form>
+        <div class='row'>
+            <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                <h3>Filter Products</h3>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                <div class='searchbar-wrapper'>
+                    <h5>Search</h5>
+                    <input name='search' [(ngModel)]="productSearchPayload.searchTerm" (keyup)="filtersChange()" placeholder="search products"/>
+                </div>
+            </div>
+            <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                <ul class="categories">
+                    <div class='searchbar-wrapper'>
+                        <h5>Categories</h5>
+                        <select name='categories' class='categories' [(ngModel)]="selectedCategory" (ngModelChange)="changeCategory($event)">
+                            <option>-- please select --</option>
+                        </select>
+                    </div>
+                </ul>
+            </div>
+            <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
+                <div class='searchbar-wrapper'>
+                    <h5>Manufacturer</h5>
+                    <select name='manufacturers' class='manufacturers' [(ngModel)]="selectedManufacturer" (ngModelChange)="changeManufacturer($event)">
+                        <option>-- please select --</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <a class='filter-reset' (click)="resetFilters()">+ reset filters</a>
+    </form>
+</div>
+

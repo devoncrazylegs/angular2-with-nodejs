@@ -7,7 +7,8 @@ import {userHelper} from "../../helpers/userHelper";
 @Component({
     selector: 'left-nav',
     templateUrl: '/app/views/left-nav/left-nav.html',
-    moduleId: module.id
+    moduleId: module.id,
+    styleUrls: ['/app/assets/css/left-nav/left-nav.css']
 })
 
 export class LeftNavComponent {

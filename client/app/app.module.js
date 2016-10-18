@@ -31,6 +31,7 @@ var CategoriesComponent_1 = require("./components/catalog/categories/CategoriesC
 var ManufacturersComponent_1 = require("./components/catalog/manufacturers/ManufacturersComponent");
 var ProductSearchComponent_1 = require("./components/catalog/products/directives/ProductSearchComponent");
 var ProductListComponent_1 = require("./components/catalog/products/directives/ProductListComponent");
+var product_service_1 = require("./services/product.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -61,7 +62,8 @@ var AppModule = (function () {
             providers: [
                 auth_service_1.AuthService,
                 auth_guard_1.AuthGuard,
-                globalEventsManager_service_1.GlobalEventsManager
+                globalEventsManager_service_1.GlobalEventsManager,
+                product_service_1.ProductService
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

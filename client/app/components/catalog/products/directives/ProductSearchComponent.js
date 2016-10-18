@@ -11,7 +11,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var ProductSearchComponent = (function () {
     function ProductSearchComponent() {
+        this.selectedManufacturer = null;
+        this.manufacturers = [];
+        this.selectedCategory = null;
+        this.categories = [];
+        this.productSearchPayload = {
+            searchTerm: null
+        };
     }
+    ProductSearchComponent.prototype.filtersChange = function () {
+    };
+    ProductSearchComponent.prototype.resetFilters = function () {
+    };
     ProductSearchComponent = __decorate([
         core_1.Component({
             selector: 'product-search',

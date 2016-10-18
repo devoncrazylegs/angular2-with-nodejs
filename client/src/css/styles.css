@@ -15,6 +15,18 @@ ul {
   padding: 0px;
   list-style-type: none; }
 
+input, select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+  width: 100%;
+  border: none; }
+
 .initial-loading {
   max-width: 300px;
   margin-left: -150px;
@@ -36,7 +48,7 @@ ul {
 nav#top-bar {
   width: 100%;
   height: 40px;
-  background-color: #d8d8d8;
+  background-color: #ededed;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -72,16 +84,12 @@ nav#top-bar {
 .form-signin .form-control {
   position: relative;
   height: auto;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 10px;
   font-size: 16px; }
 
 #left-nav {
   background-color: #b00930;
   float: left;
-  width: 222px; }
+  width: 100%; }
   #left-nav ul {
     width: 100%;
     display: inline-block; }
@@ -116,16 +124,47 @@ nav#top-bar {
     display: none;
     background-color: #ccc; }
   #left-nav ul.lower-menu li {
-    border-color: #d8d8d8; }
+    border-color: #ededed; }
   #left-nav .parent-item:hover .lower-menu {
     display: block; }
 
-router-outlet {
-  padding: 15px;
+left-nav {
+  float: left;
+  width: 15%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block; }
+
+product-component {
+  float: left;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 85%; }
+
+.product-search, .product-list {
+  background-color: #ededed;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 20px; }
+
+.product-search h5 {
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px; }
+.product-search .filter-reset {
+  width: 100%;
+  text-align: right;
+  display: inline-block;
+  margin-top: 20px; }
 
 /*# sourceMappingURL=styles.css.map */

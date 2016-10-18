@@ -1,39 +1,18 @@
 var express = require('express');
 var router = express.Router();
 var fs = require("fs");
-var bufferStream = require("../classes/libs/BufferStream");
 
-router.get('/buffer', function(req, res, next) {
-    var imageToBuffer = fs.readFileSync(appRoot + '/public/images/example.jpg');
+var productRoutesControllerObject = require('../controllers/api/catalog/Product');
+var productRoutesControllerObjectInstance = new productRoutesControllerObject();
 
-    res.writeHead(
-        200,
-        "OK",
-        {
-            "Content-Type": "image/jpg",
-            "Content-Disposition": "inline; filename=example.jpg",
-            "Content-Length": imageToBuffer.length
-        }
-    );
-
-    new bufferStream(imageToBuffer)
-        .pipe(res);
-
+router.get('/product', function(req, res, next) {
+    productRoutesControllerObjectInstance.getProducts(req, res, next);
 });
 
-router.get('/stream', function(req, res, next) {
-    var imageStream = fs.createReadStream(appRoot + '/public/images/example.jpg');
-
-    res.writeHead(
-        200,
-        "OK",
-        {
-            "Content-Type": "image/jpg",
-            "Content-Disposition": "inline; filename=example.jpg"
-        }
-    );
-
-    imageStream.pipe(res);
+router.get('/product/:productId', function(req, res, next) {
+    productRoutesControllerObjectInstance.getSingleProduct(req, res, next);
 });
+
+
 
 module.exports = router;

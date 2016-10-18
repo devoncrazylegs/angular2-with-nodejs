@@ -48,7 +48,7 @@ gulp.task('build-SASS', function() {
 
     gutil.log('build sass...');
     gulp.src([
-        'src/css/*.scss'
+        'src/css/**/*.scss'
     ])
         .pipe(sass({style: 'expanded'}))
         .on('error', gutil.log)
@@ -56,7 +56,7 @@ gulp.task('build-SASS', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('src/css/*.scss', ['build-SASS']);
+    gulp.watch('src/css/**/*.scss', ['build-SASS']);
 });
 
 gulp.task('build', [
