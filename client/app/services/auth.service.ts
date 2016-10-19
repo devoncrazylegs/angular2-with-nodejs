@@ -21,7 +21,7 @@ export class AuthService {
      */
     login(loginDetails):Observable {
         let body = JSON.stringify(loginDetails);
-        let headers = HttpHelper.createAuthorizationHeader();
+        let headers = HttpHelper.createAuthorizationHeader(false);
         let options = new RequestOptions({ headers: headers });
 
         return this._http

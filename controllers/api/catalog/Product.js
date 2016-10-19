@@ -8,10 +8,26 @@ function Product() {
 }
 
 Product.prototype.getProducts = function(req, res) {
-    console.log('in  here');
+    var self = this,
+        requestUrl = self.requestBaseUrl;
+
+    self.preRequestCheck(req, res, function(req, res) {
+        self.makeRequest(
+            'GET',
+            {
+                contentType: 'json'
+            },
+            {
+
+            },
+            requestUrl
+        ).then(function(response) {
+            res.json(response);
+        });
+    });
 };
 
-Product.prototype.getSingleProduct = function(req, res) {
+Product.prototype.getProduct = function(req, res) {
     console.log('in  here individual');
 };
 
