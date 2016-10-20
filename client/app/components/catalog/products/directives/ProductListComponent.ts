@@ -9,7 +9,7 @@ import { ProductService } from "../../../../services/product.service";
 })
 
 export class ProductListComponent {
-    @Input() products:Product[];
+    @Input() products;
 
     constructor(
 

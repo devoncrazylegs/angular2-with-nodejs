@@ -28,6 +28,9 @@ input, select {
   width: 100%;
   border: none; }
 
+.no-margin {
+  margin: 0px !important; }
+
 .initial-loading {
   max-width: 300px;
   margin-left: -150px;
@@ -168,3 +171,44 @@ product-component {
   text-align: right;
   display: inline-block;
   margin-top: 20px; }
+
+.product-list {
+  display: inline-block; }
+  .product-list .product-table {
+    display: inline-block;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc; }
+  .product-list .product-table .row > div {
+    line-height: 67px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    display: table-cell;
+    height: 67px;
+    font-size: 11px;
+    color: #666666;
+    font-weight: 500;
+    vertical-align: middle;
+    overflow: hidden; }
+  .product-list .product-table .product {
+    border-top: 1px solid #ccc;
+    margin-bottom: 10px;
+    max-height: 91px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box; }
+  .product-list .product img {
+    max-height: 50px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 8px;
+    margin-bottom: 8px; }
+  .product-list .product-check {
+    margin-top: 29px;
+    cursor: pointer; }
+  .product-list .product > div:not(:last-child), .product-list .product-table-header > div:not(:last-child) {
+    border-right: 1px solid #dddddd; }

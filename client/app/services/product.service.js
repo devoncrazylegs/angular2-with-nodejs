@@ -20,7 +20,7 @@ var ProductService = (function () {
         this.emitter = new core_1.EventEmitter();
     }
     ProductService.prototype.getProducts = function (filters) {
-        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader();
+        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true);
         var options = new http_1.RequestOptions({ headers: headers });
         return this._http
             .get(routes_1.routes.api.products + StringHelper_1.StringHelper.convertVarsToString(filters), options)

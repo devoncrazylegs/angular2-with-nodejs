@@ -20,18 +20,28 @@ ApiBase_RequestLayer.prototype.preRequestCheck = function(req, res, next) {
     next(req, res);
 };
 
-ApiBase_RequestLayer.prototype.makeRequest = function(verb, options, vars, url) {
+ApiBase_RequestLayer.prototype.makeRequest = function(verb, options, vars, url, headers) {
     var self = this,
-        headers = {};
+        reqHeaders = {};
 
     if(options.contentType === 'json') {
-        headers['Content-Type'] = 'application/json';
+        reqHeaders['Content-Type'] = 'application/json';
     } else {
 
     }
 
+    if(headers) {
+        for(var key in headers) {
+            if(!headers.hasOwnProperty(key)) {
+                continue;
+            }
+
+            reqHeaders[key] = headers[key];
+        }
+    }
+
     var payload = {
-        headers : headers,
+        headers : reqHeaders,
         url     : url,
         method  : verb,
         timeout : 10000,
@@ -43,9 +53,9 @@ ApiBase_RequestLayer.prototype.makeRequest = function(verb, options, vars, url) 
     return new Promise(function(resolve, reject) {
         request(payload, function(error, response, body) {
                 if(!error && response.statusCode === 200) {
-                    resolve(response);
+                    resolve(response, body);
                 } else {
-                    reject(error);
+                    reject(response, body);
                 }
         });
     });

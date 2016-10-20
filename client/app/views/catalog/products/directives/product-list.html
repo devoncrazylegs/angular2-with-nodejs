@@ -1,8 +1,21 @@
 <div class='product-list'>
-    <div class='row'>
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
-            <h3>Products</h3>
-            {{ products }}
+    <h3>Products</h3>
+    <div class='product-table'>
+        <div class='row no-margin product-table-header'>
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">Image</div>
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">Product Name</div>
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">Description</div>
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">SKU</div>
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"></div>
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"></div>
+        </div>
+        <div class='product row no-margin' *ngFor="let product of products">
+            <div class='col-xs-12 col-sm-2 col-md-2 col-lg-2'><input type='checkbox' class='product-check' /></div>
+            <div class='col-xs-12 col-sm-2 col-md-2 col-lg-2'><img src='{{ product.main_image }}' /></div>
+            <div class='col-xs-12 col-sm-2 col-md-2 col-lg-2'>{{ product.title }}</div>
+            <div class='col-xs-12 col-sm-2 col-md-2 col-lg-2'>{{ product.description }}</div>
+            <div class='col-xs-12 col-sm-2 col-md-2 col-lg-2'>{{ product.sku }}</div>
+            <div class='col-xs-12 col-sm-2 col-md-2 col-lg-2'><a href='#'>Edit</a></div>
         </div>
     </div>
 </div>

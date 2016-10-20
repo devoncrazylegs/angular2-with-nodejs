@@ -27,7 +27,7 @@ import { CategoriesComponent } from "./components/catalog/categories/CategoriesC
 import { ManufacturersComponent } from "./components/catalog/manufacturers/ManufacturersComponent";
 import { ProductSearchComponent } from "./components/catalog/products/directives/ProductSearchComponent";
 import { ProductListComponent } from "./components/catalog/products/directives/ProductListComponent";
-import {ProductService} from "./services/product.service";
+import { ProductService } from "./services/product.service";
 
 
 @NgModule({

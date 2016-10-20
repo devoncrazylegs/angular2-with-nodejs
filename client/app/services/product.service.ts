@@ -19,7 +19,7 @@ export class ProductService {
     }
 
     getProducts(filters): Observable<Product[]> {
-        let headers = HttpHelper.createAuthorizationHeader();
+        let headers = HttpHelper.createAuthorizationHeader(true);
         let options = new RequestOptions({ headers: headers });
         return this._http
             .get(routes.api.products + StringHelper.convertVarsToString(filters), options)

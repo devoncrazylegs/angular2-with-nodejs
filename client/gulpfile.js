@@ -44,7 +44,7 @@ gulp.task('build-bootstrap', function() {
         .pipe(gulp.dest('assets/js'));
 });
 
-gulp.task('build-SASS', function() {
+gulp.task('build-SCSS', function() {
 
     gutil.log('build sass...');
     gulp.src([
@@ -56,7 +56,7 @@ gulp.task('build-SASS', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('src/css/**/*.scss', ['build-SASS']);
+    gulp.watch('src/css/**/*.scss', ['build-SCSS']);
 });
 
 gulp.task('build', [

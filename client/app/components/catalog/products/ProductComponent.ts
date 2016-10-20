@@ -9,7 +9,7 @@ import { ProductService } from "../../../services/product.service";
 })
 
 export class ProductComponent {
-    products:Product[] = [];
+    products: Product[] = [];
     productsLoaded = false;
     APIError = [];
 
@@ -37,9 +37,9 @@ export class ProductComponent {
 
         this._productService.getProducts(this.productPayload)
             .subscribe(
-            products => {this.products = products},
-            error    => {this.APIError = error},
-            ()       => {this.productsLoaded = true}
+                products => {this.products = products},
+                error    => {this.APIError = error},
+                ()       => {this.productsLoaded = true}
         );
     }
 

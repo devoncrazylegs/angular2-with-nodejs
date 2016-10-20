@@ -9,7 +9,10 @@ function Product() {
 
 Product.prototype.getProducts = function(req, res) {
     var self = this,
-        requestUrl = self.requestBaseUrl;
+        requestUrl = self.requestBaseUrl,
+        headers = {};
+
+    headers['Authorization'] = req.headers.authorization;
 
     self.preRequestCheck(req, res, function(req, res) {
         self.makeRequest(
@@ -20,8 +23,11 @@ Product.prototype.getProducts = function(req, res) {
             {
 
             },
-            requestUrl
+            requestUrl,
+            headers
         ).then(function(response) {
+            res.send(response.body);
+        }, function(response) {
             res.json(response);
         });
     });
