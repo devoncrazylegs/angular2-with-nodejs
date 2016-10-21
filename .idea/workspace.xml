@@ -4,26 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/routes/api.js" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39ac3ac7-13f9-4442-bab1-b6f6b5e1eb7a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/app.module.js.map" afterPath="$PROJECT_DIR$/client/app/app.module.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/app.module.ts" afterPath="$PROJECT_DIR$/client/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/catalog/products/ProductComponent.js.map" afterPath="$PROJECT_DIR$/client/app/components/catalog/products/ProductComponent.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/catalog/products/ProductComponent.ts" afterPath="$PROJECT_DIR$/client/app/components/catalog/products/ProductComponent.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductListComponent.js" afterPath="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductListComponent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductListComponent.ts" afterPath="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductListComponent.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/services/product.service.js" afterPath="$PROJECT_DIR$/client/app/services/product.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/services/product.service.js.map" afterPath="$PROJECT_DIR$/client/app/services/product.service.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/services/product.service.ts" afterPath="$PROJECT_DIR$/client/app/services/product.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/catalog/products/directives/product-list.html" afterPath="$PROJECT_DIR$/client/app/views/catalog/products/directives/product-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/css/styles.css" afterPath="$PROJECT_DIR$/client/assets/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/gulpfile.js" afterPath="$PROJECT_DIR$/client/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/css/styles.css" afterPath="$PROJECT_DIR$/client/src/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/css/styles.css.map" afterPath="$PROJECT_DIR$/client/src/css/styles.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/css/styles.scss" afterPath="$PROJECT_DIR$/client/src/css/styles.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/ApiBase_RequestLayer.js" afterPath="$PROJECT_DIR$/controllers/api/ApiBase_RequestLayer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/catalog/Product.js" afterPath="$PROJECT_DIR$/controllers/api/catalog/Product.js" />
-    </list>
+    <list default="true" id="39ac3ac7-13f9-4442-bab1-b6f6b5e1eb7a" name="Default" comment="" />
     <ignored path="skeleton-ang2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -48,8 +29,8 @@
           <file leaf-file-name="product-list.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/app/views/catalog/products/directives/product-list.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="54">
-                  <caret line="3" column="54" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="54" />
+                <state relative-caret-position="306">
+                  <caret line="17" column="88" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
                   <folding />
                 </state>
               </provider>
@@ -483,16 +464,16 @@
       <workItem from="1476285847273" duration="33362000" />
       <workItem from="1476438913471" duration="16226000" />
       <workItem from="1476696147148" duration="58259000" />
-      <workItem from="1476956494133" duration="13842000" />
+      <workItem from="1476956494133" duration="16248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247644000" />
+    <option name="totallyTimeSpent" value="250050000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="18" width="1871" height="1062" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19956261" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -502,7 +483,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298969" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36082473" sideWeight="0.4978701" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -938,18 +919,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/catalog/products/directives/product-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="54" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/css/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="741">
           <caret line="292" column="78" selection-start-line="292" selection-start-column="78" selection-end-line="292" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/views/catalog/products/directives/product-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="88" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
           <folding />
         </state>
       </provider>
