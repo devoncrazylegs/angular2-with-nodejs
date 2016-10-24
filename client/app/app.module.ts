@@ -3,7 +3,7 @@ import 'app/rxjs-extensions';
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { HttpModule } from "@angular/http";
+import {HttpModule, Http, XHRBackend, RequestOptions} from "@angular/http";
 import { FormsModule } from "@angular/forms";
 
 import { AuthGuard } from "./guards/auth.guard";
@@ -28,6 +28,9 @@ import { ManufacturersComponent } from "./components/catalog/manufacturers/Manuf
 import { ProductSearchComponent } from "./components/catalog/products/directives/ProductSearchComponent";
 import { ProductListComponent } from "./components/catalog/products/directives/ProductListComponent";
 import { ProductService } from "./services/product.service";
+import { HttpInterceptor } from "./services/HttpInterceptor.service";
+import { CategoryService } from "./services/category.service";
+import {ManufacturerService} from "./services/manufacturer.service";
 
 
 @NgModule({
@@ -57,8 +60,15 @@ import { ProductService } from "./services/product.service";
         AuthService,
         AuthGuard,
         GlobalEventsManager,
-        ProductService
-
+        ProductService,
+        CategoryService,
+        ManufacturerService,
+        {
+            provide: HttpInterceptor,
+            useFactory: (backend: XHRBackend, defaultOptions: RequestOptions) =>
+                new HttpInterceptor(backend, defaultOptions),
+            deps: [XHRBackend, RequestOptions]
+        }
     ],
     bootstrap:    [ AppComponent ]
 })

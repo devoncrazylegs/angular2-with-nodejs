@@ -13,10 +13,10 @@ var http_1 = require("@angular/http");
 var routes_1 = require("../routes");
 var StringHelper_1 = require("../helpers/StringHelper");
 var HttpHelper_1 = require("../helpers/HttpHelper");
+var HttpInterceptor_service_1 = require("./HttpInterceptor.service");
 var ProductService = (function () {
     function ProductService(_http) {
         this._http = _http;
-        this.emitter = new core_1.EventEmitter();
         this.emitter = new core_1.EventEmitter();
     }
     ProductService.prototype.getProducts = function (filters) {
@@ -26,9 +26,12 @@ var ProductService = (function () {
             .get(routes_1.routes.api.products + StringHelper_1.StringHelper.convertVarsToString(filters), options)
             .map(function (res) { return res.json(); });
     };
+    ProductService.prototype.emitProducts = function (products) {
+        this.emitter.emit(products);
+    };
     ProductService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
+        __metadata('design:paramtypes', [HttpInterceptor_service_1.HttpInterceptor])
     ], ProductService);
     return ProductService;
 }());

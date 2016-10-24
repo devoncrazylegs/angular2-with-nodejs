@@ -13,9 +13,11 @@ var http_1 = require("@angular/http");
 var routes_1 = require('../routes');
 var HttpHelper_1 = require("../helpers/HttpHelper");
 var userHelper_1 = require("../helpers/userHelper");
+var router_1 = require("@angular/router");
 var AuthService = (function () {
-    function AuthService(_http) {
+    function AuthService(_http, _router) {
         this._http = _http;
+        this._router = _router;
         this.isLoggedIn = new core_1.EventEmitter();
         //Set token if saved in local storage
         this.user = userHelper_1.userHelper.user;
@@ -37,10 +39,11 @@ var AuthService = (function () {
     AuthService.prototype.logout = function () {
         // clear token
         userHelper_1.userHelper.removeUserFromStorage();
+        this._router.navigateByUrl('login');
     };
     AuthService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
+        __metadata('design:paramtypes', [http_1.Http, router_1.Router])
     ], AuthService);
     return AuthService;
 }());

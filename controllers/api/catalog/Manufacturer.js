@@ -2,12 +2,12 @@ var ApiBase_RequestLayer = require('../ApiBase_RequestLayer'),
     Config = require(global.appRoot + '/Config'),
     util = require('util');
 
-function Product() {
-    Product.super_.call(this);
-    this.requestBaseUrl = Config.brain.url + Config.brain.api + Config.brain.apiVersion + '/product';
+function Manufacturer() {
+    Manufacturer.super_.call(this);
+    this.requestBaseUrl = Config.brain.url + Config.brain.api + Config.brain.apiVersion + '/manufacturer';
 }
 
-Product.prototype.getProducts = function(req, res) {
+Manufacturer.prototype.getManufacturers = function(req, res) {
     var self = this,
         requestUrl = self.requestBaseUrl + '?' + req.url.split('?')[1],
         headers = {};
@@ -33,10 +33,6 @@ Product.prototype.getProducts = function(req, res) {
     });
 };
 
-Product.prototype.getProduct = function(req, res) {
-    console.log('in  here individual');
-};
+util.inherits(Manufacturer, ApiBase_RequestLayer);
 
-util.inherits(Product, ApiBase_RequestLayer);
-
-module.exports = Product;
+module.exports = Manufacturer;

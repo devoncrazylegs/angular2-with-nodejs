@@ -1,12 +1,13 @@
-<div class='product-list'>
+<div class='spinner' *ngIf='!products.length'></div>
+<div class='product-list' *ngIf='products.length'>
     <h3>Products</h3>
     <div class='product-table'>
         <div class='row no-margin product-table-header'>
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"></div>
             <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">Image</div>
             <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">Product Name</div>
             <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">Description</div>
             <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">SKU</div>
-            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"></div>
             <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"></div>
         </div>
         <div class='product row no-margin' *ngFor="let product of products">

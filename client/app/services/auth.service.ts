@@ -1,9 +1,10 @@
-import {Injectable, EventEmitter} from "@angular/core";
+import { Injectable, EventEmitter } from "@angular/core";
 import { Http, Headers, RequestOptions, Response }  from "@angular/http";
 import { Observable } from "rxjs";
 import { routes } from '../routes';
 import { HttpHelper } from "../helpers/HttpHelper";
 import { userHelper } from "../helpers/userHelper";
+import { Router } from "@angular/router";
 
 @Injectable()
 export class AuthService {
@@ -11,7 +12,10 @@ export class AuthService {
     public isLoggedIn: EventEmitter<boolean> = new EventEmitter();
 
 
-    constructor(private _http: Http) {
+    constructor(
+        private _http: Http,
+        private _router: Router
+    ) {
         //Set token if saved in local storage
         this.user = userHelper.user;
     }
@@ -36,5 +40,6 @@ export class AuthService {
     logout(): void {
         // clear token
         userHelper.removeUserFromStorage();
+        this._router.navigateByUrl('login');
     }
 }

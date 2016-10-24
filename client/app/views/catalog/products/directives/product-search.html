@@ -1,4 +1,5 @@
-<div class='product-search'>
+<div class='spinner' *ngIf='!loaded.categories || !loaded.manufacturers'></div>
+<div class='product-search' *ngIf='loaded.categories && loaded.manufacturers'>
     <form>
         <div class='row'>
             <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
@@ -9,15 +10,16 @@
             <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
                 <div class='searchbar-wrapper'>
                     <h5>Search</h5>
-                    <input name='search' [(ngModel)]="productSearchPayload.searchTerm" (keyup)="filtersChange()" placeholder="search products"/>
+                    <input name='search' [(ngModel)]="productSearchPayload.searchTerm" (keyup)="filtersChange($event, 'searchTerm')" placeholder="search products"/>
                 </div>
             </div>
             <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
                 <ul class="categories">
                     <div class='searchbar-wrapper'>
                         <h5>Categories</h5>
-                        <select name='categories' class='categories' [(ngModel)]="selectedCategory" (ngModelChange)="changeCategory($event)">
+                        <select name='categories' class='categories' [(ngModel)]="selectedCategory" (ngModelChange)="filtersChange($event, 'category')">
                             <option>-- please select --</option>
+                            <option *ngFor='let category of categories' [ngValue]="category.id">{{category.name}}</option>
                         </select>
                     </div>
                 </ul>
@@ -25,8 +27,9 @@
             <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
                 <div class='searchbar-wrapper'>
                     <h5>Manufacturer</h5>
-                    <select name='manufacturers' class='manufacturers' [(ngModel)]="selectedManufacturer" (ngModelChange)="changeManufacturer($event)">
+                    <select name='manufacturers' class='manufacturers' [(ngModel)]="selectedManufacturer" (ngModelChange)="filtersChange($event, 'manufacturer')">
                         <option>-- please select --</option>
+                        <option *ngFor='let manufacturer of manufacturers' [ngValue]="manufacturer.id">{{manufacturer.name}}</option>
                     </select>
                 </div>
             </div>

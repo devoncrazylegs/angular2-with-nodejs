@@ -28,8 +28,11 @@ export class ProductComponent {
     constructor(
         private _productService: ProductService
     ) {
-
-
+        _productService.emitter.subscribe(
+            products => { this.products = products },
+            error    => { this.APIError = error },
+            ()       => { }
+        )
     }
 
     getProducts() {

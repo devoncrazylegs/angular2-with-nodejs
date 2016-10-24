@@ -7,6 +7,7 @@ var querystring = require('querystring');
 function ApiBase_RequestLayer() {
     this.inherit = {};
     this.__objectName = "ApiBase_RequestLayer";
+    this.querystring = querystring;
 }
 
 /**
@@ -55,6 +56,9 @@ ApiBase_RequestLayer.prototype.makeRequest = function(verb, options, vars, url, 
                 if(!error && response.statusCode === 200) {
                     resolve(response, body);
                 } else {
+                    if(response.statusCode === 401) {
+                        console.log('token expited');
+                    }
                     reject(response, body);
                 }
         });

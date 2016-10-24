@@ -1,15 +1,14 @@
 import { Injectable, EventEmitter } from "@angular/core";
-import { RequestOptions } from "@angular/http";
-import { Product } from "../classes/Product";
-import { Observable } from "rxjs";
-import { routes } from "../routes";
-import { ConfigObject } from "../ConfigObject";
-import { StringHelper } from "../helpers/StringHelper";
-import { HttpHelper } from "../helpers/HttpHelper";
 import { HttpInterceptor } from "./HttpInterceptor.service";
+import { Observable } from "rxjs";
+import { Manufacturer } from "../classes/Manufacturer";
+import { HttpHelper } from "../helpers/HttpHelper";
+import { RequestOptions } from "@angular/http";
+import { routes } from "../routes";
+import { StringHelper } from "../helpers/StringHelper";
 
 @Injectable()
-export class ProductService {
+export class ManufacturerService {
     public emitter: EventEmitter<any> = new EventEmitter();
     private APIUrl:String;
 
@@ -19,15 +18,11 @@ export class ProductService {
 
     }
 
-    getProducts(filters): Observable<Product[]> {
+    getManufacturers(filters): Observable<Manufacturer[]> {
         let headers = HttpHelper.createAuthorizationHeader(true);
         let options = new RequestOptions({ headers: headers });
         return this._http
-            .get(routes.api.products + StringHelper.convertVarsToString(filters), options)
+            .get(routes.api.manufacturers + StringHelper.convertVarsToString(filters), options)
             .map(res => res.json());
-    }
-
-    public emitProducts(products): void {
-        this.emitter.emit(products);
     }
 }

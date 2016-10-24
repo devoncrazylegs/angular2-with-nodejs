@@ -4,7 +4,9 @@ exports.routes = {
         login: '/auth/login',
     },
     api: {
-        products: '/api/product'
+        products: '/api/product',
+        categories: '/api/categories',
+        manufacturers: '/api/manufacturer',
     }
 };
 //# sourceMappingURL=routes.js.map

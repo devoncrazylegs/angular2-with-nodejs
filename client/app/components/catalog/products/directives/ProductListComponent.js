@@ -14,7 +14,7 @@ var ProductListComponent = (function () {
     }
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', Object)
+        __metadata('design:type', Array)
     ], ProductListComponent.prototype, "products", void 0);
     ProductListComponent = __decorate([
         core_1.Component({

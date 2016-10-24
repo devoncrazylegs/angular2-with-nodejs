@@ -12,6 +12,7 @@ var core_1 = require("@angular/core");
 var product_service_1 = require("../../../services/product.service");
 var ProductComponent = (function () {
     function ProductComponent(_productService) {
+        var _this = this;
         this._productService = _productService;
         this.products = [];
         this.productsLoaded = false;
@@ -27,6 +28,7 @@ var ProductComponent = (function () {
             searchTerm: '',
             manufacturer: null
         };
+        _productService.emitter.subscribe(function (products) { _this.products = products; }, function (error) { _this.APIError = error; }, function () { });
     }
     ProductComponent.prototype.getProducts = function () {
         var _this = this;
