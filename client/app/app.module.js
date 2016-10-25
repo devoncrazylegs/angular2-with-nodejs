@@ -35,6 +35,7 @@ var product_service_1 = require("./services/product.service");
 var HttpInterceptor_service_1 = require("./services/HttpInterceptor.service");
 var category_service_1 = require("./services/category.service");
 var manufacturer_service_1 = require("./services/manufacturer.service");
+var angular2_jwt_1 = require("angular2-jwt");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -69,12 +70,13 @@ var AppModule = (function () {
                 product_service_1.ProductService,
                 category_service_1.CategoryService,
                 manufacturer_service_1.ManufacturerService,
+                angular2_jwt_1.AUTH_PROVIDERS,
                 {
                     provide: HttpInterceptor_service_1.HttpInterceptor,
-                    useFactory: function (backend, defaultOptions) {
-                        return new HttpInterceptor_service_1.HttpInterceptor(backend, defaultOptions);
+                    useFactory: function (backend, defaultOptions, authService) {
+                        return new HttpInterceptor_service_1.HttpInterceptor(backend, defaultOptions, authService);
                     },
-                    deps: [http_1.XHRBackend, http_1.RequestOptions]
+                    deps: [http_1.XHRBackend, http_1.RequestOptions, auth_service_1.AuthService]
                 }
             ],
             bootstrap: [app_component_1.AppComponent]

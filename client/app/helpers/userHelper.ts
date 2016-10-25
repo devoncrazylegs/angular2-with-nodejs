@@ -4,26 +4,26 @@ export var userHelper = {
         return this._user;
     },
     set user(user) {
-        window.sessionStorage.setItem('user', JSON.stringify(user));
+        window.localStorage.setItem('user', JSON.stringify(user));
     },
     getToken:function(): String {
-        let user = JSON.parse(window.sessionStorage.getItem('user'));
+        let user = JSON.parse(window.localStorage.getItem('user'));
         return user.token;
     },
     tokenExists: function() {
-        if(window.sessionStorage.getItem('token') && window.sessionStorage.getItem('token') !== '') {
+        if(window.localStorage.getItem('tokenName') && window.localStorage.getItem('tokenName') !== '') {
             return true;
         }
         return false;
     },
     isLoggedIn() {
-        if(window.sessionStorage.getItem('user')) {
+        if(window.localStorage.getItem('user')) {
             return true;
         }
         return false;
     },
     removeUserFromStorage() {
-        window.sessionStorage.removeItem('user');
+        window.localStorage.removeItem('user');
     }
 
 };

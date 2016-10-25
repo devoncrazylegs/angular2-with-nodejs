@@ -1,2 +1,6 @@
+<div class='product-dashboard-panel'>
+    <button><i class='glyphicon-plus'></i>Add new product</button>
+</div>
 <product-search></product-search>
-<product-list [products]='products'></product-list>
+<product-list *ngIf='productsLoaded' [products]='products'></product-list>
+<div class='spinner' *ngIf='!productsLoaded'></div>

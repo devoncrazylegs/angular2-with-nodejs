@@ -3,7 +3,6 @@ import { RequestOptions } from "@angular/http";
 import { Product } from "../classes/Product";
 import { Observable } from "rxjs";
 import { routes } from "../routes";
-import { ConfigObject } from "../ConfigObject";
 import { StringHelper } from "../helpers/StringHelper";
 import { HttpHelper } from "../helpers/HttpHelper";
 import { HttpInterceptor } from "./HttpInterceptor.service";

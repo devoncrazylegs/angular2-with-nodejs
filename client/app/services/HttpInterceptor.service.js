@@ -15,13 +15,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
+var auth_service_1 = require("./auth.service");
 var HttpInterceptor = (function (_super) {
     __extends(HttpInterceptor, _super);
-    function HttpInterceptor(backend, defaultOptions) {
+    function HttpInterceptor(backend, defaultOptions, _authService) {
         _super.call(this, backend, defaultOptions);
+        this._authService = _authService;
     }
     HttpInterceptor.prototype.request = function (url, options) {
-        console.log('request...');
         return _super.prototype.request.call(this, url, options).catch(function (res) {
             if (res.statusCode === 401) {
                 console.log('expired');
@@ -29,14 +30,24 @@ var HttpInterceptor = (function (_super) {
         });
     };
     HttpInterceptor.prototype.get = function (url, options) {
-        console.log('get...');
-        return _super.prototype.get.call(this, url, options).catch(function (res) {
-            // do something
+        var _this = this;
+        var obsStream = _super.prototype.request.call(this, url, options);
+        obsStream.subscribe(function (data) {
+            var JSONParsedRes = JSON.parse(data._body);
+            if (JSONParsedRes.statusCode) {
+                if (JSONParsedRes.statusCode == 401) {
+                    _this._authService.logout();
+                }
+            }
         });
+        return obsStream;
+    };
+    HttpInterceptor.prototype.handleError = function () {
+        console.log('error');
     };
     HttpInterceptor = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.ConnectionBackend, http_1.RequestOptions])
+        __metadata('design:paramtypes', [http_1.ConnectionBackend, http_1.RequestOptions, auth_service_1.AuthService])
     ], HttpInterceptor);
     return HttpInterceptor;
 }(http_1.Http));

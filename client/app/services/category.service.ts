@@ -1,5 +1,5 @@
 import { Injectable, EventEmitter } from "@angular/core";
-import { Http, RequestOptions } from "@angular/http";
+import { RequestOptions } from "@angular/http";
 import { Observable } from "rxjs";
 import { Category } from "../classes/Category";
 import { HttpInterceptor } from "./HttpInterceptor.service";
