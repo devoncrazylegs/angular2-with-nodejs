@@ -74,6 +74,10 @@ nav#top-bar {
   nav#top-bar a {
     float: right; }
 
+.form-group {
+  display: inline-block;
+  width: 100%; }
+
 .spinner {
   width: 100%;
   background-image: url("../img/default.gif");
@@ -151,7 +155,7 @@ left-nav {
   box-sizing: border-box;
   display: inline-block; }
 
-product-component {
+product-component, product-edit {
   float: left;
   padding: 15px;
   -webkit-box-sizing: border-box;
@@ -161,7 +165,11 @@ product-component {
   display: inline-block;
   width: 85%; }
 
-.product-search, .product-list, .product-dashboard-panel {
+.product-search,
+.product-list,
+.product-dashboard-panel,
+.product-edit-header,
+.product-edit-panel {
   background-color: #ededed;
   padding: 20px;
   -webkit-box-sizing: border-box;
@@ -224,3 +232,9 @@ product-component {
     cursor: pointer; }
   .product-list .product > div:not(:last-child), .product-list .product-table-header > div:not(:last-child) {
     border-right: 1px solid #dddddd; }
+
+.product-edit-panel label {
+  font-size: 11px;
+  padding-top: 9px;
+  font-weight: normal;
+  text-align: right; }

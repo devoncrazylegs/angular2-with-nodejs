@@ -32,6 +32,7 @@ import { HttpInterceptor } from "./services/HttpInterceptor.service";
 import { CategoryService } from "./services/category.service";
 import { ManufacturerService } from "./services/manufacturer.service";
 import { AUTH_PROVIDERS } from "angular2-jwt";
+import {ProductEditComponent} from "./components/catalog/products/directives/ProductEditComponent";
 
 
 
@@ -51,6 +52,7 @@ import { AUTH_PROVIDERS } from "angular2-jwt";
         ProductComponent,
         ProductSearchComponent,
         ProductListComponent,
+        ProductEditComponent,
         LeftNavComponent,
         SettingsComponent,
         UsersComponent,

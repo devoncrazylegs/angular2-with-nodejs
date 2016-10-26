@@ -18,6 +18,18 @@ export class ProductService {
 
     }
 
+    getProduct(id:number): Observable<Product> {
+        let headers = HttpHelper.createAuthorizationHeader(true);
+        let options = new RequestOptions({ headers: headers });
+        return this._http
+            .get(routes.api.products  + '/' + id, options)
+            .map(res => res.json());
+    }
+
+    /**
+     * Get all products
+     * return Observable
+     */
     getProducts(filters): Observable<Product[]> {
         let headers = HttpHelper.createAuthorizationHeader(true);
         let options = new RequestOptions({ headers: headers });
@@ -26,6 +38,9 @@ export class ProductService {
             .map(res => res.json());
     }
 
+    /**
+     * Add products to EventEmitter stream
+     */
     public emitProducts(products): void {
         this.emitter.emit(products);
     }

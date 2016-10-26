@@ -19,6 +19,17 @@ var ProductService = (function () {
         this._http = _http;
         this.emitter = new core_1.EventEmitter();
     }
+    ProductService.prototype.getProduct = function (id) {
+        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true);
+        var options = new http_1.RequestOptions({ headers: headers });
+        return this._http
+            .get(routes_1.routes.api.products + '/' + id, options)
+            .map(function (res) { return res.json(); });
+    };
+    /**
+     * Get all products
+     * return Observable
+     */
     ProductService.prototype.getProducts = function (filters) {
         var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true);
         var options = new http_1.RequestOptions({ headers: headers });
@@ -26,6 +37,9 @@ var ProductService = (function () {
             .get(routes_1.routes.api.products + StringHelper_1.StringHelper.convertVarsToString(filters), options)
             .map(function (res) { return res.json(); });
     };
+    /**
+     * Add products to EventEmitter stream
+     */
     ProductService.prototype.emitProducts = function (products) {
         this.emitter.emit(products);
     };

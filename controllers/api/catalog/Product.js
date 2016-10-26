@@ -9,12 +9,9 @@ function Product() {
 
 Product.prototype.getProducts = function(req, res) {
     var self = this,
-        requestUrl = self.requestBaseUrl + '?' + req.url.split('?')[1],
-        headers = {};
+        requestUrl = self.requestBaseUrl + '?' + req.url.split('?')[1];
 
-    headers['Authorization'] = req.headers.authorization;
-
-    self.preRequestCheck(req, res, function(req, res) {
+    self.preRequestCheck(req, res, function(req, res, headers) {
         self.makeRequest(
             'GET',
             {
@@ -34,7 +31,27 @@ Product.prototype.getProducts = function(req, res) {
 };
 
 Product.prototype.getProduct = function(req, res) {
-    console.log('in  here individual');
+    var self = this,
+        requestUrl = self.requestBaseUrl + '/' + req.params.productId;
+
+    self.preRequestCheck(req, res, function(req, res, headers) {
+        self.makeRequest(
+            'GET',
+            {
+                contentType: 'json'
+            },
+            {
+
+            },
+            requestUrl,
+            headers
+        ).then(function(response) {
+            res.send(response.body);
+        }, function(response) {
+            res.json(response);
+        });
+    });
+
 };
 
 util.inherits(Product, ApiBase_RequestLayer);

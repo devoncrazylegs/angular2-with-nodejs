@@ -36,6 +36,7 @@ var HttpInterceptor_service_1 = require("./services/HttpInterceptor.service");
 var category_service_1 = require("./services/category.service");
 var manufacturer_service_1 = require("./services/manufacturer.service");
 var angular2_jwt_1 = require("angular2-jwt");
+var ProductEditComponent_1 = require("./components/catalog/products/directives/ProductEditComponent");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -56,6 +57,7 @@ var AppModule = (function () {
                 ProductComponent_1.ProductComponent,
                 ProductSearchComponent_1.ProductSearchComponent,
                 ProductListComponent_1.ProductListComponent,
+                ProductEditComponent_1.ProductEditComponent,
                 left_nav_component_1.LeftNavComponent,
                 settings_component_1.SettingsComponent,
                 users_component_1.UsersComponent,

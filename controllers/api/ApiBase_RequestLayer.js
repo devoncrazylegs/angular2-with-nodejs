@@ -18,7 +18,10 @@ function ApiBase_RequestLayer() {
 ApiBase_RequestLayer.prototype.preRequestCheck = function(req, res, next) {
     var self = this;
 
-    next(req, res);
+    headers = {};
+    headers['Authorization'] = req.headers.authorization;
+
+    next(req, res, headers);
 };
 
 ApiBase_RequestLayer.prototype.makeRequest = function(verb, options, vars, url, headers) {

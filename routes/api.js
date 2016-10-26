@@ -15,6 +15,10 @@ router.get('/product', function(req, res, next) {
     productRoutesControllerObjectInstance.getProducts(req, res, next);
 });
 
+router.get('/product/:productId', function(req, res, next) {
+    productRoutesControllerObjectInstance.getProduct(req, res, next);
+});
+
 router.get('/categories', function(req, res, next) {
     categoryRoutesControllerObjectInstance.getCategories(req, res, next)
 });

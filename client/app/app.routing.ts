@@ -7,11 +7,13 @@ import { UsersComponent } from "./components/users/users-component";
 import { OptionsComponent } from "./components/catalog/options/OptionsComponent";
 import { CategoriesComponent } from "./components/catalog/categories/CategoriesComponent";
 import { ManufacturersComponent } from "./components/catalog/manufacturers/ManufacturersComponent";
+import {ProductEditComponent} from "./components/catalog/products/directives/ProductEditComponent";
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent },
     { path: 'products', component: ProductComponent, canActivate: [AuthGuard] },
+    { path: 'products/:id', component: ProductEditComponent, canActivate: [AuthGuard]},
     { path: 'options', component: OptionsComponent, canActivate: [AuthGuard] },
     { path: 'categories', component: CategoriesComponent, canActivate: [AuthGuard] },
     { path: 'manufacturers', component: ManufacturersComponent, canActivate: [AuthGuard] },

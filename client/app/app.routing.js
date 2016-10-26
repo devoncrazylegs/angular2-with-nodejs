@@ -8,10 +8,12 @@ var users_component_1 = require("./components/users/users-component");
 var OptionsComponent_1 = require("./components/catalog/options/OptionsComponent");
 var CategoriesComponent_1 = require("./components/catalog/categories/CategoriesComponent");
 var ManufacturersComponent_1 = require("./components/catalog/manufacturers/ManufacturersComponent");
+var ProductEditComponent_1 = require("./components/catalog/products/directives/ProductEditComponent");
 var appRoutes = [
     { path: '', component: HomeComponent_1.HomeComponent, canActivate: [auth_guard_1.AuthGuard] },
     { path: 'login', component: LoginComponent_1.LoginComponent },
     { path: 'products', component: ProductComponent_1.ProductComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'products/:id', component: ProductEditComponent_1.ProductEditComponent, canActivate: [auth_guard_1.AuthGuard] },
     { path: 'options', component: OptionsComponent_1.OptionsComponent, canActivate: [auth_guard_1.AuthGuard] },
     { path: 'categories', component: CategoriesComponent_1.CategoriesComponent, canActivate: [auth_guard_1.AuthGuard] },
     { path: 'manufacturers', component: ManufacturersComponent_1.ManufacturersComponent, canActivate: [auth_guard_1.AuthGuard] },
