@@ -48,10 +48,20 @@ var ProductSearchComponent = (function () {
     };
     ProductSearchComponent.prototype.filtersChange = function (value, type) {
         if (type === 'category') {
-            this.productSearchPayload.category_id = value;
+            if (value == '') {
+                this.productSearchPayload.category_id = 0;
+            }
+            else {
+                this.productSearchPayload.category_id = value;
+            }
         }
         else if (type === 'manufacturer') {
-            this.productSearchPayload.manufacturer = value;
+            if (value == '') {
+                this.productSearchPayload.manufacturer = null;
+            }
+            else {
+                this.productSearchPayload.manufacturer = value;
+            }
         }
         this.getProducts();
     };

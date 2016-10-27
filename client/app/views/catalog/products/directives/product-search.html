@@ -17,8 +17,9 @@
                 <ul class="categories">
                     <div class='searchbar-wrapper'>
                         <h5>Categories</h5>
-                        <select name='categories' class='categories' [(ngModel)]="selectedCategory" (ngModelChange)="filtersChange($event, 'category')">
-                            <option *ngFor='let category of categories' [ngValue]="category.id">{{category.name}}</option>
+                        <select name='categories' class='categories' #t (change)="filtersChange(t.value, 'category')">
+                            <option value=''>-- please select --</option>
+                            <option *ngFor='let category of categories' [value]="category.id" [ngValue]="category.id">{{category.name}}</option>
                         </select>
                     </div>
                 </ul>
@@ -26,8 +27,9 @@
             <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
                 <div class='searchbar-wrapper'>
                     <h5>Manufacturer</h5>
-                    <select name='manufacturers' class='manufacturers' [(ngModel)]="selectedManufacturer" (ngModelChange)="filtersChange($event, 'manufacturer')">
-                        <option *ngFor='let manufacturer of manufacturers' [ngValue]="manufacturer.id">{{manufacturer.name}}</option>
+                    <select name='manufacturers' class='manufacturers' #m (change)="filtersChange(m.value, 'manufacturer')">
+                        <option value=''>-- please select --</option>
+                        <option *ngFor='let manufacturer of manufacturers' [value]="manufacturer.id" [ngValue]="manufacturer.id">{{manufacturer.name}}</option>
                     </select>
                 </div>
             </div>

@@ -3,6 +3,10 @@ import { Manufacturer } from "../../../../classes/Manufacturer";
 import { Category } from "../../../../classes/Category";
 import { CategoryService } from "../../../../services/category.service";
 import { ManufacturerService } from "../../../../services/manufacturer.service";
+import { HttpHelper } from "../../../../helpers/HttpHelper";
+import { userHelper } from "../../../../helpers/userHelper";
+import { Router } from "@angular/router";
+import {AuthService} from "../../../../services/auth.service";
 import {ProductService} from "../../../../services/product.service";
 
 @Component({
@@ -68,9 +72,17 @@ export class ProductSearchComponent {
 
     filtersChange(value, type) {
         if(type === 'category') {
-            this.productSearchPayload.category_id = value;
+            if(value == '') {
+                this.productSearchPayload.category_id = 0;
+            } else {
+                this.productSearchPayload.category_id = value;
+            }
         } else if(type === 'manufacturer') {
-            this.productSearchPayload.manufacturer = value;
+            if(value == '') {
+                this.productSearchPayload.manufacturer = null;
+            } else {
+                this.productSearchPayload.manufacturer = value;
+            }
         }
         this.getProducts();
     }

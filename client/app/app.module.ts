@@ -27,14 +27,14 @@ import { CategoriesComponent } from "./components/catalog/categories/CategoriesC
 import { ManufacturersComponent } from "./components/catalog/manufacturers/ManufacturersComponent";
 import { ProductSearchComponent } from "./components/catalog/products/directives/ProductSearchComponent";
 import { ProductListComponent } from "./components/catalog/products/directives/ProductListComponent";
+import { ProductEditComponent } from "./components/catalog/products/directives/ProductEditComponent";
 import { ProductService } from "./services/product.service";
 import { HttpInterceptor } from "./services/HttpInterceptor.service";
 import { CategoryService } from "./services/category.service";
 import { ManufacturerService } from "./services/manufacturer.service";
 import { AUTH_PROVIDERS } from "angular2-jwt";
-import {ProductEditComponent} from "./components/catalog/products/directives/ProductEditComponent";
-
-
+import { FileUploaderDirective } from "./components/directives/files/FileUploaderDirective";
+import {TabsDirective} from "./components/directives/tabs/TabsDirective";
 
 @NgModule({
     imports: [
@@ -58,7 +58,10 @@ import {ProductEditComponent} from "./components/catalog/products/directives/Pro
         UsersComponent,
         OptionsComponent,
         CategoriesComponent,
-        ManufacturersComponent
+        ManufacturersComponent,
+
+        FileUploaderDirective,
+        TabsDirective
     ],
     providers: [
         AuthService,
@@ -70,9 +73,14 @@ import {ProductEditComponent} from "./components/catalog/products/directives/Pro
         AUTH_PROVIDERS,
         {
             provide: HttpInterceptor,
-            useFactory: (backend: XHRBackend, defaultOptions: RequestOptions, authService: AuthService) =>
-                new HttpInterceptor(backend, defaultOptions, authService),
-            deps: [XHRBackend, RequestOptions, AuthService]
+            useFactory: (
+                backend: XHRBackend,
+                defaultOptions: RequestOptions,
+                authService: AuthService,
+                globalEventsManager: GlobalEventsManager
+            ) =>
+                new HttpInterceptor(backend, defaultOptions, authService, globalEventsManager),
+            deps: [XHRBackend, RequestOptions, AuthService, GlobalEventsManager]
         }
     ],
     bootstrap:    [ AppComponent ]

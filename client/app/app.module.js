@@ -31,12 +31,14 @@ var CategoriesComponent_1 = require("./components/catalog/categories/CategoriesC
 var ManufacturersComponent_1 = require("./components/catalog/manufacturers/ManufacturersComponent");
 var ProductSearchComponent_1 = require("./components/catalog/products/directives/ProductSearchComponent");
 var ProductListComponent_1 = require("./components/catalog/products/directives/ProductListComponent");
+var ProductEditComponent_1 = require("./components/catalog/products/directives/ProductEditComponent");
 var product_service_1 = require("./services/product.service");
 var HttpInterceptor_service_1 = require("./services/HttpInterceptor.service");
 var category_service_1 = require("./services/category.service");
 var manufacturer_service_1 = require("./services/manufacturer.service");
 var angular2_jwt_1 = require("angular2-jwt");
-var ProductEditComponent_1 = require("./components/catalog/products/directives/ProductEditComponent");
+var FileUploaderDirective_1 = require("./components/directives/files/FileUploaderDirective");
+var TabsDirective_1 = require("./components/directives/tabs/TabsDirective");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -63,7 +65,9 @@ var AppModule = (function () {
                 users_component_1.UsersComponent,
                 OptionsComponent_1.OptionsComponent,
                 CategoriesComponent_1.CategoriesComponent,
-                ManufacturersComponent_1.ManufacturersComponent
+                ManufacturersComponent_1.ManufacturersComponent,
+                FileUploaderDirective_1.FileUploaderDirective,
+                TabsDirective_1.TabsDirective
             ],
             providers: [
                 auth_service_1.AuthService,
@@ -75,10 +79,10 @@ var AppModule = (function () {
                 angular2_jwt_1.AUTH_PROVIDERS,
                 {
                     provide: HttpInterceptor_service_1.HttpInterceptor,
-                    useFactory: function (backend, defaultOptions, authService) {
-                        return new HttpInterceptor_service_1.HttpInterceptor(backend, defaultOptions, authService);
+                    useFactory: function (backend, defaultOptions, authService, globalEventsManager) {
+                        return new HttpInterceptor_service_1.HttpInterceptor(backend, defaultOptions, authService, globalEventsManager);
                     },
-                    deps: [http_1.XHRBackend, http_1.RequestOptions, auth_service_1.AuthService]
+                    deps: [http_1.XHRBackend, http_1.RequestOptions, auth_service_1.AuthService, globalEventsManager_service_1.GlobalEventsManager]
                 }
             ],
             bootstrap: [app_component_1.AppComponent]

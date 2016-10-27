@@ -11,17 +11,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var product_service_1 = require("../../../../services/product.service");
 var router_1 = require("@angular/router");
+var common_1 = require('@angular/common');
 var ProductEditComponent = (function () {
-    function ProductEditComponent(_productService, _activatedRoute) {
+    function ProductEditComponent(_productService, _activatedRoute, _location) {
         this._productService = _productService;
         this._activatedRoute = _activatedRoute;
+        this._location = _location;
+        this.tabs = [
+            { title: 'General', content: '', active: true },
+            { title: 'Images', content: '', active: false }
+        ];
     }
     ProductEditComponent.prototype.getProduct = function () {
         var self = this;
         this._productService.getProduct(this.id)
             .subscribe(function (product) {
-            self.product = product;
+            self.product = product[0];
         });
+    };
+    ProductEditComponent.prototype.back = function () {
+        this._location.back();
     };
     ProductEditComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -40,7 +49,7 @@ var ProductEditComponent = (function () {
             templateUrl: '/app/views/catalog/products/directives/product-edit.html',
             moduleId: module.id
         }), 
-        __metadata('design:paramtypes', [product_service_1.ProductService, router_1.ActivatedRoute])
+        __metadata('design:paramtypes', [product_service_1.ProductService, router_1.ActivatedRoute, common_1.Location])
     ], ProductEditComponent);
     return ProductEditComponent;
 }());

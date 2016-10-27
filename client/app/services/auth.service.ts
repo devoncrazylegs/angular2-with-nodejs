@@ -5,6 +5,7 @@ import { routes } from '../routes';
 import { HttpHelper } from "../helpers/HttpHelper";
 import { userHelper } from "../helpers/userHelper";
 import { Router } from "@angular/router";
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 @Injectable()
 export class AuthService {
@@ -14,7 +15,8 @@ export class AuthService {
 
     constructor(
         private _http: Http,
-        private _router: Router
+        private _router: Router,
+        private _toastr: ToastsManager
     ) {
         //Set token if saved in local storage
         this.user = userHelper.user;
@@ -37,9 +39,10 @@ export class AuthService {
     /**
      * Logout function
      */
-    logout(): void {
+    logout(message: Object): void {
         // clear token
         userHelper.removeUserFromStorage();
+        this._toastr.success(message.title, message.message);
         this._router.navigateByUrl('login');
     }
 }

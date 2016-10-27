@@ -1,14 +1,17 @@
-import {Injectable, Inject} from "@angular/core";
+import { Injectable, Inject } from "@angular/core";
 import { Http, ConnectionBackend, RequestOptions, Request, RequestOptionsArgs, Response } from "@angular/http";
 import { Observable } from "rxjs";
 import { AuthService } from "./auth.service";
+import { GlobalEventsManager } from "./globalEventsManager.service";
+import { messages } from "../helpers/messages";
 
 @Injectable()
 export class HttpInterceptor extends Http {
     constructor(
         backend: ConnectionBackend,
         defaultOptions: RequestOptions,
-        public _authService: AuthService
+        public _authService: AuthService,
+        public _globalEventsManager: GlobalEventsManager
     ) {
         super(backend, defaultOptions);
     }
@@ -27,7 +30,8 @@ export class HttpInterceptor extends Http {
             var JSONParsedRes = JSON.parse(data._body);
             if(JSONParsedRes.statusCode) {
                 if(JSONParsedRes.statusCode == 401) {
-                    this._authService.logout();
+                    this._globalEventsManager.showNavBar.emit(false);
+                    this._authService.logout({message: messages.messages.auth.tokenExpired, title:messages.titles.auth.tokenExpired});
                 }
             }
         });

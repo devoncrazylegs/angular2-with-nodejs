@@ -16,11 +16,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var auth_service_1 = require("./auth.service");
+var globalEventsManager_service_1 = require("./globalEventsManager.service");
+var messages_1 = require("../helpers/messages");
 var HttpInterceptor = (function (_super) {
     __extends(HttpInterceptor, _super);
-    function HttpInterceptor(backend, defaultOptions, _authService) {
+    function HttpInterceptor(backend, defaultOptions, _authService, _globalEventsManager) {
         _super.call(this, backend, defaultOptions);
         this._authService = _authService;
+        this._globalEventsManager = _globalEventsManager;
     }
     HttpInterceptor.prototype.request = function (url, options) {
         return _super.prototype.request.call(this, url, options).catch(function (res) {
@@ -36,7 +39,8 @@ var HttpInterceptor = (function (_super) {
             var JSONParsedRes = JSON.parse(data._body);
             if (JSONParsedRes.statusCode) {
                 if (JSONParsedRes.statusCode == 401) {
-                    _this._authService.logout();
+                    _this._globalEventsManager.showNavBar.emit(false);
+                    _this._authService.logout({ message: messages_1.messages.messages.auth.tokenExpired, title: messages_1.messages.titles.auth.tokenExpired });
                 }
             }
         });
@@ -47,7 +51,7 @@ var HttpInterceptor = (function (_super) {
     };
     HttpInterceptor = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.ConnectionBackend, http_1.RequestOptions, auth_service_1.AuthService])
+        __metadata('design:paramtypes', [http_1.ConnectionBackend, http_1.RequestOptions, auth_service_1.AuthService, globalEventsManager_service_1.GlobalEventsManager])
     ], HttpInterceptor);
     return HttpInterceptor;
 }(http_1.Http));

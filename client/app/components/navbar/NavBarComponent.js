@@ -13,6 +13,7 @@ var globalEventsManager_service_1 = require("../../services/globalEventsManager.
 var auth_service_1 = require("../../services/auth.service");
 var router_1 = require("@angular/router");
 var userHelper_1 = require("../../helpers/userHelper");
+var messages_1 = require("../../helpers/messages");
 var NavBarComponent = (function () {
     function NavBarComponent(_globalEventsManager, _authService, _router) {
         var _this = this;
@@ -29,7 +30,7 @@ var NavBarComponent = (function () {
         });
     }
     NavBarComponent.prototype.logout = function () {
-        this._authService.logout();
+        this._authService.logout({ message: messages_1.messages.messages.logout.success, title: messages_1.messages.titles.logout.success });
         this._globalEventsManager.showNavBar.emit(false);
         this._router.navigate(['login']);
     };

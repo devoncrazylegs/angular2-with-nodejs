@@ -14,10 +14,12 @@ var routes_1 = require('../routes');
 var HttpHelper_1 = require("../helpers/HttpHelper");
 var userHelper_1 = require("../helpers/userHelper");
 var router_1 = require("@angular/router");
+var ng2_toastr_1 = require('ng2-toastr/ng2-toastr');
 var AuthService = (function () {
-    function AuthService(_http, _router) {
+    function AuthService(_http, _router, _toastr) {
         this._http = _http;
         this._router = _router;
+        this._toastr = _toastr;
         this.isLoggedIn = new core_1.EventEmitter();
         //Set token if saved in local storage
         this.user = userHelper_1.userHelper.user;
@@ -36,14 +38,15 @@ var AuthService = (function () {
     /**
      * Logout function
      */
-    AuthService.prototype.logout = function () {
+    AuthService.prototype.logout = function (message) {
         // clear token
         userHelper_1.userHelper.removeUserFromStorage();
+        this._toastr.success(message.title, message.message);
         this._router.navigateByUrl('login');
     };
     AuthService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http, router_1.Router])
+        __metadata('design:paramtypes', [http_1.Http, router_1.Router, ng2_toastr_1.ToastsManager])
     ], AuthService);
     return AuthService;
 }());

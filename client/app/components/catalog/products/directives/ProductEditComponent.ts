@@ -3,6 +3,7 @@ import { Product } from "../../../../classes/Product";
 import { ProductService } from "../../../../services/product.service";
 import { Subscription } from "rxjs";
 import { ActivatedRoute } from "@angular/router";
+import { Location } from '@angular/common';
 
 @Component({
     selector: 'product-edit',
@@ -13,11 +14,16 @@ import { ActivatedRoute } from "@angular/router";
 export class ProductEditComponent {
     public product:Product;
     private _subscription: Subscription;
-    id: number;
+    public id: number;
+    public tabs:Array<any> = [
+        {title: 'General', content: '', active: true},
+        {title: 'Images', content: '', active: false}
+    ];
 
     constructor(
         private _productService: ProductService,
-        private _activatedRoute: ActivatedRoute
+        private _activatedRoute: ActivatedRoute,
+        private _location: Location
     ) {
 
     }
@@ -27,9 +33,13 @@ export class ProductEditComponent {
         this._productService.getProduct(this.id)
             .subscribe(
                 (product) => {
-                    self.product = product;
+                    self.product = product[0];
                 }
             );
+    }
+
+    back() {
+        this._location.back();
     }
 
     ngOnInit() {
