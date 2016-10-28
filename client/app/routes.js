@@ -7,6 +7,7 @@ exports.routes = {
         products: '/api/product',
         categories: '/api/categories',
         manufacturers: '/api/manufacturer',
+        files: '/api/upload'
     }
 };
 //# sourceMappingURL=routes.js.map

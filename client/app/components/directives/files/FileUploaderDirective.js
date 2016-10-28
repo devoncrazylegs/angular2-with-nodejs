@@ -9,40 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var routes_1 = require("../../../routes");
+var files_service_1 = require("../../../services/files.service");
 var FileUploaderDirective = (function () {
-    function FileUploaderDirective() {
-        this.filesToUpload = [];
+    function FileUploaderDirective(_filesService) {
+        this._filesService = _filesService;
+        this._filesToUpload = [];
     }
+    FileUploaderDirective.prototype.fileChangeEvents = function (fileInput) {
+        this._filesToUpload = fileInput.target.files;
+    };
     FileUploaderDirective.prototype.upload = function () {
-        this.makeFileRequest('url', [], this.filesToUpload)
+        var formData = new FormData();
+        for (var i = 0; i < this._filesToUpload; i++) {
+            formData.append('uploads[]', this._filesToUpload[i], this._filesToUpload[i].name);
+        }
+        this._filesService.sendFile(routes_1.routes.api.files, [], formData)
             .then(function (result) {
             console.log(result);
         }, function (error) {
             console.log(error);
-        });
-    };
-    FileUploaderDirective.prototype.fileChangeEvents = function (fileInput) {
-        this.filesToUpload = fileInput.target.files;
-    };
-    FileUploaderDirective.prototype.makeFileRequest = function (url, params, files) {
-        return new Promise(function (resolve, reject) {
-            var formData = new FormData();
-            var xhr = new XMLHttpRequest();
-            for (var i = 0; i < files.length; i++) {
-                formData.append("uploads[]", files[i], files[i].name);
-            }
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4) {
-                    if (xhr.status == 200) {
-                        resolve(JSON.parse(xhr.response));
-                    }
-                    else {
-                        reject(xhr.response);
-                    }
-                }
-            };
-            xhr.open("POST", url, true);
-            xhr.send(formData);
         });
     };
     FileUploaderDirective = __decorate([
@@ -51,7 +37,7 @@ var FileUploaderDirective = (function () {
             moduleId: module.id,
             templateUrl: '/app/views/files/file-upload.html',
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [files_service_1.FilesService])
     ], FileUploaderDirective);
     return FileUploaderDirective;
 }());

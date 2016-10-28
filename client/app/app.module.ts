@@ -35,6 +35,7 @@ import { ManufacturerService } from "./services/manufacturer.service";
 import { AUTH_PROVIDERS } from "angular2-jwt";
 import { FileUploaderDirective } from "./components/directives/files/FileUploaderDirective";
 import {TabsDirective} from "./components/directives/tabs/TabsDirective";
+import {FilesService} from "./services/files.service";
 
 @NgModule({
     imports: [

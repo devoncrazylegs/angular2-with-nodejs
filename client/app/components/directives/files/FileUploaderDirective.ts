@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { routes } from "../../../routes";
+import { FilesService } from "../../../services/files.service";
 
 @Component({
     selector    : 'file-upload',
@@ -7,43 +9,27 @@ import { Component } from "@angular/core";
 })
 
 export class FileUploaderDirective {
-    private filesToUpload: Array<File>;
+    private _filesToUpload: Array<File> = [];
 
-    constructor() {
-        this.filesToUpload = [];
+    constructor(private _filesService: FilesService) {
+
+    }
+
+    fileChangeEvents(fileInput: any) {
+        this._filesToUpload = <Array<File>> fileInput.target.files;
     }
 
     upload() {
-        this.makeFileRequest('url', [], this.filesToUpload)
+        let formData: any = new FormData();
+        for(var i = 0; i < this._filesToUpload; i++) {
+            formData.append('uploads[]', this._filesToUpload[i], this._filesToUpload[i].name)
+        }
+
+        this._filesService.sendFile(routes.api.files, [], formData)
             .then((result) => {
                 console.log(result);
             }, (error) => {
                 console.log(error);
             });
-    }
-
-    fileChangeEvents(fileInput: any) {
-        this.filesToUpload = <Array<File>> fileInput.target.files;
-    }
-
-    makeFileRequest(url: String, params: Array<string>, files: Array<File>) {
-        return new Promise((resolve, reject) => {
-            var formData: any = new FormData();
-            var xhr = new XMLHttpRequest();
-            for(var i = 0; i < files.length; i++) {
-                formData.append("uploads[]", files[i], files[i].name);
-            }
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4) {
-                    if (xhr.status == 200) {
-                        resolve(JSON.parse(xhr.response));
-                    } else {
-                        reject(xhr.response);
-                    }
-                }
-            };
-            xhr.open("POST", url, true);
-            xhr.send(formData);
-        });
     }
 }

@@ -11,6 +11,9 @@ var categoryRoutesControllerObjectInstance = new categoryRoutesControllerObject(
 var manufacturerRoutesControllerObject = require('../controllers/api/catalog/Manufacturer');
 var manufacturerRoutesControllerObjectInstance = new manufacturerRoutesControllerObject();
 
+var filesRoutesControllerObject = require('../controllers/api/files/Files');
+var filesRoutesControllerObjectInstance = new filesRoutesControllerObject();
+
 router.get('/product', function(req, res, next) {
     productRoutesControllerObjectInstance.getProducts(req, res, next);
 });
@@ -25,6 +28,10 @@ router.get('/categories', function(req, res, next) {
 
 router.get('/manufacturer', function(req, res, next) {
     manufacturerRoutesControllerObjectInstance.getManufacturers(req, res, next)
+});
+
+router.post('/upload', function(req, res, next) {
+    filesRoutesControllerObjectInstance.upload(req, res, next);
 });
 
 /*router.get('/product/:productId', function(req, res, next) {
