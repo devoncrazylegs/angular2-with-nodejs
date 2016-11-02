@@ -11,7 +11,9 @@ import { FilesService } from "../../../services/files.service";
 export class FileUploaderDirective {
     private _filesToUpload: Array<File> = [];
 
-    constructor(private _filesService: FilesService) {
+    constructor(
+        private _filesService: FilesService
+    ) {
 
     }
 
@@ -20,13 +22,8 @@ export class FileUploaderDirective {
     }
 
     upload() {
-        let formData: any = new FormData();
-        for(var i = 0; i < this._filesToUpload; i++) {
-            formData.append('uploads[]', this._filesToUpload[i], this._filesToUpload[i].name)
-        }
-
-        this._filesService.sendFile(routes.api.files, [], formData)
-            .then((result) => {
+        this._filesService.sendFile(routes.api.files, [], this._filesToUpload)
+            .subscribe((result) => {
                 console.log(result);
             }, (error) => {
                 console.log(error);

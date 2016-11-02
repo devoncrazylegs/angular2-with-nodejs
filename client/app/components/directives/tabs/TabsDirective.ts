@@ -1,4 +1,4 @@
-import {Component, Input, AfterContentInit } from "@angular/core";
+import { Component, Input, AfterContentInit } from "@angular/core";
 
 @Component({
     selector    : 'tabs',

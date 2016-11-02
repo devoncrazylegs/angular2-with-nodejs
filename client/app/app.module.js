@@ -20,8 +20,6 @@ var HomeComponent_1 = require("./components/home/HomeComponent");
 var LoginComponent_1 = require("./components/login/LoginComponent");
 var NavBarComponent_1 = require("./components/navbar/NavBarComponent");
 var ProductComponent_1 = require("./components/catalog/products/ProductComponent");
-var globalEventsManager_service_1 = require("./services/globalEventsManager.service");
-var auth_service_1 = require("./services/auth.service");
 var ng2_toastr_1 = require('ng2-toastr/ng2-toastr');
 var left_nav_component_1 = require("./components/left-nav/left-nav-component");
 var settings_component_1 = require("./components/settings/settings-component");
@@ -32,10 +30,13 @@ var ManufacturersComponent_1 = require("./components/catalog/manufacturers/Manuf
 var ProductSearchComponent_1 = require("./components/catalog/products/directives/ProductSearchComponent");
 var ProductListComponent_1 = require("./components/catalog/products/directives/ProductListComponent");
 var ProductEditComponent_1 = require("./components/catalog/products/directives/ProductEditComponent");
-var product_service_1 = require("./services/product.service");
 var HttpInterceptor_service_1 = require("./services/HttpInterceptor.service");
+var auth_service_1 = require("./services/auth.service");
 var category_service_1 = require("./services/category.service");
+var files_service_1 = require("./services/files.service");
+var globalEventsManager_service_1 = require("./services/globalEventsManager.service");
 var manufacturer_service_1 = require("./services/manufacturer.service");
+var product_service_1 = require("./services/product.service");
 var angular2_jwt_1 = require("angular2-jwt");
 var FileUploaderDirective_1 = require("./components/directives/files/FileUploaderDirective");
 var TabsDirective_1 = require("./components/directives/tabs/TabsDirective");
@@ -70,12 +71,13 @@ var AppModule = (function () {
                 TabsDirective_1.TabsDirective
             ],
             providers: [
-                auth_service_1.AuthService,
                 auth_guard_1.AuthGuard,
-                globalEventsManager_service_1.GlobalEventsManager,
-                product_service_1.ProductService,
+                auth_service_1.AuthService,
                 category_service_1.CategoryService,
+                files_service_1.FilesService,
+                globalEventsManager_service_1.GlobalEventsManager,
                 manufacturer_service_1.ManufacturerService,
+                product_service_1.ProductService,
                 angular2_jwt_1.AUTH_PROVIDERS,
                 {
                     provide: HttpInterceptor_service_1.HttpInterceptor,

@@ -1,5 +1,5 @@
 import { Injectable, EventEmitter } from "@angular/core";
-import { Http, Headers, RequestOptions, Response }  from "@angular/http";
+import { Http, RequestOptions }  from "@angular/http";
 import { Observable } from "rxjs";
 import { routes } from '../routes';
 import { HttpHelper } from "../helpers/HttpHelper";

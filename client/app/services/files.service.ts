@@ -1,28 +1,30 @@
-import {Injectable} from "@angular/core";
-import {Observable} from "rxjs";
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
+import { HttpInterceptor } from "./HttpInterceptor.service";
+import { HttpHelper } from "../helpers/HttpHelper";
+import { RequestOptions } from "@angular/http";
 
-@Injectable
+@Injectable()
 export class FilesService {
 
-    sendFile(url: String, vars: Array<String>, files: FormData): Promise<any> {
-        return new Promise((resolve, reject) => {
-            let xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if(xhr.readyState == 4) {
-                    if (xhr.readyState == 4) {
-                        if (xhr.status == 200) {
-                            resolve(JSON.parse(xhr.response));
-                        } else {
-                            reject(xhr.response);
-                        }
-                    }
-                }
-            };
-            xhr.open("POST", url, true);
-            xhr.send(files);
-        });
+    constructor(private _http: HttpInterceptor) {
+
     }
 
+    sendFile(url: String, vars: Array<String>, files: File[]):Observable<any> {
+        let headers = HttpHelper.createAuthorizationHeader(true);
+        let options = new RequestOptions({ headers: headers });
+        let files = files;
+        const formData = new FormData();
 
+        for(var i = 0; i < files.length; i++){
+            formData.append(files[i].name, files[i]);
+        }
 
+        return this._http
+            .post(url, formData)
+            .map((res) => {
+                return res.json();
+            });
+    }
 }

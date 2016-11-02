@@ -30,7 +30,7 @@ export class ProductService {
      * Get all products
      * return Observable
      */
-    getProducts(filters): Observable<Product[]> {
+    getProducts(filters:Object): Observable<Product[]> {
         let headers = HttpHelper.createAuthorizationHeader(true);
         let options = new RequestOptions({ headers: headers });
         return this._http
