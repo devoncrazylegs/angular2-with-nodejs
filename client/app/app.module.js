@@ -40,6 +40,7 @@ var product_service_1 = require("./services/product.service");
 var angular2_jwt_1 = require("angular2-jwt");
 var FileUploaderDirective_1 = require("./components/directives/files/FileUploaderDirective");
 var TabsDirective_1 = require("./components/directives/tabs/TabsDirective");
+var tabs_service_1 = require("./services/tabs.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -78,6 +79,7 @@ var AppModule = (function () {
                 globalEventsManager_service_1.GlobalEventsManager,
                 manufacturer_service_1.ManufacturerService,
                 product_service_1.ProductService,
+                tabs_service_1.TabsService,
                 angular2_jwt_1.AUTH_PROVIDERS,
                 {
                     provide: HttpInterceptor_service_1.HttpInterceptor,

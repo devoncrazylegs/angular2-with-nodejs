@@ -20,6 +20,7 @@ export var messages = {
             },
 
             login: {
+                success: 'You have successfully logged in',
                 serverError: 'There is an internal server error. Please contact an administrator',
                 incorrectCreds: 'Your login details are incorrect'
             },

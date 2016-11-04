@@ -9,11 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var tabs_service_1 = require("../../../services/tabs.service");
 var TabsDirective = (function () {
-    function TabsDirective() {
+    function TabsDirective(_tabsService) {
+        this._tabsService = _tabsService;
     }
     TabsDirective.prototype.selectTab = function (tab) {
         this.selectedTab = tab;
+        this._tabsService.emitTab(tab);
     };
     TabsDirective.prototype.ngAfterContentInit = function () {
         this.selectedTab = this.tabs[0];
@@ -28,7 +31,7 @@ var TabsDirective = (function () {
             moduleId: module.id,
             templateUrl: '/app/views/directives/tabs/tabs-view.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [tabs_service_1.TabsService])
     ], TabsDirective);
     return TabsDirective;
 }());

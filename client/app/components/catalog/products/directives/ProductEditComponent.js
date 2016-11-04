@@ -12,15 +12,31 @@ var core_1 = require("@angular/core");
 var product_service_1 = require("../../../../services/product.service");
 var router_1 = require("@angular/router");
 var common_1 = require('@angular/common');
+var tabs_service_1 = require("../../../../services/tabs.service");
 var ProductEditComponent = (function () {
-    function ProductEditComponent(_productService, _activatedRoute, _location) {
+    function ProductEditComponent(_productService, _activatedRoute, _location, _tabsService) {
+        var _this = this;
         this._productService = _productService;
         this._activatedRoute = _activatedRoute;
         this._location = _location;
+        this._tabsService = _tabsService;
         this.tabs = [
-            { title: 'General', content: '', active: true },
-            { title: 'Images', content: '', active: false }
+            { title: 'General', content: '', active: true, linked: 'general' },
+            { title: 'Images', content: '', active: false, linked: 'images' },
+            { title: 'Categories', content: '', active: false, linked: 'categories' },
+            { title: 'Manufacturers', content: '', active: false, linked: 'manufacturers' }
         ];
+        this.selectedTab = this.tabs[0];
+        this._tabsService.emitter
+            .subscribe(function (tab) {
+            _this.tabs.filter(function (arrayItem) {
+                if (arrayItem.title === tab.title) {
+                    _this.selectedTab = arrayItem;
+                }
+            });
+        }, function () {
+        }, function () {
+        });
     }
     ProductEditComponent.prototype.getProduct = function () {
         var self = this;
@@ -49,7 +65,7 @@ var ProductEditComponent = (function () {
             templateUrl: '/app/views/catalog/products/directives/product-edit.html',
             moduleId: module.id
         }), 
-        __metadata('design:paramtypes', [product_service_1.ProductService, router_1.ActivatedRoute, common_1.Location])
+        __metadata('design:paramtypes', [product_service_1.ProductService, router_1.ActivatedRoute, common_1.Location, tabs_service_1.TabsService])
     ], ProductEditComponent);
     return ProductEditComponent;
 }());

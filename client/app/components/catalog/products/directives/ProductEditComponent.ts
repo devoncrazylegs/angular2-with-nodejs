@@ -4,6 +4,7 @@ import { ProductService } from "../../../../services/product.service";
 import { Subscription } from "rxjs";
 import { ActivatedRoute } from "@angular/router";
 import { Location } from '@angular/common';
+import {TabsService} from "../../../../services/tabs.service";
 
 @Component({
     selector: 'product-edit',
@@ -16,16 +17,31 @@ export class ProductEditComponent {
     private _subscription: Subscription;
     public id: number;
     public tabs:Array<any> = [
-        {title: 'General', content: '', active: true},
-        {title: 'Images', content: '', active: false}
+        {title: 'General', content: '', active: true, linked: 'general'},
+        {title: 'Images', content: '', active: false, linked: 'images'},
+        {title: 'Categories', content: '', active: false, linked: 'categories'},
+        {title: 'Manufacturers', content: '', active: false, linked: 'manufacturers'}
     ];
+    private selectedTab: Object = this.tabs[0];
 
-    constructor(
+        constructor(
         private _productService: ProductService,
         private _activatedRoute: ActivatedRoute,
-        private _location: Location
+        private _location: Location,
+        private _tabsService: TabsService
     ) {
+        this._tabsService.emitter
+            .subscribe((tab) => {
+                this.tabs.filter((arrayItem) => {
+                    if(arrayItem.title === tab.title) {
+                        this.selectedTab = arrayItem;
+                    }
+                });
+            }, () => {
 
+            }, () => {
+
+            });
     }
 
     getProduct() {

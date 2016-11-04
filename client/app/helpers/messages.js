@@ -18,6 +18,7 @@ exports.messages = {
             tokenExpired: 'Your token has expired therefore you have been logged out. Please login again to continue'
         },
         login: {
+            success: 'You have successfully logged in',
             serverError: 'There is an internal server error. Please contact an administrator',
             incorrectCreds: 'Your login details are incorrect'
         },

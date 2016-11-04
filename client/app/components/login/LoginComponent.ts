@@ -43,6 +43,7 @@ export class LoginComponent {
                     if(userResponse.body && userResponse.body.token) {
                         userHelper.user = userResponse.body;
                         this._globalEventsManager.showNavBar.emit(true);
+                        this._toastr.success(messages.messages.login.success, messages.titles.login.success);
                         this._router.navigate(['/']);
                     } else {
                         this.showSpinner = false;

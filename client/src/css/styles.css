@@ -10,6 +10,9 @@
 li, a, p, span, button {
   font-family: "GillSans", sans-serif; }
 
+.glyphicon {
+  top: 2px !important; }
+
 ul {
   margin: 0px;
   padding: 0px;
@@ -65,13 +68,26 @@ nav#top-bar {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0 40px; }
+  box-sizing: border-box; }
   nav#top-bar ul {
     display: inline-block;
     width: 100%; }
   nav#top-bar a {
-    float: right; }
+    float: right;
+    line-height: 40px;
+    height: 40px;
+    border-left: 1px solid #e0e0e0;
+    cursor: pointer;
+    color: #848484;
+    padding: 0px 14px; }
+  nav#top-bar a.logout {
+    padding: 0 30px 0 20px; }
+  nav#top-bar .notifications {
+    margin-top: 9px; }
+  nav#top-bar a.logout:hover {
+    background-color: #ddd; }
+  nav#top-bar a.logout i {
+    padding: 0px 5px; }
 
 .form-group {
   display: inline-block;
@@ -82,68 +98,51 @@ nav#top-bar {
   background-image: url("../img/default.gif");
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100px; }
+  min-height: 100px;
+  display: inline-block; }
+
+.login-logo-wrap {
+  display: inline-block;
+  background-color: #b00930;
+  width: 100%;
+  min-height: 200px;
+  text-align: center; }
+  .login-logo-wrap .login-logo {
+    display: inline-block;
+    width: 100%;
+    clear: both; }
+    .login-logo-wrap .login-logo img {
+      display: block;
+      margin: 0 auto;
+      background-color: #b00930;
+      padding: 20px; }
 
 .form-signin {
   max-width: 330px;
   padding: 15px;
-  margin: 0 auto;
+  margin: 20px auto;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box; }
-
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0; }
-
-.form-signin .form-control {
-  position: relative;
-  height: auto;
-  font-size: 16px; }
-
-#left-nav {
-  background-color: #b00930;
-  float: left;
-  width: 100%; }
-  #left-nav ul {
-    width: 100%;
-    display: inline-block; }
-  #left-nav li {
+  .form-signin input[type="email"] {
+    margin-bottom: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
+  .form-signin input, .form-signin button {
+    clear: both;
     display: inline-block;
-    width: 100%;
-    border-bottom: 1px solid;
-    border-color: #9a0000;
-    cursor: pointer; }
-  #left-nav li i {
-    display: inline-block;
-    width: 20px;
-    margin-left: 10px;
-    color: #fff;
-    margin-top: 5px; }
-  #left-nav li a {
-    padding: 10px 20px 10px 10px;
-    display: inline-block;
-    color: #fff;
-    font-size: 13px;
-    text-decoration: none;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box; }
-  #left-nav ul li:first-child {
-    border-top: 1px solid;
-    border-color: #9a0000; }
-  #left-nav li:hover {
-    background-color: #9a0000; }
-  #left-nav ul.lower-menu {
-    display: none;
-    background-color: #ccc; }
-  #left-nav ul.lower-menu li {
-    border-color: #ededed; }
-  #left-nav .parent-item:hover .lower-menu {
-    display: block; }
+    width: 100%; }
+  .form-signin button {
+    background-color: #b00930; }
+  .form-signin button:hover, .form-signin button:active, .form-signin button:visited {
+    background-color: #b00930; }
+  .form-signin .form-control {
+    position: relative;
+    height: auto;
+    font-size: 16px; }
+  .form-signin h2 {
+    font-size: 14px; }
 
 left-nav {
   float: left;
@@ -153,6 +152,48 @@ left-nav {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block; }
+  left-nav #left-nav {
+    background-color: #b00930;
+    float: left;
+    height: 100%;
+    width: 100%; }
+    left-nav #left-nav ul {
+      width: 100%;
+      display: inline-block; }
+    left-nav #left-nav li {
+      display: inline-block;
+      width: 100%;
+      border-bottom: 1px solid;
+      border-color: #9a0000;
+      cursor: pointer; }
+    left-nav #left-nav li i {
+      display: inline-block;
+      width: 20px;
+      margin-left: 10px;
+      color: #fff;
+      margin-top: 5px; }
+    left-nav #left-nav li a {
+      padding: 10px 20px 10px 10px;
+      display: inline-block;
+      color: #fff;
+      font-size: 13px;
+      text-decoration: none;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box; }
+    left-nav #left-nav ul li:first-child {
+      border-top: 1px solid;
+      border-color: #9a0000; }
+    left-nav #left-nav li:hover {
+      background-color: #9a0000; }
+    left-nav #left-nav ul.lower-menu {
+      display: none;
+      background-color: #ccc; }
+    left-nav #left-nav ul.lower-menu li {
+      border-color: #ededed; }
+    left-nav #left-nav .parent-item:hover .lower-menu {
+      display: block; }
 
 product-component, product-edit {
   float: left;
@@ -236,6 +277,8 @@ product-component, product-edit {
   padding-top: 9px;
   font-weight: normal;
   text-align: right; }
+.product-edit-panel textarea {
+  height: 250px !important; }
 .product-edit-panel input[type='checkbox'] {
   float: left;
   max-width: 30px;
@@ -244,6 +287,17 @@ product-component, product-edit {
   cursor: pointer; }
 .product-edit-panel .images-wrapper img {
   max-width: 200px; }
+.product-edit-panel .tab-pane-wrapper {
+  position: relative; }
+.product-edit-panel .tab-pane {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 1000px;
+  background-color: white;
+  z-index: -10; }
+.product-edit-panel .tab-pane.active {
+  z-index: 10; }
 
 tabs {
   width: 100%;

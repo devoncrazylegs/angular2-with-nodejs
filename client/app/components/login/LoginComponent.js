@@ -42,6 +42,7 @@ var LoginComponent = (function () {
             if (userResponse.body && userResponse.body.token) {
                 userHelper_1.userHelper.user = userResponse.body;
                 _this._globalEventsManager.showNavBar.emit(true);
+                _this._toastr.success(messages_1.messages.messages.login.success, messages_1.messages.titles.login.success);
                 _this._router.navigate(['/']);
             }
             else {

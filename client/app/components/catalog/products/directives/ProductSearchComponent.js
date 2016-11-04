@@ -23,6 +23,7 @@ var ProductSearchComponent = (function () {
         this.selectedCategory = null;
         this.categories = [];
         this.APIError = false;
+        this.filterList = [];
         this.loaded = {
             categories: false,
             manufacturers: false

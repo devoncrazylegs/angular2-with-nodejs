@@ -21,6 +21,7 @@ export class ProductSearchComponent {
     selectedCategory:Category = null;
     categories:Category[] = [];
     APIError = false;
+    filterList: Array = [];
     loaded = {
         categories: false,
         manufacturers: false
@@ -66,8 +67,6 @@ export class ProductSearchComponent {
                 error    => {this.APIError = error},
                 ()       => {}
             );
-
-
     }
 
     filtersChange(value, type) {

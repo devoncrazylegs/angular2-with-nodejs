@@ -40,6 +40,7 @@ import { AUTH_PROVIDERS } from "angular2-jwt";
 
 import { FileUploaderDirective } from "./components/directives/files/FileUploaderDirective";
 import { TabsDirective } from "./components/directives/tabs/TabsDirective";
+import {TabsService} from "./services/tabs.service";
 
 
 
@@ -78,6 +79,7 @@ import { TabsDirective } from "./components/directives/tabs/TabsDirective";
         GlobalEventsManager,
         ManufacturerService,
         ProductService,
+        TabsService,
         AUTH_PROVIDERS,
         {
             provide: HttpInterceptor,
