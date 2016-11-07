@@ -41,7 +41,7 @@ var AuthService = (function () {
     AuthService.prototype.logout = function (message) {
         // clear token
         userHelper_1.userHelper.removeUserFromStorage();
-        this._toastr.success(message.title, message.message);
+        this._toastr.success(message.message, message.title);
         this._router.navigateByUrl('login');
     };
     AuthService = __decorate([

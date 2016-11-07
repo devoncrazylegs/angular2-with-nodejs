@@ -4,7 +4,8 @@ import { ProductService } from "../../../../services/product.service";
 import { Subscription } from "rxjs";
 import { ActivatedRoute } from "@angular/router";
 import { Location } from '@angular/common';
-import {TabsService} from "../../../../services/tabs.service";
+import { TabsService } from "../../../../services/tabs.service";
+import { CategoryService } from "../../../../services/category.service";
 
 @Component({
     selector: 'product-edit',
@@ -14,6 +15,9 @@ import {TabsService} from "../../../../services/tabs.service";
 
 export class ProductEditComponent {
     public product:Product;
+    private categories = {};
+    private allocatedCategories = [];
+    private searchTerm = '';
     private _subscription: Subscription;
     public id: number;
     public tabs:Array<any> = [
@@ -26,6 +30,7 @@ export class ProductEditComponent {
 
         constructor(
         private _productService: ProductService,
+        private _categoryService: CategoryService,
         private _activatedRoute: ActivatedRoute,
         private _location: Location,
         private _tabsService: TabsService
@@ -42,6 +47,7 @@ export class ProductEditComponent {
             }, () => {
 
             });
+
     }
 
     getProduct() {
@@ -54,6 +60,40 @@ export class ProductEditComponent {
             );
     }
 
+    getCategories(filters) {
+        var self = this;
+        this._categoryService.getCategories(filters)
+            .subscribe((categories) => {
+                self.categories = categories;
+            });
+
+    }
+
+    getAllocatedCategories() {
+        var self = this;
+        this._categoryService.getCategories({
+            product: self.id
+        }).subscribe((categories) => {
+            self.allocatedCategories = categories;
+        });
+    }
+
+    searchCategories() {
+        var self = this;
+        this.getCategories({
+            'search_term' : self.searchTerm
+        });
+    }
+
+    alreadyAllocated(category) {
+        for(var i = 0; i < this.allocatedCategories; i++) {
+            if(this.allocatedCategories[i]['id'] == category.id) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     back() {
         this._location.back();
     }
@@ -64,6 +104,8 @@ export class ProductEditComponent {
             self.id = +params['id'];
             this.getProduct();
         });
+        this.getCategories({});
+        this.getAllocatedCategories();
     }
 
     ngOnDestroy() {

@@ -30,6 +30,7 @@ var ManufacturersComponent_1 = require("./components/catalog/manufacturers/Manuf
 var ProductSearchComponent_1 = require("./components/catalog/products/directives/ProductSearchComponent");
 var ProductListComponent_1 = require("./components/catalog/products/directives/ProductListComponent");
 var ProductEditComponent_1 = require("./components/catalog/products/directives/ProductEditComponent");
+var ShopsComponent_1 = require("./components/catalog/shops/ShopsComponent");
 var HttpInterceptor_service_1 = require("./services/HttpInterceptor.service");
 var auth_service_1 = require("./services/auth.service");
 var category_service_1 = require("./services/category.service");
@@ -37,10 +38,10 @@ var files_service_1 = require("./services/files.service");
 var globalEventsManager_service_1 = require("./services/globalEventsManager.service");
 var manufacturer_service_1 = require("./services/manufacturer.service");
 var product_service_1 = require("./services/product.service");
+var tabs_service_1 = require("./services/tabs.service");
 var angular2_jwt_1 = require("angular2-jwt");
 var FileUploaderDirective_1 = require("./components/directives/files/FileUploaderDirective");
 var TabsDirective_1 = require("./components/directives/tabs/TabsDirective");
-var tabs_service_1 = require("./services/tabs.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -68,6 +69,7 @@ var AppModule = (function () {
                 OptionsComponent_1.OptionsComponent,
                 CategoriesComponent_1.CategoriesComponent,
                 ManufacturersComponent_1.ManufacturersComponent,
+                ShopsComponent_1.ShopsComponent,
                 FileUploaderDirective_1.FileUploaderDirective,
                 TabsDirective_1.TabsDirective
             ],

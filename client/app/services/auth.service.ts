@@ -42,7 +42,7 @@ export class AuthService {
     logout(message: Object): void {
         // clear token
         userHelper.removeUserFromStorage();
-        this._toastr.success(message.title, message.message);
+        this._toastr.success(message.message, message.title);
         this._router.navigateByUrl('login');
     }
 }

@@ -11,9 +11,6 @@
 li, a, p, span, button {
   font-family: "GillSans", sans-serif; }
 
-.glyphicon {
-  top: 2px !important; }
-
 ul {
   margin: 0px;
   padding: 0px;
@@ -38,8 +35,6 @@ button {
   float: right;
   border: none;
   font-family: "GillSans", sans-serif !important; }
-  button i {
-    margin-right: 7px; }
 
 .no-margin {
   margin: 0px !important; }
@@ -221,6 +216,12 @@ product-component, product-edit {
   margin-bottom: 20px;
   display: inline-block; }
 
+.product-edit-header button:last-child {
+  margin-right: 5px; }
+
+.product-edit-header button:first-child {
+  background-color: #b5b5b5; }
+
 .product-search h5 {
   border-bottom: 1px solid #dddddd;
   padding-bottom: 10px;
@@ -262,6 +263,11 @@ product-component, product-edit {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box; }
+    .product-list .product-table .product button {
+      margin-top: 18px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block; }
   .product-list .product img {
     max-height: 50px;
     display: block;
@@ -294,7 +300,10 @@ product-component, product-edit {
   max-width: 200px; }
 
 .product-edit-panel .tab-pane-wrapper {
-  position: relative; }
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-height: 500px; }
 
 .product-edit-panel .tab-pane {
   position: absolute;
@@ -302,14 +311,39 @@ product-component, product-edit {
   left: 0px;
   height: 1000px;
   background-color: white;
-  z-index: -10; }
+  z-index: 10;
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: 10px;
+  -moz-box-sizing: 10px;
+  -ms-box-sizing: 10px;
+  box-sizing: 10px; }
 
 .product-edit-panel .tab-pane.active {
   z-index: 10; }
 
+#categories .allocated-category, #categories .category {
+  padding: 10px;
+  background-color: #ededed;
+  margin-right: 10px;
+  border: 1px solid #b5b5b5;
+  cursor: pointer; }
+  #categories .allocated-category .glyphicon, #categories .category .glyphicon {
+    top: 3px;
+    margin-left: 7px; }
+
+#categories .allocated-category {
+  background-color: #2a6496;
+  color: #fff; }
+
+#categories .categories-wrapper {
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px; }
+
 tabs {
   width: 100%;
-  height: 50px;
+  height: 41px;
   background-color: #ededed;
   display: inline-block; }
   tabs .nav-tabs li a {

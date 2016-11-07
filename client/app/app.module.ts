@@ -26,6 +26,7 @@ import { ManufacturersComponent } from "./components/catalog/manufacturers/Manuf
 import { ProductSearchComponent } from "./components/catalog/products/directives/ProductSearchComponent";
 import { ProductListComponent } from "./components/catalog/products/directives/ProductListComponent";
 import { ProductEditComponent } from "./components/catalog/products/directives/ProductEditComponent";
+import { ShopsComponent } from "./components/catalog/shops/ShopsComponent";
 
 import { HttpInterceptor } from "./services/HttpInterceptor.service";
 
@@ -35,12 +36,14 @@ import { FilesService } from "./services/files.service";
 import { GlobalEventsManager } from "./services/globalEventsManager.service";
 import { ManufacturerService } from "./services/manufacturer.service"
 import { ProductService } from "./services/product.service";
+import { TabsService } from "./services/tabs.service";
 
 import { AUTH_PROVIDERS } from "angular2-jwt";
 
 import { FileUploaderDirective } from "./components/directives/files/FileUploaderDirective";
 import { TabsDirective } from "./components/directives/tabs/TabsDirective";
-import {TabsService} from "./services/tabs.service";
+
+
 
 
 
@@ -67,6 +70,7 @@ import {TabsService} from "./services/tabs.service";
         OptionsComponent,
         CategoriesComponent,
         ManufacturersComponent,
+        ShopsComponent,
 
         FileUploaderDirective,
         TabsDirective

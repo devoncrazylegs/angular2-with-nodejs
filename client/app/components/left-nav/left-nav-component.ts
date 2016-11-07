@@ -2,7 +2,8 @@ import { Component } from "@angular/core";
 import { GlobalEventsManager } from "../../services/globalEventsManager.service";
 import { AuthService } from "../../services/auth.service";
 import { Router } from "@angular/router";
-import {userHelper} from "../../helpers/userHelper";
+import { userHelper } from "../../helpers/userHelper";
+import { messages } from "../../helpers/messages";
 
 @Component({
     selector: 'left-nav',
@@ -31,7 +32,7 @@ export class LeftNavComponent {
     }
 
     logout() {
-        this._authService.logout();
+        this._authService.logout({message: messages.messages.logout.success, title:messages.titles.logout.success});
         this._globalEventsManager.showNavBar.emit(false);
         this._router.navigate(['login']);
     }
