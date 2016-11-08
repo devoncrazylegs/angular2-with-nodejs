@@ -318,7 +318,8 @@ product-component, product-edit {
   background-color: #ededed;
   margin-right: 10px;
   border: 1px solid #b5b5b5;
-  cursor: pointer; }
+  cursor: pointer;
+  display: inline-block; }
   #categories .allocated-category .glyphicon, #categories .category .glyphicon {
     top: 3px;
     margin-left: 7px; }

@@ -2,6 +2,7 @@ var http    = require('http');
 var request = require('request');
 var util    = require('util');
 var querystring = require('querystring');
+var Config = require('../../Config');
 
 
 function ApiBase_RequestLayer() {
@@ -17,8 +18,13 @@ function ApiBase_RequestLayer() {
  */
 ApiBase_RequestLayer.prototype.preRequestCheck = function(req, res, next) {
     var self = this;
-
     headers = {};
+    if(Config.allowXDebugCookie) {
+        headers = {
+            'Cookie' : 'XDEBUG_SESSION=PHPSTORM'
+        };
+    }
+
     headers['Authorization'] = req.headers.authorization;
 
     next(req, res, headers);

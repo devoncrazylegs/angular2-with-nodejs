@@ -79,6 +79,11 @@ var ProductEditComponent = (function () {
         }
         return true;
     };
+    ProductEditComponent.prototype.save = function () {
+        this._productService.editProduct(this.product)
+            .subscribe(function (response) {
+        });
+    };
     ProductEditComponent.prototype.back = function () {
         this._location.back();
     };

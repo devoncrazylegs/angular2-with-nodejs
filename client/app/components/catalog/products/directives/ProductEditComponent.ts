@@ -94,6 +94,13 @@ export class ProductEditComponent {
         return true;
     }
 
+    save() {
+        this._productService.editProduct(this.product)
+            .subscribe((response) => {
+
+            });
+    }
+
     back() {
         this._location.back();
     }

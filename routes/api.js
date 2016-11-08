@@ -22,6 +22,10 @@ router.get('/product/:productId', function(req, res, next) {
     productRoutesControllerObjectInstance.getProduct(req, res, next);
 });
 
+router.post('/product/:productId', function(req, res, next) {
+    productRoutesControllerObjectInstance.editProduct(req, res, next);
+});
+
 router.get('/categories', function(req, res, next) {
     categoryRoutesControllerObjectInstance.getCategories(req, res, next)
 });

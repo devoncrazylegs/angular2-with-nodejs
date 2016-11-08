@@ -54,6 +54,27 @@ Product.prototype.getProduct = function(req, res) {
 
 };
 
+Product.prototype.editProduct = function(req, res) {var self = this,
+        requestUrl = self.requestBaseUrl + '/' + req.params.productId,
+        payload = req.body;
+
+        self.preRequestCheck(req, res, function(req, res ,headers) {
+            self.makeRequest(
+                'POST',
+                {
+                    contentType: 'json'
+                },
+                payload,
+                requestUrl,
+                headers
+            ).then(function(response) {
+                res.send(response.body);
+            }, function(response) {
+                res.json(response);
+            });
+        });
+};
+
 util.inherits(Product, ApiBase_RequestLayer);
 
 module.exports = Product;

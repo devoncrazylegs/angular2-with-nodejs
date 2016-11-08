@@ -38,6 +38,15 @@ export class ProductService {
             .map(res => res.json());
     }
 
+    editProduct(product: Product) {
+        let headers = HttpHelper.createAuthorizationHeader(true);
+        let options = new RequestOptions({ headers: headers });
+        product['_method'] = 'PUT';
+        return this._http
+            .post(routes.api.products + '/' + product.id, product, options)
+            .map(res => res.json());
+    }
+
     /**
      * Add products to EventEmitter stream
      */

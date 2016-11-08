@@ -90,8 +90,8 @@
                 <input class='form-control' name='categoriesSearch' [(ngModel)]='searchTerm' (keyup)='searchCategories()' placeholder='Add to category' />
                 <div class='categories-wrapper'>
                     <h3>Categories</h3>
-                    <div *ngFor='let category of categories'>
-                        <a class='category' *ngIf='allocatedCategories.indexOf(category) === -1'>{{category.name}}<i class='glyphicon glyphicon-plus'></i></a>
+                    <div *ngFor='let category of categories' class='category'>
+                        <a *ngIf='allocatedCategories.indexOf(category) === -1'>{{category.name}}<i class='glyphicon glyphicon-plus'></i></a>
                     </div>
                 </div>
 

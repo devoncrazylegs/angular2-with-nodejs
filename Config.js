@@ -1,4 +1,5 @@
 module.exports = Config = {
+    allowXDebugCookie: true,
     brain: {
         url: 'http://stdavids-brain.dev',
         api: '/api',
