@@ -1,6 +1,10 @@
 "use strict";
 exports.messages = {
     titles: {
+        general: {
+            success: 'Success',
+            error: 'Error'
+        },
         auth: {
             tokenExpired: 'Token Expired'
         },
@@ -11,7 +15,8 @@ exports.messages = {
         logout: {
             success: 'Logged out successfully',
             error: 'Error logging out'
-        }
+        },
+        products: {}
     },
     messages: {
         auth: {
@@ -24,6 +29,9 @@ exports.messages = {
         },
         logout: {
             success: 'You have logged out'
+        },
+        products: {
+            productEdited: 'Product edited successfully'
         }
     }
 };

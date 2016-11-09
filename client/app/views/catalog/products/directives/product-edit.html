@@ -87,17 +87,16 @@
 
         <div id='categories' class='tab-pane' *ngIf='selectedTab.linked == "categories"'>
             <div class='form-group'>
-                <input class='form-control' name='categoriesSearch' [(ngModel)]='searchTerm' (keyup)='searchCategories()' placeholder='Add to category' />
                 <div class='categories-wrapper'>
                     <h3>Categories</h3>
-                    <div *ngFor='let category of categories' class='category'>
-                        <a *ngIf='allocatedCategories.indexOf(category) === -1'>{{category.name}}<i class='glyphicon glyphicon-plus'></i></a>
+                    <div *ngFor='let category of catsToShow' class='category' (click)='addCategory(category)'>
+                        <a>{{category.name}}<i class='glyphicon glyphicon-plus'></i></a>
                     </div>
                 </div>
 
                 <div class='categories-wrapper'>
                     <h3>Current allocated categories</h3>
-                    <a class='allocated-category' *ngFor='let category of allocatedCategories'>{{category.name}}<i class='glyphicon glyphicon-remove'></i></a>
+                    <a class='allocated-category' *ngFor='let category of allocatedCategories' (click)='removeCategory(category)'>{{category.name}}<i class='glyphicon glyphicon-remove'></i></a>
                 </div>
             </div>
         </div>

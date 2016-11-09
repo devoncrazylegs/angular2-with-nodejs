@@ -62,13 +62,15 @@ ApiBase_RequestLayer.prototype.makeRequest = function(verb, options, vars, url, 
 
     return new Promise(function(resolve, reject) {
         request(payload, function(error, response, body) {
-                if(!error && response.statusCode === 200) {
-                    resolve(response, body);
-                } else {
-                    if(response.statusCode === 401) {
-                        console.log('token expited');
+                if(response) {
+                    if(!error && response.statusCode === 200) {
+                        resolve(response, body);
+                    } else {
+                        if(response.statusCode === 401) {
+                            console.log('token expited');
+                        }
+                        reject(response, body);
                     }
-                    reject(response, body);
                 }
         });
     });

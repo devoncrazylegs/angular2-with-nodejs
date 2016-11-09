@@ -4,7 +4,7 @@ import { userHelper } from "../../helpers/userHelper";
 import { Router } from "@angular/router";
 import { GlobalEventsManager } from "../../services/globalEventsManager.service";
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
-import {messages} from "../../helpers/messages";
+import { messages } from "../../helpers/messages";
 
 
 @Component({

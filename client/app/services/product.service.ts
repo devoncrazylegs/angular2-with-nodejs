@@ -38,12 +38,12 @@ export class ProductService {
             .map(res => res.json());
     }
 
-    editProduct(product: Product) {
+    editProduct(payload) {
         let headers = HttpHelper.createAuthorizationHeader(true);
         let options = new RequestOptions({ headers: headers });
-        product['_method'] = 'PUT';
+        payload['_method'] = 'PUT';
         return this._http
-            .post(routes.api.products + '/' + product.id, product, options)
+            .post(routes.api.products + '/' + payload.product.id, payload, options)
             .map(res => res.json());
     }
 

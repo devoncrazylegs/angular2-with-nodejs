@@ -10,21 +10,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var product_service_1 = require("../../../../services/product.service");
+var Rx_1 = require("rxjs/Rx");
 var router_1 = require("@angular/router");
 var common_1 = require('@angular/common');
 var tabs_service_1 = require("../../../../services/tabs.service");
 var category_service_1 = require("../../../../services/category.service");
+var ng2_toastr_1 = require('ng2-toastr/ng2-toastr');
+var messages_1 = require("../../../../helpers/messages");
 var ProductEditComponent = (function () {
-    function ProductEditComponent(_productService, _categoryService, _activatedRoute, _location, _tabsService) {
+    function ProductEditComponent(_productService, _categoryService, _activatedRoute, _location, _tabsService, _toastr) {
         var _this = this;
         this._productService = _productService;
         this._categoryService = _categoryService;
         this._activatedRoute = _activatedRoute;
         this._location = _location;
         this._tabsService = _tabsService;
-        this.categories = {};
+        this._toastr = _toastr;
+        this.categories = [];
+        this.catsToShow = [];
         this.allocatedCategories = [];
-        this.searchTerm = '';
         this.tabs = [
             { title: 'General', content: '', active: true, linked: 'general' },
             { title: 'Images', content: '', active: false, linked: 'images' },
@@ -65,23 +69,29 @@ var ProductEditComponent = (function () {
             self.allocatedCategories = categories;
         });
     };
-    ProductEditComponent.prototype.searchCategories = function () {
-        var self = this;
-        this.getCategories({
-            'search_term': self.searchTerm
-        });
-    };
-    ProductEditComponent.prototype.alreadyAllocated = function (category) {
-        for (var i = 0; i < this.allocatedCategories; i++) {
-            if (this.allocatedCategories[i]['id'] == category.id) {
-                return false;
-            }
+    ProductEditComponent.prototype.alreadyAllocated = function () {
+        for (var _i = 0, _a = this.allocatedCategories; _i < _a.length; _i++) {
+            var allocatedCategory = _a[_i];
+            this.catsToShow.splice(this.findIndexOfObject(allocatedCategory, this.categories), 1);
         }
-        return true;
+    };
+    ProductEditComponent.prototype.addCategory = function (category) {
+        this.catsToShow.splice(this.findIndexOfObject(category, this.catsToShow), 1);
+        this.allocatedCategories.push(category);
+    };
+    ProductEditComponent.prototype.removeCategory = function (category) {
+        this.allocatedCategories.splice(this.findIndexOfObject(category, this.catsToShow), 1);
+        this.catsToShow.push(category);
     };
     ProductEditComponent.prototype.save = function () {
-        this._productService.editProduct(this.product)
+        var _this = this;
+        var payload = {
+            product: this.product,
+            categories: this.getIdsIndexes(this.allocatedCategories)
+        };
+        this._productService.editProduct(payload)
             .subscribe(function (response) {
+            _this._toastr.success(messages_1.messages.messages.products.productEdited, messages_1.messages.titles.general.success);
         });
     };
     ProductEditComponent.prototype.back = function () {
@@ -94,11 +104,33 @@ var ProductEditComponent = (function () {
             self.id = +params['id'];
             _this.getProduct();
         });
-        this.getCategories({});
-        this.getAllocatedCategories();
+        Rx_1.Observable.forkJoin([
+            this._categoryService.getCategories({}),
+            this._categoryService.getCategories({
+                product: self.id
+            })
+        ])
+            .subscribe(function (response) {
+            _this.categories = _this.catsToShow = response[0];
+            _this.allocatedCategories = response[1];
+            _this.alreadyAllocated();
+        });
     };
     ProductEditComponent.prototype.ngOnDestroy = function () {
         this._subscription.unsubscribe();
+    };
+    ProductEditComponent.prototype.findIndexOfObject = function (categoryToFind, arrayToSearch) {
+        return arrayToSearch.findIndex(function (i) {
+            return categoryToFind.id === i.id;
+        });
+    };
+    ProductEditComponent.prototype.getIdsIndexes = function (arrayToSearch) {
+        var ids = [];
+        for (var _i = 0, arrayToSearch_1 = arrayToSearch; _i < arrayToSearch_1.length; _i++) {
+            var item = arrayToSearch_1[_i];
+            ids.push(item.id);
+        }
+        return ids;
     };
     ProductEditComponent = __decorate([
         core_1.Component({
@@ -106,7 +138,7 @@ var ProductEditComponent = (function () {
             templateUrl: '/app/views/catalog/products/directives/product-edit.html',
             moduleId: module.id
         }), 
-        __metadata('design:paramtypes', [product_service_1.ProductService, category_service_1.CategoryService, router_1.ActivatedRoute, common_1.Location, tabs_service_1.TabsService])
+        __metadata('design:paramtypes', [product_service_1.ProductService, category_service_1.CategoryService, router_1.ActivatedRoute, common_1.Location, tabs_service_1.TabsService, ng2_toastr_1.ToastsManager])
     ], ProductEditComponent);
     return ProductEditComponent;
 }());

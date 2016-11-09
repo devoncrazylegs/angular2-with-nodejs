@@ -37,12 +37,12 @@ var ProductService = (function () {
             .get(routes_1.routes.api.products + StringHelper_1.StringHelper.convertVarsToString(filters), options)
             .map(function (res) { return res.json(); });
     };
-    ProductService.prototype.editProduct = function (product) {
+    ProductService.prototype.editProduct = function (payload) {
         var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true);
         var options = new http_1.RequestOptions({ headers: headers });
-        product['_method'] = 'PUT';
+        payload['_method'] = 'PUT';
         return this._http
-            .post(routes_1.routes.api.products + '/' + product.id, product, options)
+            .post(routes_1.routes.api.products + '/' + payload.product.id, payload, options)
             .map(function (res) { return res.json(); });
     };
     /**

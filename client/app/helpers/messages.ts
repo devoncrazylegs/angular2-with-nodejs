@@ -1,5 +1,9 @@
 export var messages = {
         titles: {
+            general: {
+                success: 'Success',
+                error: 'Error'
+            },
             auth: {
                 tokenExpired: 'Token Expired'
             },
@@ -12,6 +16,9 @@ export var messages = {
             logout: {
                 success: 'Logged out successfully',
                 error  : 'Error logging out'
+            },
+            products: {
+
             }
         },
         messages: {
@@ -27,6 +34,10 @@ export var messages = {
 
             logout: {
                 success: 'You have logged out'
+            },
+            products: {
+                productEdited: 'Product edited successfully'
             }
         }
+
 };

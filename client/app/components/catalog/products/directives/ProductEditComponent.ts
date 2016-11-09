@@ -2,10 +2,13 @@ import { Component, Input } from "@angular/core";
 import { Product } from "../../../../classes/Product";
 import { ProductService } from "../../../../services/product.service";
 import { Subscription } from "rxjs";
+import { Observable } from "rxjs/Rx";
 import { ActivatedRoute } from "@angular/router";
 import { Location } from '@angular/common';
 import { TabsService } from "../../../../services/tabs.service";
 import { CategoryService } from "../../../../services/category.service";
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import {messages} from "../../../../helpers/messages";
 
 @Component({
     selector: 'product-edit',
@@ -15,9 +18,9 @@ import { CategoryService } from "../../../../services/category.service";
 
 export class ProductEditComponent {
     public product:Product;
-    private categories = {};
+    private categories = [];
+    private catsToShow = [];
     private allocatedCategories = [];
-    private searchTerm = '';
     private _subscription: Subscription;
     public id: number;
     public tabs:Array<any> = [
@@ -33,7 +36,9 @@ export class ProductEditComponent {
         private _categoryService: CategoryService,
         private _activatedRoute: ActivatedRoute,
         private _location: Location,
-        private _tabsService: TabsService
+        private _tabsService: TabsService,
+        private _toastr: ToastsManager
+
     ) {
         this._tabsService.emitter
             .subscribe((tab) => {
@@ -78,26 +83,30 @@ export class ProductEditComponent {
         });
     }
 
-    searchCategories() {
-        var self = this;
-        this.getCategories({
-            'search_term' : self.searchTerm
-        });
+    alreadyAllocated() {
+        for(let allocatedCategory of this.allocatedCategories) {
+            this.catsToShow.splice(this.findIndexOfObject(allocatedCategory, this.categories), 1);
+        }
     }
 
-    alreadyAllocated(category) {
-        for(var i = 0; i < this.allocatedCategories; i++) {
-            if(this.allocatedCategories[i]['id'] == category.id) {
-                return false;
-            }
-        }
-        return true;
+    addCategory(category) {
+        this.catsToShow.splice(this.findIndexOfObject(category, this.catsToShow), 1);
+        this.allocatedCategories.push(category);
+    }
+
+    removeCategory(category) {
+        this.allocatedCategories.splice(this.findIndexOfObject(category, this.catsToShow), 1);
+        this.catsToShow.push(category);
     }
 
     save() {
-        this._productService.editProduct(this.product)
+        let payload:Object = {
+            product: this.product,
+            categories: this.getIdsIndexes(this.allocatedCategories)
+        };
+        this._productService.editProduct(payload)
             .subscribe((response) => {
-
+                this._toastr.success(messages.messages.products.productEdited, messages.titles.general.success);
             });
     }
 
@@ -111,11 +120,34 @@ export class ProductEditComponent {
             self.id = +params['id'];
             this.getProduct();
         });
-        this.getCategories({});
-        this.getAllocatedCategories();
+        Observable.forkJoin([
+                this._categoryService.getCategories({}),
+                this._categoryService.getCategories({
+                    product: self.id
+                })
+            ])
+            .subscribe((response) => {
+                this.categories = this.catsToShow = response[0];
+                this.allocatedCategories = response[1];
+                this.alreadyAllocated();
+            });
     }
 
     ngOnDestroy() {
         this._subscription.unsubscribe();
+    }
+
+    private findIndexOfObject(categoryToFind, arrayToSearch) {
+        return arrayToSearch.findIndex((i) => {
+            return categoryToFind.id === i.id;
+        });
+    }
+
+    private getIdsIndexes(arrayToSearch) {
+        let ids:Array = [];
+        for(let item of arrayToSearch) {
+            ids.push(item.id);
+        }
+        return ids;
     }
 }
