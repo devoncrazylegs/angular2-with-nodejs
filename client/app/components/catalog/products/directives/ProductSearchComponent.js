@@ -11,13 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var category_service_1 = require("../../../../services/category.service");
 var manufacturer_service_1 = require("../../../../services/manufacturer.service");
-var product_service_1 = require("../../../../services/product.service");
 var ProductSearchComponent = (function () {
-    function ProductSearchComponent(_categoriesService, _manufacturerService, _productService) {
+    function ProductSearchComponent(_categoriesService, _manufacturerService) {
         var _this = this;
         this._categoriesService = _categoriesService;
         this._manufacturerService = _manufacturerService;
-        this._productService = _productService;
+        this.productFiltersChange = new core_1.EventEmitter();
         this.selectedManufacturer = null;
         this.manufacturers = [];
         this.selectedCategory = null;
@@ -43,11 +42,11 @@ var ProductSearchComponent = (function () {
         this._manufacturerService.getManufacturers({}).subscribe(function (manufacturers) { _this.manufacturers = manufacturers; }, function (error) { _this.APIError = error; }, function () { _this.loaded.manufacturers = true; });
     }
     ProductSearchComponent.prototype.getProducts = function () {
-        var _this = this;
-        this._productService.getProducts(this.productSearchPayload)
-            .subscribe(function (products) { _this._productService.emitProducts(products); }, function (error) { _this.APIError = error; }, function () { });
+        this.productFiltersChange.emit(this.productSearchPayload);
     };
-    ProductSearchComponent.prototype.filtersChange = function (value, type) {
+    ProductSearchComponent.prototype.filtersChange = function ($event, value, type) {
+        $event.stopPropagation();
+        $event.preventDefault();
         if (type === 'category') {
             if (value == '') {
                 this.productSearchPayload.category_id = 0;
@@ -84,13 +83,17 @@ var ProductSearchComponent = (function () {
     };
     ProductSearchComponent.prototype.ngOnInit = function () {
     };
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', core_1.EventEmitter)
+    ], ProductSearchComponent.prototype, "productFiltersChange", void 0);
     ProductSearchComponent = __decorate([
         core_1.Component({
             selector: 'product-search',
             templateUrl: '/app/views/catalog/products/directives/product-search.html',
             moduleId: module.id
         }), 
-        __metadata('design:paramtypes', [category_service_1.CategoryService, manufacturer_service_1.ManufacturerService, product_service_1.ProductService])
+        __metadata('design:paramtypes', [category_service_1.CategoryService, manufacturer_service_1.ManufacturerService])
     ], ProductSearchComponent);
     return ProductSearchComponent;
 }());

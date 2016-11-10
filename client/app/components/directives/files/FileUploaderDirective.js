@@ -20,18 +20,19 @@ var FileUploaderDirective = (function () {
         this._filesToUpload = fileInput.target.files;
     };
     FileUploaderDirective.prototype.upload = function () {
-        this._filesService.sendFile(routes_1.routes.api.files, [], this._filesToUpload)
-            .subscribe(function (result) {
-            console.log(result);
-        }, function (error) {
-            console.log(error);
-        });
+        /*this._filesService.sendFile(routes.api.files, [], this._filesToUpload)
+            .subscribe((result) => {
+                console.log(result);
+            }, (error) => {
+                console.log(error);
+            });*/
+        this._filesService.sendFile(routes_1.routes.api.files, [], this._filesToUpload);
     };
     FileUploaderDirective = __decorate([
         core_1.Component({
             selector: 'file-upload',
             moduleId: module.id,
-            templateUrl: '/app/views/files/file-upload.html',
+            templateUrl: '/app/views/directives/files/file-upload.html',
         }), 
         __metadata('design:paramtypes', [files_service_1.FilesService])
     ], FileUploaderDirective);

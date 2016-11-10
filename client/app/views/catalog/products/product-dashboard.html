@@ -1,6 +1,6 @@
 <div class='product-dashboard-panel'>
     <button><i class='glyphicon glyphicon-plus'></i></button>
 </div>
-<product-search></product-search>
-<product-list *ngIf='productsLoaded' [products]='products'></product-list>
+<product-search (productFiltersChange)='getProducts($event)'></product-search>
+<product-list *ngIf='productsLoaded' [products]='products' ></product-list>
 <div class='spinner' *ngIf='!productsLoaded'></div>

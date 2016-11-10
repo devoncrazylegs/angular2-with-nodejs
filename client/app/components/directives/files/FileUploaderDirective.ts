@@ -5,11 +5,12 @@ import { FilesService } from "../../../services/files.service";
 @Component({
     selector    : 'file-upload',
     moduleId    : module.id,
-    templateUrl : '/app/views/files/file-upload.html',
+    templateUrl : '/app/views/directives/files/file-upload.html',
 })
 
 export class FileUploaderDirective {
     private _filesToUpload: Array<File> = [];
+
 
     constructor(
         private _filesService: FilesService
@@ -22,11 +23,14 @@ export class FileUploaderDirective {
     }
 
     upload() {
-        this._filesService.sendFile(routes.api.files, [], this._filesToUpload)
+        /*this._filesService.sendFile(routes.api.files, [], this._filesToUpload)
             .subscribe((result) => {
                 console.log(result);
             }, (error) => {
                 console.log(error);
-            });
+            });*/
+
+        this._filesService.sendFile(routes.api.files, [], this._filesToUpload);
+
     }
 }

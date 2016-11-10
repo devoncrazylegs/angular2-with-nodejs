@@ -1,6 +1,7 @@
 var formidable = require('formidable');
 var fs = require('fs');
 var path = require('path');
+var multer = require('multer');
 
 var ApiBase_RequestLayer = require('../ApiBase_RequestLayer'),
     Config = require(global.appRoot + '/Config'),

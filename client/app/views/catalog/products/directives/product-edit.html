@@ -50,7 +50,7 @@
                     Active
                 </label>
                 <div class='col-xs-10 col-sm-10 col-md-10 col-lg-10'>
-                    <input type='checkbox' [(ngModel)]="product.active" placeholder="SKU" class="" />
+                    <input type='checkbox' [checked]='product.active' [(ngModel)]='product.active' placeholder="SKU" class="" />
                 </div>
             </div>
 
@@ -82,7 +82,16 @@
         </div>
 
         <div id='images' class='tab-pane' *ngIf='selectedTab.linked == "images"'>
-            images
+            <div class='form-group'>
+                <div class='col-xs-10 col-sm-10 col-md-10 col-lg-10'>
+                    <div *ngIf='product.images.length' class='images-wrapper'>
+                        <div class='image' *ngFor='let image of product.images'>
+                            <img src='{{image.url}}' alt='{{image.name}}' />
+                        </div>
+                    </div>
+                    <file-upload></file-upload>
+                </div>
+            </div>
         </div>
 
         <div id='categories' class='tab-pane' *ngIf='selectedTab.linked == "categories"'>

@@ -52,7 +52,8 @@ var AppModule = (function () {
                 http_1.HttpModule,
                 forms_1.FormsModule,
                 app_routing_1.routing,
-                ng2_toastr_1.ToastModule
+                ng2_toastr_1.ToastModule,
+                forms_1.ReactiveFormsModule
             ],
             declarations: [
                 app_component_1.AppComponent,

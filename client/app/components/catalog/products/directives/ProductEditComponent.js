@@ -51,6 +51,8 @@ var ProductEditComponent = (function () {
         var self = this;
         this._productService.getProduct(this.id)
             .subscribe(function (product) {
+            product[0].active = parseInt(product[0].active);
+            product[0].images = JSON.parse(product[0].images);
             self.product = product[0];
         });
     };

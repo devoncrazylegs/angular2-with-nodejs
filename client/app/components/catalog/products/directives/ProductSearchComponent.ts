@@ -1,13 +1,8 @@
-import { Component } from "@angular/core";
+import { Component, Output, EventEmitter } from "@angular/core";
 import { Manufacturer } from "../../../../classes/Manufacturer";
 import { Category } from "../../../../classes/Category";
 import { CategoryService } from "../../../../services/category.service";
 import { ManufacturerService } from "../../../../services/manufacturer.service";
-import { HttpHelper } from "../../../../helpers/HttpHelper";
-import { userHelper } from "../../../../helpers/userHelper";
-import { Router } from "@angular/router";
-import {AuthService} from "../../../../services/auth.service";
-import {ProductService} from "../../../../services/product.service";
 
 @Component({
     selector: 'product-search',
@@ -16,6 +11,7 @@ import {ProductService} from "../../../../services/product.service";
 })
 
 export class ProductSearchComponent {
+    @Output() productFiltersChange:EventEmitter<any> = new EventEmitter();
     selectedManufacturer:Manufacturer = null;
     manufacturers:Manufacturer[] = [];
     selectedCategory:Category = null;
@@ -41,7 +37,8 @@ export class ProductSearchComponent {
     constructor(
         private _categoriesService: CategoryService,
         private _manufacturerService: ManufacturerService,
-        private _productService: ProductService
+
+
     ) {
         this._categoriesService.getCategories({
 
@@ -61,15 +58,12 @@ export class ProductSearchComponent {
     }
 
     getProducts() {
-        this._productService.getProducts(this.productSearchPayload)
-            .subscribe(
-                products => {this._productService.emitProducts(products)},
-                error    => {this.APIError = error},
-                ()       => {}
-            );
+        this.productFiltersChange.emit(this.productSearchPayload);
     }
 
-    filtersChange(value, type) {
+    filtersChange($event, value, type) {
+        $event.stopPropagation();
+        $event.preventDefault();
         if(type === 'category') {
             if(value == '') {
                 this.productSearchPayload.category_id = 0;

@@ -8,7 +8,7 @@ import { Location } from '@angular/common';
 import { TabsService } from "../../../../services/tabs.service";
 import { CategoryService } from "../../../../services/category.service";
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
-import {messages} from "../../../../helpers/messages";
+import { messages } from "../../../../helpers/messages";
 
 @Component({
     selector: 'product-edit',
@@ -20,6 +20,7 @@ export class ProductEditComponent {
     public product:Product;
     private categories = [];
     private catsToShow = [];
+    private parsedImages:Array<any>;
     private allocatedCategories = [];
     private _subscription: Subscription;
     public id: number;
@@ -60,6 +61,9 @@ export class ProductEditComponent {
         this._productService.getProduct(this.id)
             .subscribe(
                 (product) => {
+                    product[0].active = parseInt(product[0].active);
+                    product[0].images = JSON.parse(product[0].images);
+
                     self.product = product[0];
                 }
             );

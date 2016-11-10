@@ -10,14 +10,14 @@
             <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
                 <div class='searchbar-wrapper'>
                     <h5>Search</h5>
-                    <input name='search' [(ngModel)]="productSearchPayload.searchTerm" (keyup)="filtersChange($event, 'searchTerm')" placeholder="search products"/>
+                    <input name='search' #input [(ngModel)]="productSearchPayload.searchTerm" (keyup)="filtersChange($event, 'searchTerm')" placeholder="search products"/>
                 </div>
             </div>
             <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12'>
                 <ul class="categories">
                     <div class='searchbar-wrapper'>
                         <h5>Categories</h5>
-                        <select name='categories' class='categories' #t (change)="filtersChange(t.value, 'category')">
+                        <select name='categories' class='categories' #t (change)="filtersChange($event, t.value, 'category')">
                             <option value=''>-- please select --</option>
                             <option *ngFor='let category of categories' [value]="category.id" [ngValue]="category.id">{{category.name}}</option>
                         </select>

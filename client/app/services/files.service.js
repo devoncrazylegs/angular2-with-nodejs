@@ -10,25 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var HttpInterceptor_service_1 = require("./HttpInterceptor.service");
-var HttpHelper_1 = require("../helpers/HttpHelper");
-var http_1 = require("@angular/http");
 var FilesService = (function () {
     function FilesService(_http) {
         this._http = _http;
     }
     FilesService.prototype.sendFile = function (url, vars, files) {
-        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true);
-        var options = new http_1.RequestOptions({ headers: headers });
-        var files = files;
         var formData = new FormData();
-        for (var i = 0; i < files.length; i++) {
-            formData.append(files[i].name, files[i]);
-        }
-        return this._http
-            .post(url, formData)
-            .map(function (res) {
-            return res.json();
-        });
+        formData.append('files', files);
+        formData.append('files', 'testfiles');
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', url, true);
+        xhr.withCredentials = true;
+        xhr.send(formData);
     };
     FilesService = __decorate([
         core_1.Injectable(), 

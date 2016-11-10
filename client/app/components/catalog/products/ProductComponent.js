@@ -30,14 +30,14 @@ var ProductComponent = (function () {
         };
         _productService.emitter.subscribe(function (products) { _this.products = products; }, function (error) { _this.APIError = error; }, function () { });
     }
-    ProductComponent.prototype.getProducts = function () {
+    ProductComponent.prototype.getProducts = function (filters) {
         var _this = this;
         this.productsLoaded = false;
-        this._productService.getProducts(this.productPayload)
+        this._productService.getProducts(filters)
             .subscribe(function (products) { _this.products = products; }, function (error) { _this.APIError = error; }, function () { _this.productsLoaded = true; });
     };
     ProductComponent.prototype.ngOnInit = function () {
-        this.getProducts();
+        this.getProducts({});
     };
     ProductComponent = __decorate([
         core_1.Component({

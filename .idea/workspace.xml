@@ -5,20 +5,303 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39ac3ac7-13f9-4442-bab1-b6f6b5e1eb7a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/lib/addFilesFromExtStreams.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/lib/addHtmlToStream.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/lib/end.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/lib/getGlobs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/lib/getPattern.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/lib/reorderTheStream.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/lib/unprocessedCounter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-parent/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-parent/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-parent/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-parent/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-parent/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-parent/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-parent/test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/glob/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/glob/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/glob/common.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/glob/glob.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/glob/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/glob/sync.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/readable-stream/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/readable-stream/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/readable-stream/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/readable-stream/duplex.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/readable-stream/lib/_stream_duplex.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/readable-stream/lib/_stream_passthrough.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/readable-stream/lib/_stream_readable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/readable-stream/lib/_stream_transform.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/readable-stream/lib/_stream_writable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/readable-stream/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/readable-stream/passthrough.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/readable-stream/readable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/readable-stream/transform.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/readable-stream/writable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/through2/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/through2/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/through2/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/through2/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/node_modules/through2/through2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/glob-stream/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/is-extglob/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/is-extglob/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/is-extglob/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/is-extglob/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/is-glob/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/is-glob/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/is-glob/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/is-glob/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/isarray/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/isarray/build/build.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/isarray/component.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/isarray/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/isarray/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/ordered-read-streams/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/ordered-read-streams/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/ordered-read-streams/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/ordered-read-streams/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/unique-stream/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/unique-stream/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/unique-stream/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/unique-stream/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/dest/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/dest/writeContents/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/dest/writeContents/writeBuffer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/dest/writeContents/writeDir.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/dest/writeContents/writeStream.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/dest/writeContents/writeSymbolicLink.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/fileOperations.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/filterSince.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/prepareWrite.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/sink.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/src/getContents/bufferFile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/src/getContents/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/src/getContents/readDir.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/src/getContents/readSymbolicLink.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/src/getContents/streamFile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/src/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/src/wrapWithVinylFile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/lib/symlink/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl-fs/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl/lib/cloneBuffer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl/lib/inspectStream.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl/lib/isBuffer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl/lib/isNull.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl/lib/isStream.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/node_modules/vinyl/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/gulp-useref/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/npm-debug.log" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/app/views/files/file-upload.html" afterPath="$PROJECT_DIR$/client/app/views/directives/files/file-upload.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.js.gz" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.js.map.gz" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.js.map.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.min.js.gz" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.min.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.min.js.map.gz" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.min.js.map.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/toastr-examples.jpg" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/toastr-examples.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/app.module.js" afterPath="$PROJECT_DIR$/client/app/app.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/app.module.js.map" afterPath="$PROJECT_DIR$/client/app/app.module.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/app.module.ts" afterPath="$PROJECT_DIR$/client/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/catalog/products/ProductComponent.js" afterPath="$PROJECT_DIR$/client/app/components/catalog/products/ProductComponent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/catalog/products/ProductComponent.js.map" afterPath="$PROJECT_DIR$/client/app/components/catalog/products/ProductComponent.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/catalog/products/ProductComponent.ts" afterPath="$PROJECT_DIR$/client/app/components/catalog/products/ProductComponent.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductEditComponent.js" afterPath="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductEditComponent.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductEditComponent.js.map" afterPath="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductEditComponent.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductEditComponent.ts" afterPath="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductEditComponent.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/login/LoginComponent.js.map" afterPath="$PROJECT_DIR$/client/app/components/login/LoginComponent.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/login/LoginComponent.ts" afterPath="$PROJECT_DIR$/client/app/components/login/LoginComponent.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/helpers/messages.js" afterPath="$PROJECT_DIR$/client/app/helpers/messages.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/helpers/messages.js.map" afterPath="$PROJECT_DIR$/client/app/helpers/messages.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/helpers/messages.ts" afterPath="$PROJECT_DIR$/client/app/helpers/messages.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/services/product.service.js" afterPath="$PROJECT_DIR$/client/app/services/product.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/services/product.service.js.map" afterPath="$PROJECT_DIR$/client/app/services/product.service.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/services/product.service.ts" afterPath="$PROJECT_DIR$/client/app/services/product.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductSearchComponent.js" afterPath="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductSearchComponent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductSearchComponent.js.map" afterPath="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductSearchComponent.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductSearchComponent.ts" afterPath="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductSearchComponent.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.js" afterPath="$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.js.map" afterPath="$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.ts" afterPath="$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/services/files.service.js" afterPath="$PROJECT_DIR$/client/app/services/files.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/services/files.service.js.map" afterPath="$PROJECT_DIR$/client/app/services/files.service.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/services/files.service.ts" afterPath="$PROJECT_DIR$/client/app/services/files.service.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/catalog/products/directives/product-edit.html" afterPath="$PROJECT_DIR$/client/app/views/catalog/products/directives/product-edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/ApiBase_RequestLayer.js" afterPath="$PROJECT_DIR$/controllers/api/ApiBase_RequestLayer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/catalog/products/directives/product-search.html" afterPath="$PROJECT_DIR$/client/app/views/catalog/products/directives/product-search.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/catalog/products/product-dashboard.html" afterPath="$PROJECT_DIR$/client/app/views/catalog/products/product-dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/css/styles.css" afterPath="$PROJECT_DIR$/client/assets/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/angular2-jwt/.npmignore" afterPath="$PROJECT_DIR$/client/node_modules/angular2-jwt/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/angular2-jwt/LICENSE" afterPath="$PROJECT_DIR$/client/node_modules/angular2-jwt/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/angular2-jwt/README.md" afterPath="$PROJECT_DIR$/client/node_modules/angular2-jwt/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/angular2-jwt/angular2-jwt.d.ts" afterPath="$PROJECT_DIR$/client/node_modules/angular2-jwt/angular2-jwt.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/angular2-jwt/angular2-jwt.js" afterPath="$PROJECT_DIR$/client/node_modules/angular2-jwt/angular2-jwt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/angular2-jwt/custom.d.ts" afterPath="$PROJECT_DIR$/client/node_modules/angular2-jwt/custom.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/angular2-jwt/package.json" afterPath="$PROJECT_DIR$/client/node_modules/angular2-jwt/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/AUTHORS.txt" afterPath="$PROJECT_DIR$/client/node_modules/jquery/AUTHORS.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/LICENSE.txt" afterPath="$PROJECT_DIR$/client/node_modules/jquery/LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/README.md" afterPath="$PROJECT_DIR$/client/node_modules/jquery/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/bower.json" afterPath="$PROJECT_DIR$/client/node_modules/jquery/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/dist/core.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/dist/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/dist/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/dist/jquery.min.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/dist/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/dist/jquery.min.map" afterPath="$PROJECT_DIR$/client/node_modules/jquery/dist/jquery.min.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/dist/jquery.slim.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/dist/jquery.slim.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/dist/jquery.slim.min.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/dist/jquery.slim.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/dist/jquery.slim.min.map" afterPath="$PROJECT_DIR$/client/node_modules/jquery/dist/jquery.slim.min.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/external/sizzle/LICENSE.txt" afterPath="$PROJECT_DIR$/client/node_modules/jquery/external/sizzle/LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/external/sizzle/dist/sizzle.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/external/sizzle/dist/sizzle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/external/sizzle/dist/sizzle.min.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/external/sizzle/dist/sizzle.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/external/sizzle/dist/sizzle.min.map" afterPath="$PROJECT_DIR$/client/node_modules/jquery/external/sizzle/dist/sizzle.min.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/package.json" afterPath="$PROJECT_DIR$/client/node_modules/jquery/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/.eslintrc.json" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/.eslintrc.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax/jsonp.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax/jsonp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax/load.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax/load.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax/parseXML.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax/parseXML.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax/script.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax/var/location.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax/var/location.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax/var/nonce.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax/var/nonce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax/var/rquery.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax/var/rquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax/xhr.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/ajax/xhr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/attributes.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/attributes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/attributes/attr.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/attributes/attr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/attributes/classes.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/attributes/classes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/attributes/prop.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/attributes/prop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/attributes/support.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/attributes/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/attributes/val.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/attributes/val.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/callbacks.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/callbacks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/core.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/core/DOMEval.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/core/DOMEval.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/core/access.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/core/access.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/core/init.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/core/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/core/parseHTML.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/core/parseHTML.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/core/ready-no-deferred.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/core/ready-no-deferred.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/core/ready.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/core/ready.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/core/readyException.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/core/readyException.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/core/stripAndCollapse.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/core/stripAndCollapse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/core/support.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/core/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/core/var/rsingleTag.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/core/var/rsingleTag.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/css.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/css.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/css/addGetHookIf.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/css/addGetHookIf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/css/adjustCSS.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/css/adjustCSS.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/css/curCSS.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/css/curCSS.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/css/hiddenVisibleSelectors.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/css/hiddenVisibleSelectors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/css/showHide.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/css/showHide.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/css/support.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/css/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/css/var/cssExpand.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/css/var/cssExpand.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/css/var/getStyles.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/css/var/getStyles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/css/var/isHiddenWithinTree.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/css/var/isHiddenWithinTree.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/css/var/rmargin.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/css/var/rmargin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/css/var/rnumnonpx.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/css/var/rnumnonpx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/css/var/swap.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/css/var/swap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/data.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/data/Data.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/data/Data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/data/var/acceptData.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/data/var/acceptData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/data/var/dataPriv.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/data/var/dataPriv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/data/var/dataUser.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/data/var/dataUser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/deferred.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/deferred.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/deferred/exceptionHook.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/deferred/exceptionHook.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/deprecated.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/deprecated.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/dimensions.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/dimensions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/effects.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/effects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/effects/Tween.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/effects/Tween.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/effects/animatedSelector.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/effects/animatedSelector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/event.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/event.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/event/ajax.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/event/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/event/alias.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/event/alias.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/event/focusin.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/event/focusin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/event/support.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/event/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/event/trigger.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/event/trigger.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/exports/amd.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/exports/amd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/exports/global.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/exports/global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/jquery.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/_evalUrl.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/_evalUrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/buildFragment.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/buildFragment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/getAll.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/getAll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/setGlobalEval.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/setGlobalEval.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/support.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/var/rcheckableType.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/var/rcheckableType.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/var/rscriptType.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/var/rscriptType.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/var/rtagName.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/var/rtagName.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/wrapMap.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/manipulation/wrapMap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/offset.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/offset.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/queue.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/queue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/queue/delay.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/queue/delay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/selector-native.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/selector-native.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/selector-sizzle.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/selector-sizzle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/selector.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/selector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/serialize.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/serialize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/traversing.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/traversing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/traversing/findFilter.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/traversing/findFilter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/traversing/var/dir.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/traversing/var/dir.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/traversing/var/rneedsContext.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/traversing/var/rneedsContext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/traversing/var/siblings.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/traversing/var/siblings.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/ObjectFunctionString.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/ObjectFunctionString.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/arr.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/arr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/class2type.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/class2type.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/concat.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/concat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/document.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/document.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/documentElement.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/documentElement.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/fnToString.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/fnToString.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/getProto.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/getProto.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/hasOwn.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/hasOwn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/indexOf.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/indexOf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/pnum.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/pnum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/push.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/push.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/rcssNum.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/rcssNum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/rnothtmlwhite.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/rnothtmlwhite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/slice.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/slice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/support.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/var/toString.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/var/toString.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/jquery/src/wrap.js" afterPath="$PROJECT_DIR$/client/node_modules/jquery/src/wrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/.npmignore" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/README.md" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.js" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.js.map" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.min.css" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.min.js" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.min.js.map" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/bundles/ng2-toastr.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/gulpfile.js" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/make.js" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/make.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/ng2-toastr.css" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/ng2-toastr.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/ng2-toastr.d.ts" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/ng2-toastr.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/ng2-toastr.js" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/ng2-toastr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/ng2-toastr.metadata.json" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/ng2-toastr.metadata.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/package.json" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/.npmignore" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-container.component.d.ts" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-container.component.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-container.component.js" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-container.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-container.component.metadata.json" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-container.component.metadata.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-container.component.ngfactory.d.ts" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-container.component.ngfactory.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-container.component.ngfactory.js" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-container.component.ngfactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-manager.d.ts" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-manager.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-manager.js" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-manager.metadata.json" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-manager.metadata.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-options.d.ts" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-options.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-options.js" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-options.metadata.json" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast-options.metadata.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast.d.ts" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast.js" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast.module.d.ts" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast.module.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast.module.js" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast.module.metadata.json" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast.module.metadata.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast.module.ngfactory.d.ts" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast.module.ngfactory.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast.module.ngfactory.js" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/src/toast.module.ngfactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/tsconfig.json" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/tsconfig.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/tslint.json" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/tslint.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-toastr/typings.json" afterPath="$PROJECT_DIR$/client/node_modules/ng2-toastr/typings.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/package.json" afterPath="$PROJECT_DIR$/client/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/css/styles.css" afterPath="$PROJECT_DIR$/client/src/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/css/styles.css.map" afterPath="$PROJECT_DIR$/client/src/css/styles.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/css/styles.scss" afterPath="$PROJECT_DIR$/client/src/css/styles.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/api/files/Files.js" afterPath="$PROJECT_DIR$/controllers/api/files/Files.js" />
     </list>
     <ignored path="skeleton-ang2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,26 +321,24 @@
     <favorites_list name="skeleton-ang2" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.29156172">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/routes/api.js">
+        <leaf>
+          <file leaf-file-name="Files.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/controllers/api/files/Files.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="468">
-                  <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-                  <folding>
-                    <marker date="1478615323134" expanded="true" signature="1435:1552" ph="/*...*/" />
-                  </folding>
+                <state relative-caret-position="270">
+                  <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app.js">
+          <file leaf-file-name="product.service.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/app/services/product.service.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+                <state relative-caret-position="342">
+                  <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
@@ -66,30 +347,8 @@
           <file leaf-file-name="Product.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/controllers/api/catalog/Product.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
+                <state relative-caret-position="630">
                   <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-                  <folding>
-                    <marker date="1478616365275" expanded="true" signature="1463:2040" ph="{...}" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ApiBase_RequestLayer.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/controllers/api/ApiBase_RequestLayer.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="832">
-                  <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ShopsComponent.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/app/components/catalog/shops/ShopsComponent.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -98,94 +357,32 @@
           <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/app/app.module.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="684">
-                  <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="auth.service.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/app/services/auth.service.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="612">
-                  <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ProductEditComponent.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductEditComponent.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="756">
-                  <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+                <state relative-caret-position="414">
+                  <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
                   <folding>
-                    <element signature="e#0#49#0" expanded="true" />
+                    <element signature="e#0#29#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="messages.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/client/app/helpers/messages.ts">
+          <file leaf-file-name="api.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/routes/api.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="72">
-                  <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-                  <folding />
+                <state relative-caret-position="328">
+                  <caret line="37" column="3" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+                  <folding>
+                    <marker date="1478615323134" expanded="true" signature="1435:1552" ph="/*...*/" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="systemjs.config.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/systemjs.config.js">
+          <file leaf-file-name="FileUploaderDirective.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-216">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="tabs.service.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/app/services/tabs.service.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="234">
-                  <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="category.service.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/app/services/category.service.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="342">
-                  <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="product-edit.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/client/app/views/catalog/products/directives/product-edit.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="751">
-                  <caret line="88" column="36" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="36" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="LoginComponent.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/app/components/login/LoginComponent.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+                <state relative-caret-position="576">
+                  <caret line="32" column="79" selection-start-line="32" selection-start-column="79" selection-end-line="32" selection-end-column="79" />
                   <folding>
                     <element signature="e#0#42#0" expanded="true" />
                   </folding>
@@ -193,31 +390,27 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="product.service.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/app/services/product.service.ts">
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="files.service.ts" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client/app/services/files.service.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="217">
-                  <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-                  <folding />
+                <state relative-caret-position="306">
+                  <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+                  <folding>
+                    <element signature="e#0#43#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Auth.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/controllers/api/auth/Auth.js">
+          <file leaf-file-name="HttpHelper.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/app/helpers/HttpHelper.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="288">
-                  <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Config.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Config.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="18">
-                  <caret line="1" column="21" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="21" />
+                <state relative-caret-position="216">
+                  <caret line="13" column="51" selection-start-line="5" selection-start-column="8" selection-end-line="13" selection-end-column="51" />
                   <folding />
                 </state>
               </provider>
@@ -245,13 +438,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/index.html" />
         <option value="$PROJECT_DIR$/client/app/services/manufacturer.service.ts" />
         <option value="$PROJECT_DIR$/controllers/api/catalog/Manufacturer.js" />
         <option value="$PROJECT_DIR$/controllers/api/catalog/Category.js" />
-        <option value="$PROJECT_DIR$/client/app/components/catalog/products/ProductComponent.ts" />
-        <option value="$PROJECT_DIR$/client/package.json" />
-        <option value="$PROJECT_DIR$/client/systemjs.config.js" />
         <option value="$PROJECT_DIR$/client/app/helpers/userHelper.ts" />
         <option value="$PROJECT_DIR$/client/app/components/navbar/NavBarComponent.ts" />
         <option value="$PROJECT_DIR$/client/app/components/files/file-upload.ts" />
@@ -264,38 +453,42 @@
         <option value="$PROJECT_DIR$/client/app/routes.ts" />
         <option value="$PROJECT_DIR$/client/app/views/files/file-upload.html" />
         <option value="$PROJECT_DIR$/client/app/services/files.service.js.map" />
-        <option value="$PROJECT_DIR$/controllers/api/files/Files.js" />
-        <option value="$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.ts" />
-        <option value="$PROJECT_DIR$/client/app/services/files.service.ts" />
         <option value="$PROJECT_DIR$/client/app/views/login/login.html" />
         <option value="$PROJECT_DIR$/client/app/views/navbar/navbar.html" />
         <option value="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductListComponent.ts" />
-        <option value="$PROJECT_DIR$/client/app/views/catalog/products/directives/product-search.html" />
-        <option value="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductSearchComponent.ts" />
         <option value="$PROJECT_DIR$/client/app/services/tabs.service.ts" />
         <option value="$PROJECT_DIR$/client/app/components/directives/tabs/TabsDirective.js" />
         <option value="$PROJECT_DIR$/client/app/components/directives/tabs/TabsDirective.ts" />
         <option value="$PROJECT_DIR$/client/app/views/catalog/products/directives/product-list.html" />
         <option value="$PROJECT_DIR$/client/app/services/auth.service.ts" />
-        <option value="$PROJECT_DIR$/client/app/views/catalog/products/product-dashboard.html" />
         <option value="$PROJECT_DIR$/client/app/components/catalog/shops/ShopsComponent.ts" />
         <option value="$PROJECT_DIR$/client/app/views/catalog/shops/shops-dashboard.html" />
         <option value="$PROJECT_DIR$/client/app/components/left-nav/left-nav-component.ts" />
         <option value="$PROJECT_DIR$/client/app/app.routing.ts" />
-        <option value="$PROJECT_DIR$/client/app/app.module.ts" />
         <option value="$PROJECT_DIR$/client/app/views/left-nav/left-nav.html" />
-        <option value="$PROJECT_DIR$/client/src/css/styles.scss" />
         <option value="$PROJECT_DIR$/routes/api.js" />
         <option value="internal/process/next_tick.js" />
         <option value="$PROJECT_DIR$/controllers/api/catalog/Product.js" />
         <option value="$PROJECT_DIR$/Config.js" />
         <option value="$PROJECT_DIR$/client/app/services/category.service.ts" />
-        <option value="$PROJECT_DIR$/client/app/services/product.service.ts" />
         <option value="$PROJECT_DIR$/controllers/api/ApiBase_RequestLayer.js" />
         <option value="$PROJECT_DIR$/client/app/components/login/LoginComponent.ts" />
-        <option value="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductEditComponent.ts" />
         <option value="$PROJECT_DIR$/client/app/helpers/messages.ts" />
+        <option value="$PROJECT_DIR$/client/app/views/catalog/products/product-dashboard.html" />
+        <option value="$PROJECT_DIR$/client/app/components/catalog/products/ProductComponent.ts" />
+        <option value="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductSearchComponent.ts" />
+        <option value="$PROJECT_DIR$/client/app/views/catalog/products/directives/product-search.html" />
+        <option value="$PROJECT_DIR$/client/app/services/product.service.ts" />
         <option value="$PROJECT_DIR$/client/app/views/catalog/products/directives/product-edit.html" />
+        <option value="$PROJECT_DIR$/client/src/css/styles.scss" />
+        <option value="$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductEditComponent.ts" />
+        <option value="$PROJECT_DIR$/client/systemjs.config.js" />
+        <option value="$PROJECT_DIR$/client/app/views/directives/files/file-upload.html" />
+        <option value="$PROJECT_DIR$/client/package.json" />
+        <option value="$PROJECT_DIR$/client/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/controllers/api/files/Files.js" />
+        <option value="$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.ts" />
+        <option value="$PROJECT_DIR$/client/app/services/files.service.ts" />
       </list>
     </option>
   </component>
@@ -404,20 +597,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skeleton-ang2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skeleton-ang2" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="client" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -484,12 +663,8 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
+              <option name="myItemId" value="catalog" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LoginComponent.ts" />
-              <option name="myItemType" value="com.intellij.lang.typescript.compiler.ui.projectView.TypeScriptNestingTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -513,19 +688,19 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/james/PhpstormProjects/skeleton-ang2/client/app/views/catalog/products/directives/product-edit.html" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/app/views/directives/files" />
+      <recent name="$PROJECT_DIR$/client/app/views/directives" />
+      <recent name="$PROJECT_DIR$/client/app/views/directives/tabs" />
+      <recent name="$PROJECT_DIR$/client/app/components/directives" />
+      <recent name="$PROJECT_DIR$/client/src/css/left-nav" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/app/components/directives/files" />
       <recent name="$PROJECT_DIR$/client/assets/img" />
       <recent name="$PROJECT_DIR$/client/app/classes" />
       <recent name="$PROJECT_DIR$/client/assets" />
       <recent name="$PROJECT_DIR$/client/app" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client/app/views/directives/tabs" />
-      <recent name="$PROJECT_DIR$/client/app/components/directives" />
-      <recent name="$PROJECT_DIR$/client/src/css/left-nav" />
-      <recent name="$PROJECT_DIR$/client/src/css" />
-      <recent name="$PROJECT_DIR$/client/app/views/catalog/products/directives" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.debug node">
@@ -641,18 +816,18 @@
       <workItem from="1478256346907" duration="19816000" />
       <workItem from="1478512562461" duration="38000" />
       <workItem from="1478512628217" duration="4623000" />
-      <workItem from="1478518346444" duration="49277000" />
+      <workItem from="1478518346444" duration="73496000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="450071000" />
+    <option name="totallyTimeSpent" value="474290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="18" width="1871" height="1062" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13176599" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14871514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5021299" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -660,9 +835,9 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33814433" sideWeight="0.4978701" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33917525" sideWeight="0.4978701" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36082473" sideWeight="0.4978701" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36082473" sideWeight="0.4978701" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -762,26 +937,28 @@
           <option name="timeStamp" value="187" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/controllers/api/files/Files.js</url>
-          <line>14</line>
-          <option name="timeStamp" value="191" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/app/services/files.service.ts</url>
           <option name="timeStamp" value="192" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/routes/api.js</url>
-          <line>37</line>
-          <option name="timeStamp" value="193" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/app/components/login/LoginComponent.ts</url>
           <properties />
           <option name="timeStamp" value="200" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/app/services/files.service.ts</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="202" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/api.js</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="205" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="201" />
+      <option name="time" value="206" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="NodeJSConfigurationType">
@@ -790,85 +967,9 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/app/services/HttpInterceptor.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#51#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/services/category.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/services/category.service.js.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/services/files.service.js.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/services/files.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/files/Files.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///var/www/wordpress/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/services/files.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/files/file-upload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
         </state>
       </provider>
@@ -901,21 +1002,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductSearchComponent.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="65" column="54" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductListComponent.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/classes/Product.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -934,13 +1020,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/catalog/products/product-dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/views/directives/tabs/tabs-view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -948,33 +1027,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/catalog/products/directives/product-search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="24" selection-end-line="22" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/components/catalog/categories/CategoriesComponent.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/views/catalog/products/directives/product-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/components/catalog/products/ProductComponent.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="7" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1023,14 +1079,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/css/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="467" column="13" selection-start-line="467" selection-start-column="13" selection-end-line="467" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/routes.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1055,16 +1103,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api/catalog/Product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding>
-            <marker date="1478616365275" expanded="true" signature="1463:2040" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/api/auth/Auth.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1081,28 +1119,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <marker date="1478615323134" expanded="true" signature="1435:1552" ph="/*...*/" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/services/tabs.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -1123,26 +1143,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/systemjs.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/services/auth.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1163,30 +1167,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/services/product.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/components/login/LoginComponent.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductEditComponent.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1199,11 +1185,205 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/views/catalog/products/directives/product-search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" column="171" selection-start-line="12" selection-start-column="171" selection-end-line="12" selection-end-column="171" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductSearchComponent.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#64#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/views/catalog/products/product-dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductListComponent.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/components/catalog/products/ProductComponent.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/views/catalog/products/directives/product-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/css/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="443" column="11" selection-start-line="443" selection-start-column="11" selection-end-line="443" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/views/catalog/products/directives/product-edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="751">
-          <caret line="88" column="36" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="36" />
+        <state relative-caret-position="219">
+          <caret line="88" column="66" selection-start-line="88" selection-start-column="66" selection-end-line="88" selection-end-column="66" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/components/catalog/products/directives/ProductEditComponent.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/typings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/systemjs.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/views/directives/files/file-upload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/catalog/Product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/services/product.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/typescriptCompiler/external/lib.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="16201" column="4" selection-start-line="16201" selection-start-column="4" selection-end-line="16201" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/helpers/HttpHelper.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="13" column="51" selection-start-line="5" selection-start-column="8" selection-end-line="13" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api/files/Files.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="79" selection-start-line="32" selection-start-column="79" selection-end-line="32" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="37" column="3" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+          <folding>
+            <marker date="1478615323134" expanded="true" signature="1435:1552" ph="/*...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/services/files.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

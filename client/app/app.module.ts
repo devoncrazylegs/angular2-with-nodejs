@@ -4,7 +4,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpModule, Http, XHRBackend, RequestOptions } from "@angular/http";
-import { FormsModule } from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 import { AuthGuard } from "./guards/auth.guard";
 import { routing } from "./app.routing";
@@ -43,17 +43,14 @@ import { AUTH_PROVIDERS } from "angular2-jwt";
 import { FileUploaderDirective } from "./components/directives/files/FileUploaderDirective";
 import { TabsDirective } from "./components/directives/tabs/TabsDirective";
 
-
-
-
-
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
         FormsModule,
         routing,
-        ToastModule
+        ToastModule,
+        ReactiveFormsModule
     ],
     declarations: [
         AppComponent,

@@ -11,7 +11,18 @@ export class FilesService {
 
     }
 
-    sendFile(url: String, vars: Array<String>, files: File[]):Observable<any> {
+    sendFile(url: String, vars: Array<String>, files: File[]) {
+        let formData = new FormData();
+        formData.append('files', files);
+        formData.append('files', 'testfiles');
+
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', url, true);
+        xhr.withCredentials = true;
+        xhr.send(formData);
+    }
+
+    /*sendFile(url: String, vars: Array<String>, files: File[]):Observable<any> {
         let headers = HttpHelper.createAuthorizationHeader(true);
         let options = new RequestOptions({ headers: headers });
         let files = files;
@@ -26,5 +37,5 @@ export class FilesService {
             .map((res) => {
                 return res.json();
             });
-    }
+    }*/
 }

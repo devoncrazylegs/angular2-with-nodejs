@@ -35,10 +35,10 @@ export class ProductComponent {
         )
     }
 
-    getProducts() {
+    getProducts(filters) {
         this.productsLoaded = false;
 
-        this._productService.getProducts(this.productPayload)
+        this._productService.getProducts(filters)
             .subscribe(
                 products => {this.products = products},
                 error    => {this.APIError = error},
@@ -47,7 +47,7 @@ export class ProductComponent {
     }
 
     ngOnInit() {
-        this.getProducts();
+        this.getProducts({});
     }
 
 }
