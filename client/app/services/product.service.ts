@@ -19,7 +19,7 @@ export class ProductService {
     }
 
     getProduct(id:number): Observable<Product> {
-        let headers = HttpHelper.createAuthorizationHeader(true);
+        let headers = HttpHelper.createAuthorizationHeader(true, false);
         let options = new RequestOptions({ headers: headers });
         return this._http
             .get(routes.api.products  + '/' + id, options)
@@ -31,7 +31,7 @@ export class ProductService {
      * return Observable
      */
     getProducts(filters:Object): Observable<Product[]> {
-        let headers = HttpHelper.createAuthorizationHeader(true);
+        let headers = HttpHelper.createAuthorizationHeader(true, false);
         let options = new RequestOptions({ headers: headers });
         return this._http
             .get(routes.api.products + StringHelper.convertVarsToString(filters), options)
@@ -39,7 +39,7 @@ export class ProductService {
     }
 
     editProduct(payload) {
-        let headers = HttpHelper.createAuthorizationHeader(true);
+        let headers = HttpHelper.createAuthorizationHeader(true, false);
         let options = new RequestOptions({ headers: headers });
         payload['_method'] = 'PUT';
         return this._http

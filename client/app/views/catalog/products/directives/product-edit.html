@@ -72,9 +72,9 @@
                 </label>
                 <div class='col-xs-10 col-sm-10 col-md-10 col-lg-10'>
                     <div *ngIf='product.files.length' class='files-wrapper'>
-                        <!--<div *ngFor='let files of product.files' class='file'>
-                            i am a file
-                        </div>-->
+                        <a *ngFor='let files of product.files' class='file'>
+                            <a href=''>{{file.name}}</a>
+                        </a>
                     </div>
                     <file-upload></file-upload>
                 </div>
@@ -111,7 +111,14 @@
         </div>
 
         <div id='manufacturers' class='tab-pane' *ngIf='selectedTab.linked == "manufacturers"'>
-            manufacturers
+            <label class='col-xs-2 col-sm-2 col-md-2 col-lg-2 control-label'>
+                Manufacturer
+            </label>
+            <div class='col-xs-10 col-sm-10 col-md-10 col-lg-10'>
+                <select [(ngModel)]='product.manufacturer_id'>
+                    <option *ngFor='let manufacturer of manufacturers' [value]='manufacturer.id'>{{manufacturer.name}}</option>
+                </select>
+            </div>
         </div>
 
         <div class='clear'></div>

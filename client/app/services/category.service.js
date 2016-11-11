@@ -23,7 +23,7 @@ var CategoryService = (function () {
     }
     CategoryService.prototype.getCategories = function (filters) {
         var _this = this;
-        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true);
+        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true, false);
         var options = new http_1.RequestOptions({ headers: headers });
         return this._http
             .get(routes_1.routes.api.categories + StringHelper_1.StringHelper.convertVarsToString(filters), options)

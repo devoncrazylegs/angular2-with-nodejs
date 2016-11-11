@@ -29,7 +29,7 @@ var AuthService = (function () {
      */
     AuthService.prototype.login = function (loginDetails) {
         var body = JSON.stringify(loginDetails);
-        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(false);
+        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(false, false);
         var options = new http_1.RequestOptions({ headers: headers });
         return this._http
             .post(routes_1.routes.auth.login, body, options)

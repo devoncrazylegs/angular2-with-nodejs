@@ -23,14 +23,11 @@ export class FileUploaderDirective {
     }
 
     upload() {
-        /*this._filesService.sendFile(routes.api.files, [], this._filesToUpload)
+        this._filesService.sendFile(routes.api.files, [], this._filesToUpload)
             .subscribe((result) => {
                 console.log(result);
             }, (error) => {
                 console.log(error);
-            });*/
-
-        this._filesService.sendFile(routes.api.files, [], this._filesToUpload);
-
+            });
     }
 }

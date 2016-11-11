@@ -20,7 +20,7 @@ var ProductService = (function () {
         this.emitter = new core_1.EventEmitter();
     }
     ProductService.prototype.getProduct = function (id) {
-        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true);
+        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true, false);
         var options = new http_1.RequestOptions({ headers: headers });
         return this._http
             .get(routes_1.routes.api.products + '/' + id, options)
@@ -31,14 +31,14 @@ var ProductService = (function () {
      * return Observable
      */
     ProductService.prototype.getProducts = function (filters) {
-        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true);
+        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true, false);
         var options = new http_1.RequestOptions({ headers: headers });
         return this._http
             .get(routes_1.routes.api.products + StringHelper_1.StringHelper.convertVarsToString(filters), options)
             .map(function (res) { return res.json(); });
     };
     ProductService.prototype.editProduct = function (payload) {
-        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true);
+        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true, false);
         var options = new http_1.RequestOptions({ headers: headers });
         payload['_method'] = 'PUT';
         return this._http

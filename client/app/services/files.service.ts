@@ -11,31 +11,23 @@ export class FilesService {
 
     }
 
-    sendFile(url: String, vars: Array<String>, files: File[]) {
-        let formData = new FormData();
-        formData.append('files', files);
-        formData.append('files', 'testfiles');
+    sendFile(url: String, vars: Array<String>, files: File[]):Observable<any> {
+        let formData:FormData = new FormData();
+        if(files.length > 0) {
+            for(let i = 0;  i < files.length; i++) {
+                formData.append('uploadFile[]', files[i]);
+            }
 
-        let xhr = new XMLHttpRequest();
-        xhr.open('POST', url, true);
-        xhr.withCredentials = true;
-        xhr.send(formData);
-    }
-
-    /*sendFile(url: String, vars: Array<String>, files: File[]):Observable<any> {
-        let headers = HttpHelper.createAuthorizationHeader(true);
-        let options = new RequestOptions({ headers: headers });
-        let files = files;
-        const formData = new FormData();
-
-        for(var i = 0; i < files.length; i++){
-            formData.append(files[i].name, files[i]);
+            let headers = HttpHelper.createAuthorizationHeader(true, true);
+            let options = new RequestOptions({ headers: headers });
+            var xhr = new XMLHttpRequest;
+            xhr.open('POST', '/', true);
+            xhr.send(formData);
+            return this._http
+                .post(url, formData, options)
+                .map((res) => {
+                    return res.json();
+                });
         }
-
-        return this._http
-            .post(url, formData)
-            .map((res) => {
-                return res.json();
-            });
-    }*/
+    }
 }

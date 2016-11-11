@@ -21,7 +21,7 @@ export class CategoryService {
     }
 
     getCategories(filters): Observable<Category[]> {
-        let headers = HttpHelper.createAuthorizationHeader(true);
+        let headers = HttpHelper.createAuthorizationHeader(true, false);
         let options = new RequestOptions({ headers: headers });
         return this._http
             .get(routes.api.categories + StringHelper.convertVarsToString(filters), options)

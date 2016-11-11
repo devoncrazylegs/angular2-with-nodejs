@@ -7,6 +7,7 @@ import { ActivatedRoute } from "@angular/router";
 import { Location } from '@angular/common';
 import { TabsService } from "../../../../services/tabs.service";
 import { CategoryService } from "../../../../services/category.service";
+import { ManufacturerService } from "../../../../services/manufacturer.service";
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { messages } from "../../../../helpers/messages";
 
@@ -19,6 +20,7 @@ import { messages } from "../../../../helpers/messages";
 export class ProductEditComponent {
     public product:Product;
     private categories = [];
+    private manufacturers = [];
     private catsToShow = [];
     private parsedImages:Array<any>;
     private allocatedCategories = [];
@@ -35,12 +37,15 @@ export class ProductEditComponent {
         constructor(
         private _productService: ProductService,
         private _categoryService: CategoryService,
+        private _manufacturerService: ManufacturerService,
         private _activatedRoute: ActivatedRoute,
         private _location: Location,
         private _tabsService: TabsService,
         private _toastr: ToastsManager
 
     ) {
+
+
         this._tabsService.emitter
             .subscribe((tab) => {
                 this.tabs.filter((arrayItem) => {
@@ -63,6 +68,7 @@ export class ProductEditComponent {
                 (product) => {
                     product[0].active = parseInt(product[0].active);
                     product[0].images = JSON.parse(product[0].images);
+                    product[0].files = JSON.parse(product[0].files);
 
                     self.product = product[0];
                 }
@@ -128,11 +134,13 @@ export class ProductEditComponent {
                 this._categoryService.getCategories({}),
                 this._categoryService.getCategories({
                     product: self.id
-                })
+                }),
+                this._manufacturerService.getManufacturers({})
             ])
             .subscribe((response) => {
                 this.categories = this.catsToShow = response[0];
                 this.allocatedCategories = response[1];
+                this.manufacturers = response[2];
                 this.alreadyAllocated();
             });
     }

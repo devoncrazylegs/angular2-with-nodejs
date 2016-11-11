@@ -20,7 +20,7 @@ var ManufacturerService = (function () {
         this.emitter = new core_1.EventEmitter();
     }
     ManufacturerService.prototype.getManufacturers = function (filters) {
-        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true);
+        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true, false);
         var options = new http_1.RequestOptions({ headers: headers });
         return this._http
             .get(routes_1.routes.api.manufacturers + StringHelper_1.StringHelper.convertVarsToString(filters), options)

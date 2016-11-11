@@ -20,13 +20,12 @@ var FileUploaderDirective = (function () {
         this._filesToUpload = fileInput.target.files;
     };
     FileUploaderDirective.prototype.upload = function () {
-        /*this._filesService.sendFile(routes.api.files, [], this._filesToUpload)
-            .subscribe((result) => {
-                console.log(result);
-            }, (error) => {
-                console.log(error);
-            });*/
-        this._filesService.sendFile(routes_1.routes.api.files, [], this._filesToUpload);
+        this._filesService.sendFile(routes_1.routes.api.files, [], this._filesToUpload)
+            .subscribe(function (result) {
+            console.log(result);
+        }, function (error) {
+            console.log(error);
+        });
     };
     FileUploaderDirective = __decorate([
         core_1.Component({

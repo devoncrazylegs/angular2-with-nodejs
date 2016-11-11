@@ -19,7 +19,7 @@ export class ManufacturerService {
     }
 
     getManufacturers(filters): Observable<Manufacturer[]> {
-        let headers = HttpHelper.createAuthorizationHeader(true);
+        let headers = HttpHelper.createAuthorizationHeader(true, false);
         let options = new RequestOptions({ headers: headers });
         return this._http
             .get(routes.api.manufacturers + StringHelper.convertVarsToString(filters), options)
