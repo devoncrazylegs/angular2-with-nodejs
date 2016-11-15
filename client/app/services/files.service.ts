@@ -11,11 +11,11 @@ export class FilesService {
 
     }
 
-    sendFile(url: String, vars: Array<String>, files: File[]):Observable<any> {
+    sendFile(url: String, vars: Array<String>, files: FileList):Observable<any> {
         let formData:FormData = new FormData();
         if(files.length > 0) {
             for(let i = 0;  i < files.length; i++) {
-                formData.append('uploadFile[]', files[i]);
+                formData.append('files', files[i]);
             }
 
             let headers = HttpHelper.createAuthorizationHeader(true, true);
@@ -24,7 +24,7 @@ export class FilesService {
             xhr.open('POST', '/', true);
             xhr.send(formData);
             return this._http
-                .post(url, formData, options)
+                .post('http://stdavids-brain.dev/upload', formData, options)
                 .map((res) => {
                     return res.json();
                 });

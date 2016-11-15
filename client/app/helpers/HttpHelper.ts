@@ -3,22 +3,18 @@ import { userHelper } from "./userHelper";
 
 export var HttpHelper = {
     createAuthorizationHeader(token, multipart): Headers {
-        let payload: Object;
+        let headers:Headers = new Headers();
         if(multipart) {
-            payload = {
-                'Content-Type': 'multipart/form-data'
-            };
+            //headers.set('Content-Type', 'multipart/form-data');
         } else {
-            payload = {
-                'Content-Type': 'application/json'
-            };
+            headers.set('Content-Type', 'application/json');
         }
 
         if(token) {
-            payload['Authorization'] = 'Bearer ' + userHelper.getToken();
+            headers.set('Authorization', 'Bearer ' + userHelper.getToken());
         }
 
-        let headers:Headers = new Headers(payload);
+
         return headers;
     }
 };

@@ -9,7 +9,7 @@ import { FilesService } from "../../../services/files.service";
 })
 
 export class FileUploaderDirective {
-    private _filesToUpload: Array<File> = [];
+    private _filesToUpload: FileList;
 
 
     constructor(
@@ -19,7 +19,7 @@ export class FileUploaderDirective {
     }
 
     fileChangeEvents(fileInput: any) {
-        this._filesToUpload = <Array<File>> fileInput.target.files;
+        this._filesToUpload = fileInput.target.files;
     }
 
     upload() {

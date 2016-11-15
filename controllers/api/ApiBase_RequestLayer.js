@@ -28,16 +28,33 @@ ApiBase_RequestLayer.prototype.preRequestCheck = function(req, res, next) {
     headers['Authorization'] = req.headers.authorization;
 
     next(req, res, headers);
+
+    /*{
+        'Authorization'     : req.headers.authorization,
+        'Content-Type'      : 'multipart/form-data; boundary=' + myBoundary,
+        'Content-Length'    : Buffer.byteLength(fieldsData) + Buffer.byteLength(beforeBoundary) + files.files.size + Buffer.byteLength(afterBoundary)
+    }*/
 };
 
 ApiBase_RequestLayer.prototype.makeRequest = function(verb, options, vars, url, headers) {
     var self = this,
         reqHeaders = {};
 
+    // Content Type
     if(options.contentType === 'json') {
         reqHeaders['Content-Type'] = 'application/json';
-    } else {
+    } else if(options.contentType === 'files') {
 
+        if(options.boundary) {
+            reqHeaders['Content-Type'] = options.boundary
+        } else {
+            reqHeaders['Content-Type'] = 'multipart/form-data';
+        }
+    }
+
+    // Content Length
+    if(options.contentLength) {
+        headers['Content-Length'] = options.contentLength
     }
 
     if(headers) {

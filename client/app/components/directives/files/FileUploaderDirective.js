@@ -14,7 +14,6 @@ var files_service_1 = require("../../../services/files.service");
 var FileUploaderDirective = (function () {
     function FileUploaderDirective(_filesService) {
         this._filesService = _filesService;
-        this._filesToUpload = [];
     }
     FileUploaderDirective.prototype.fileChangeEvents = function (fileInput) {
         this._filesToUpload = fileInput.target.files;

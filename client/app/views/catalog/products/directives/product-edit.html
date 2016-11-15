@@ -72,8 +72,8 @@
                 </label>
                 <div class='col-xs-10 col-sm-10 col-md-10 col-lg-10'>
                     <div *ngIf='product.files.length' class='files-wrapper'>
-                        <a *ngFor='let files of product.files' class='file'>
-                            <a href=''>{{file.name}}</a>
+                        <a *ngFor='let file of product.files' class='file'>
+                            <a href='{{file.url}}'><i class='glyphicon-file glyphicon'></i>{{file.name}}</a>
                         </a>
                     </div>
                     <file-upload></file-upload>

@@ -1,2 +1,4 @@
-<input type='file' (change)='fileChangeEvents($event)' placeholder='Upload file...' />
-<button (click)='upload()'>Upload Files</button>
+<form enctype="multipart/form-data">
+    <input type='file' (change)='fileChangeEvents($event)' placeholder='Upload file...' multiple accept="'image/*'" />
+    <input type='submit' value='Upload' (click)='upload()' placeholder='Upload'/>
+</form>

@@ -20,7 +20,7 @@ var FilesService = (function () {
         var formData = new FormData();
         if (files.length > 0) {
             for (var i = 0; i < files.length; i++) {
-                formData.append('uploadFile[]', files[i]);
+                formData.append('files', files[i]);
             }
             var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true, true);
             var options = new http_1.RequestOptions({ headers: headers });
@@ -28,7 +28,7 @@ var FilesService = (function () {
             xhr.open('POST', '/', true);
             xhr.send(formData);
             return this._http
-                .post(url, formData, options)
+                .post('http://stdavids-brain.dev/upload', formData, options)
                 .map(function (res) {
                 return res.json();
             });

@@ -205,7 +205,8 @@ product-component, product-edit {
 .product-list,
 .product-dashboard-panel,
 .product-edit-header,
-.product-edit-panel {
+.product-edit-panel,
+.dashboard-home-wrapper {
   background-color: #ededed;
   padding: 20px;
   -webkit-box-sizing: border-box;
@@ -361,3 +362,9 @@ tabs {
   display: inline-block; }
   tabs .nav-tabs li a {
     cursor: pointer; }
+
+file-upload input[type='submit'], file-upload input[type='file'] {
+  width: auto; }
+
+.dashboard-home-wrapper {
+  float: left; }
