@@ -220,6 +220,10 @@ nav#top-bar {
   }
 }
 
+.dashboard-home-wrapper {
+  float:left;
+}
+
 left-nav {
   float:left;
   width:15%;
@@ -535,6 +539,18 @@ file-upload {
   }
 }
 
-.dashboard-home-wrapper {
-  float:left;
+.files-wrapper {
+  padding:10px;
+
+  .file {
+    padding:15px;
+    color:#fff;
+    background-color:$gray;
+    cursor:pointer;
+  }
+
+  .removeFile {
+    margin-left:10px;
+    border-left:1px solid #000000;
+  }
 }

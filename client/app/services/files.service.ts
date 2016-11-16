@@ -17,6 +17,7 @@ export class FilesService {
             for(let i = 0;  i < files.length; i++) {
                 formData.append('files', files[i]);
             }
+            //formData.append('_method', 'POST');
 
             let headers = HttpHelper.createAuthorizationHeader(true, true);
             let options = new RequestOptions({ headers: headers });
@@ -24,7 +25,7 @@ export class FilesService {
             xhr.open('POST', '/', true);
             xhr.send(formData);
             return this._http
-                .post('http://stdavids-brain.dev/upload', formData, options)
+                .post(url, formData, options)
                 .map((res) => {
                     return res.json();
                 });

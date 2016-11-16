@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     connect = require('gulp-connect'),
-    useref = require('gulp-useref'),
+    //useref = require('gulp-useref'),
     tsProject = ts.createProject("tsconfig.json");
 
 gulp.task('build-jquery', function() {

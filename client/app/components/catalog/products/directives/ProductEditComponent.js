@@ -18,6 +18,7 @@ var category_service_1 = require("../../../../services/category.service");
 var manufacturer_service_1 = require("../../../../services/manufacturer.service");
 var ng2_toastr_1 = require('ng2-toastr/ng2-toastr');
 var messages_1 = require("../../../../helpers/messages");
+var productHelper_1 = require("../../../../helpers/productHelper");
 var ProductEditComponent = (function () {
     function ProductEditComponent(_productService, _categoryService, _manufacturerService, _activatedRoute, _location, _tabsService, _toastr) {
         var _this = this;
@@ -54,9 +55,10 @@ var ProductEditComponent = (function () {
         var self = this;
         this._productService.getProduct(this.id)
             .subscribe(function (product) {
+            product = productHelper_1.productHelper.processImagesAndDownloads(product);
             product[0].active = parseInt(product[0].active);
-            product[0].images = JSON.parse(product[0].images);
-            product[0].files = JSON.parse(product[0].files);
+            //product[0].images = JSON.parse(product[0].images);
+            //product[0].files = JSON.parse(product[0].files);
             self.product = product[0];
         });
     };

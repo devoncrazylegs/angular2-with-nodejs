@@ -139,6 +139,9 @@ nav#top-bar {
   .form-signin h2 {
     font-size: 14px; }
 
+.dashboard-home-wrapper {
+  float: left; }
+
 left-nav {
   float: left;
   width: 15%;
@@ -354,7 +357,15 @@ tabs {
 file-upload input[type='submit'], file-upload input[type='file'] {
   width: auto; }
 
-.dashboard-home-wrapper {
-  float: left; }
+.files-wrapper {
+  padding: 10px; }
+  .files-wrapper .file {
+    padding: 15px;
+    color: #fff;
+    background-color: #ededed;
+    cursor: pointer; }
+  .files-wrapper .removeFile {
+    margin-left: 10px;
+    border-left: 1px solid #000000; }
 
 /*# sourceMappingURL=styles.css.map */

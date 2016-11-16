@@ -43,13 +43,6 @@ ApiBase_RequestLayer.prototype.makeRequest = function(verb, options, vars, url, 
     // Content Type
     if(options.contentType === 'json') {
         reqHeaders['Content-Type'] = 'application/json';
-    } else if(options.contentType === 'files') {
-
-        if(options.boundary) {
-            reqHeaders['Content-Type'] = options.boundary
-        } else {
-            reqHeaders['Content-Type'] = 'multipart/form-data';
-        }
     }
 
     // Content Length
@@ -74,7 +67,8 @@ ApiBase_RequestLayer.prototype.makeRequest = function(verb, options, vars, url, 
         timeout : 10000,
         form    : vars,
         followRedirect: true,
-        maxRedirects: 10
+        maxRedirects: 10,
+        body    : '' || options.body
     };
 
     return new Promise(function(resolve, reject) {
@@ -84,7 +78,7 @@ ApiBase_RequestLayer.prototype.makeRequest = function(verb, options, vars, url, 
                         resolve(response, body);
                     } else {
                         if(response.statusCode === 401) {
-                            console.log('token expited');
+                            console.log('token expired');
                         }
                         reject(response, body);
                     }

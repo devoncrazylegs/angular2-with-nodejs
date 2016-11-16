@@ -10,6 +10,7 @@ import { CategoryService } from "../../../../services/category.service";
 import { ManufacturerService } from "../../../../services/manufacturer.service";
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { messages } from "../../../../helpers/messages";
+import {productHelper} from "../../../../helpers/productHelper";
 
 @Component({
     selector: 'product-edit',
@@ -66,9 +67,11 @@ export class ProductEditComponent {
         this._productService.getProduct(this.id)
             .subscribe(
                 (product) => {
+                    product = productHelper.processImagesAndDownloads(product);
                     product[0].active = parseInt(product[0].active);
-                    product[0].images = JSON.parse(product[0].images);
-                    product[0].files = JSON.parse(product[0].files);
+
+                    //product[0].images = JSON.parse(product[0].images);
+                    //product[0].files = JSON.parse(product[0].files);
 
                     self.product = product[0];
                 }

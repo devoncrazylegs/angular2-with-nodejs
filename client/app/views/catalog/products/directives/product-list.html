@@ -13,7 +13,10 @@
         <div class='product row no-margin' *ngFor="let product of products">
             <div class='col-xs-12 col-sm-1 col-md-1 col-lg-1'><input type='checkbox' class='product-check' /></div>
             <div class='col-xs-12 col-sm-1 col-md-1 col-lg-1'>{{ product.id }}</div>
-            <div class='col-xs-12 col-sm-2 col-md-2 col-lg-2'><img src='{{ product.main_image }}' /></div>
+            <div class='col-xs-12 col-sm-2 col-md-2 col-lg-2'>
+                <img *ngIf='product.images.length' src='{{ product.images[0].url | APIUrl: "image" }}' />
+
+            </div>
             <div class='col-xs-12 col-sm-2 col-md-2 col-lg-2'>{{ product.title }}</div>
             <div class='col-xs-12 col-sm-3 col-md-3 col-lg-3'>{{ product.description }}</div>
             <div class='col-xs-12 col-sm-2 col-md-2 col-lg-2'>{{ product.sku }}</div>

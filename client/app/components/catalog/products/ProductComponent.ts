@@ -1,6 +1,9 @@
 import { Component } from "@angular/core";
 import { Product } from "../../../classes/Product";
 import { ProductService } from "../../../services/product.service";
+import { ConfigObject } from "../../../ConfigObject";
+import { productHelper } from "../../../helpers/productHelper";
+
 
 @Component({
     selector: 'product-component',
@@ -9,6 +12,7 @@ import { ProductService } from "../../../services/product.service";
 })
 
 export class ProductComponent {
+    globals = ConfigObject;
     products: Product[] = [];
     productsLoaded = false;
     APIError = [];
@@ -29,7 +33,9 @@ export class ProductComponent {
         private _productService: ProductService
     ) {
         _productService.emitter.subscribe(
-            products => { this.products = products },
+            (products) => {
+                this.products = productHelper.processImagesAndDownloads(products);
+            },
             error    => { this.APIError = error },
             ()       => { }
         )
@@ -40,9 +46,9 @@ export class ProductComponent {
 
         this._productService.getProducts(filters)
             .subscribe(
-                products => {this.products = products},
-                error    => {this.APIError = error},
-                ()       => {this.productsLoaded = true}
+                products => { this.products = productHelper.processImagesAndDownloads(products)},
+                error    => { this.APIError = error },
+                ()       => { this.productsLoaded = true }
         );
     }
 

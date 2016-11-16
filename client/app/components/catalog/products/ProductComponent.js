@@ -10,10 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var product_service_1 = require("../../../services/product.service");
+var ConfigObject_1 = require("../../../ConfigObject");
+var productHelper_1 = require("../../../helpers/productHelper");
 var ProductComponent = (function () {
     function ProductComponent(_productService) {
         var _this = this;
         this._productService = _productService;
+        this.globals = ConfigObject_1.ConfigObject;
         this.products = [];
         this.productsLoaded = false;
         this.APIError = [];
@@ -28,13 +31,15 @@ var ProductComponent = (function () {
             searchTerm: '',
             manufacturer: null
         };
-        _productService.emitter.subscribe(function (products) { _this.products = products; }, function (error) { _this.APIError = error; }, function () { });
+        _productService.emitter.subscribe(function (products) {
+            _this.products = productHelper_1.productHelper.processImagesAndDownloads(products);
+        }, function (error) { _this.APIError = error; }, function () { });
     }
     ProductComponent.prototype.getProducts = function (filters) {
         var _this = this;
         this.productsLoaded = false;
         this._productService.getProducts(filters)
-            .subscribe(function (products) { _this.products = products; }, function (error) { _this.APIError = error; }, function () { _this.productsLoaded = true; });
+            .subscribe(function (products) { _this.products = productHelper_1.productHelper.processImagesAndDownloads(products); }, function (error) { _this.APIError = error; }, function () { _this.productsLoaded = true; });
     };
     ProductComponent.prototype.ngOnInit = function () {
         this.getProducts({});

@@ -47,11 +47,11 @@ Files.prototype.upload = function(req, res) {
                     'POST',
                     {
                         contentLength : Buffer.byteLength(fieldsData) + Buffer.byteLength(beforeBoundary) + files.files.size + Buffer.byteLength(afterBoundary),
-                        contentType   : 'files',
-                        boundary      : 'multipart/form-data; boundary=' + myBoundary
+                        boundary      : 'multipart/form-data; boundary=' + myBoundary,
+                        body          : beforeBoundary + afterBoundary
                     },
                     {
-
+                        '_method' : 'POST'
                     },
                     requestUrl,
                     headers

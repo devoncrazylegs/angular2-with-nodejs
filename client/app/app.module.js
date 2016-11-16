@@ -42,6 +42,7 @@ var tabs_service_1 = require("./services/tabs.service");
 var angular2_jwt_1 = require("angular2-jwt");
 var FileUploaderDirective_1 = require("./components/directives/files/FileUploaderDirective");
 var TabsDirective_1 = require("./components/directives/tabs/TabsDirective");
+var apiurl_pipe_1 = require("./pipes/apiurl.pipe");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -72,7 +73,8 @@ var AppModule = (function () {
                 ManufacturersComponent_1.ManufacturersComponent,
                 ShopsComponent_1.ShopsComponent,
                 FileUploaderDirective_1.FileUploaderDirective,
-                TabsDirective_1.TabsDirective
+                TabsDirective_1.TabsDirective,
+                apiurl_pipe_1.APIUrlPipe
             ],
             providers: [
                 auth_guard_1.AuthGuard,

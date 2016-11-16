@@ -22,13 +22,14 @@ var FilesService = (function () {
             for (var i = 0; i < files.length; i++) {
                 formData.append('files', files[i]);
             }
+            //formData.append('_method', 'POST');
             var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true, true);
             var options = new http_1.RequestOptions({ headers: headers });
             var xhr = new XMLHttpRequest;
             xhr.open('POST', '/', true);
             xhr.send(formData);
             return this._http
-                .post('http://stdavids-brain.dev/upload', formData, options)
+                .post(url, formData, options)
                 .map(function (res) {
                 return res.json();
             });

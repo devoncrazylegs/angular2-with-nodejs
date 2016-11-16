@@ -6,11 +6,11 @@ export var userHelper = {
     set user(user) {
         window.localStorage.setItem('user', JSON.stringify(user));
     },
-    getToken:function(): String {
+    getToken(): String {
         let user = JSON.parse(window.localStorage.getItem('user'));
         return user.token;
     },
-    tokenExists: function() {
+    tokenExists() {
         if(window.localStorage.getItem('tokenName') && window.localStorage.getItem('tokenName') !== '') {
             return true;
         }
