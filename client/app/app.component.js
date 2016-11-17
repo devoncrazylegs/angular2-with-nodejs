@@ -9,8 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var files_service_1 = require("./services/files.service");
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(_filesService) {
+        var _this = this;
+        this._filesService = _filesService;
+        this.openFileUploader = false;
+        _filesService.emitter.subscribe(function (stream) {
+            _this.fileUploaderScope = stream.options;
+            _this.openFileUploader = stream.open;
+        }, function () {
+        }, function () {
+        });
     }
     AppComponent = __decorate([
         core_1.Component({
@@ -18,7 +28,7 @@ var AppComponent = (function () {
             moduleId: module.id,
             templateUrl: '/app/views/app.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [files_service_1.FilesService])
     ], AppComponent);
     return AppComponent;
 }());

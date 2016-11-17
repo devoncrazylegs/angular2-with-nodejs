@@ -440,6 +440,11 @@ product-component, product-edit {
   }
 
   .images-wrapper {
+    .add-image {
+
+      background-size: contain;
+    }
+
     .image {
       max-width:200px;
       width:100%;
@@ -448,7 +453,9 @@ product-component, product-edit {
       margin:20px 10px;
       cursor:pointer;
       border:1px solid $gray;
-
+      float:left;
+      max-height:200px;
+      height:100%;
       img {
         width:100%;
       }
@@ -533,6 +540,48 @@ tabs {
 }
 
 file-upload {
+  width:100%;
+  z-index:40000;
+  background:rgba(0, 0, 0, .5);
+  position:fixed;
+  top: 0px;
+  left:0px;
+  height:100%;
+
+  .file-gallery {
+    display:inline-block;
+    width:100%;
+
+    @include box-sizing(border-box);
+
+    .image {
+      img {
+        max-width:150px;
+        width:100%;
+      }
+      cursor:pointer;
+      display:inline-block;
+      float:left;
+      max-width:150px;
+      height:150px;
+      width:100%;
+      padding:7px;
+      border:1px solid $gray;
+      margin:5px;
+    }
+  }
+
+  .file-upload-wrapper {
+    @include box-sizing(border-box);
+    max-width:100%;
+    position:relative;
+    height:400px;
+    overflow:auto;
+    padding:20px;
+    margin:20px;
+    background-color:#fff;
+  }
+
   input[type='submit'], input[type='file'] {
     width:auto;
 
@@ -541,7 +590,9 @@ file-upload {
 
 .files-wrapper {
   padding:10px;
-
+  .close {
+    cusror:pointer;
+  }
   .file {
     padding:15px;
     color:#fff;

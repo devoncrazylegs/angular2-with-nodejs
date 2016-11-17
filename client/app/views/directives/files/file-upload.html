@@ -1,4 +1,16 @@
-<form enctype="multipart/form-data">
-    <input type='file' (change)='fileChangeEvents($event)' placeholder='Upload file...' multiple accept="'image/*'" />
-    <input type='submit' value='Upload' (click)='upload()' placeholder='Upload'/>
-</form>
+<div class='file-upload-wrapper'>
+    <a class='close' (click)='closeOverlay()'>close</a>
+    <h3>Media Library</h3>
+    <div class='file-gallery'>
+        <div *ngIf='!filesLoaded' class='spinner'></div>
+        <div *ngFor='let file of files' class='image'>
+            <img *ngIf='file.type === "image"' src="{{file.url | APIUrl: 'image'}}" />
+        </div>
+    </div>
+    <div class='file-gallery'>
+        <form enctype="multipart/form-data">
+            <input type='file' (change)='fileChangeEvents($event)' placeholder='Upload file...' multiple accept="'image/*'" />
+            <input type='submit' value='Upload' (click)='upload()' placeholder='Upload'/>
+        </form>
+    </div>
+</div>

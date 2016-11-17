@@ -34,8 +34,12 @@ router.get('/manufacturer', function(req, res, next) {
     manufacturerRoutesControllerObjectInstance.getManufacturers(req, res, next)
 });
 
-router.post('/upload', function(req, res, next) {
-    filesRoutesControllerObjectInstance.upload(req, res, next);
+router.get('/files', function(req, res, next) {
+    filesRoutesControllerObjectInstance.getFiles(req, res, next);
+});
+
+router.post('/files', function(req, res, next) {
+    filesRoutesControllerObjectInstance.uploadFiles(req, res, next);
 });
 
 /*router.get('/product/:productId', function(req, res, next) {

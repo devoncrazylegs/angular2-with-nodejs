@@ -14,7 +14,15 @@ var files_service_1 = require("../../../services/files.service");
 var FileUploaderDirective = (function () {
     function FileUploaderDirective(_filesService) {
         this._filesService = _filesService;
+        this.filesLoaded = false;
+        this.payload = {};
     }
+    FileUploaderDirective.prototype.getFiles = function (filters) {
+        var _this = this;
+        var self = this;
+        this._filesService.getFiles(filters)
+            .subscribe(function (files) { _this.files = files; }, function (error) { }, function () { _this.filesLoaded = true; });
+    };
     FileUploaderDirective.prototype.fileChangeEvents = function (fileInput) {
         this._filesToUpload = fileInput.target.files;
     };
@@ -26,6 +34,16 @@ var FileUploaderDirective = (function () {
             console.log(error);
         });
     };
+    FileUploaderDirective.prototype.closeOverlay = function () {
+        this._filesService.emitFileOverlayOpen(false, {});
+    };
+    FileUploaderDirective.prototype.ngOnInit = function () {
+        this.getFiles(this.payload);
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], FileUploaderDirective.prototype, "fileUploaderScope", void 0);
     FileUploaderDirective = __decorate([
         core_1.Component({
             selector: 'file-upload',

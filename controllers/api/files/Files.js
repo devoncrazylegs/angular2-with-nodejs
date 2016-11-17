@@ -8,10 +8,36 @@ var ApiBase_RequestLayer = require('../ApiBase_RequestLayer'),
 
 function Files() {
     Files.super_.call(this);
-    this.requestBaseUrl = Config.brain.url + '/upload';
+    this.requestBaseUrl = Config.brain.url + Config.brain.api + Config.brain.apiVersion + '/files';
 }
 
-Files.prototype.upload = function(req, res) {
+Files.prototype.getFiles = function(req, res) {
+    var self = this,
+        requestUrl = self.requestBaseUrl + '?' + req.url.split('?')[1],
+        headers = {};
+
+    headers['Authorization'] = req.headers.authorization;
+
+    self.preRequestCheck(req, res, function(req, res) {
+        self.makeRequest(
+            'GET',
+            {
+                contentType: 'json'
+            },
+            {
+
+            },
+            requestUrl,
+            headers
+        ).then(function(response) {
+            res.send(response.body);
+        }, function(response) {
+            res.send(response);
+        });
+    });
+};
+
+Files.prototype.uploadFiles = function(req, res) {
     var self = this;
     var formidable = require('formidable');
     var requestUrl = self.requestBaseUrl;

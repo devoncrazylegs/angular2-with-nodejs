@@ -9,21 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var product_service_1 = require("../../../../services/product.service");
 var Rx_1 = require("rxjs/Rx");
 var router_1 = require("@angular/router");
 var common_1 = require('@angular/common');
 var tabs_service_1 = require("../../../../services/tabs.service");
+var files_service_1 = require("../../../../services/files.service");
 var category_service_1 = require("../../../../services/category.service");
 var manufacturer_service_1 = require("../../../../services/manufacturer.service");
+var product_service_1 = require("../../../../services/product.service");
 var ng2_toastr_1 = require('ng2-toastr/ng2-toastr');
 var messages_1 = require("../../../../helpers/messages");
 var productHelper_1 = require("../../../../helpers/productHelper");
 var ProductEditComponent = (function () {
-    function ProductEditComponent(_productService, _categoryService, _manufacturerService, _activatedRoute, _location, _tabsService, _toastr) {
+    function ProductEditComponent(_productService, _categoryService, _filesService, _manufacturerService, _activatedRoute, _location, _tabsService, _toastr) {
         var _this = this;
         this._productService = _productService;
         this._categoryService = _categoryService;
+        this._filesService = _filesService;
         this._manufacturerService = _manufacturerService;
         this._activatedRoute = _activatedRoute;
         this._location = _location;
@@ -33,6 +35,7 @@ var ProductEditComponent = (function () {
         this.manufacturers = [];
         this.catsToShow = [];
         this.allocatedCategories = [];
+        this.openFileUploader = true;
         this.tabs = [
             { title: 'General', content: '', active: true, linked: 'general' },
             { title: 'Images', content: '', active: false, linked: 'images' },
@@ -91,6 +94,9 @@ var ProductEditComponent = (function () {
         this.allocatedCategories.splice(this.findIndexOfObject(category, this.catsToShow), 1);
         this.catsToShow.push(category);
     };
+    ProductEditComponent.prototype.uploadOpen = function (filters) {
+        this._filesService.emitFileOverlayOpen(true, filters);
+    };
     ProductEditComponent.prototype.save = function () {
         var _this = this;
         var payload = {
@@ -148,7 +154,7 @@ var ProductEditComponent = (function () {
             templateUrl: '/app/views/catalog/products/directives/product-edit.html',
             moduleId: module.id
         }), 
-        __metadata('design:paramtypes', [product_service_1.ProductService, category_service_1.CategoryService, manufacturer_service_1.ManufacturerService, router_1.ActivatedRoute, common_1.Location, tabs_service_1.TabsService, ng2_toastr_1.ToastsManager])
+        __metadata('design:paramtypes', [product_service_1.ProductService, category_service_1.CategoryService, files_service_1.FilesService, manufacturer_service_1.ManufacturerService, router_1.ActivatedRoute, common_1.Location, tabs_service_1.TabsService, ng2_toastr_1.ToastsManager])
     ], ProductEditComponent);
     return ProductEditComponent;
 }());

@@ -1,16 +1,17 @@
 import { Component, Input } from "@angular/core";
 import { Product } from "../../../../classes/Product";
-import { ProductService } from "../../../../services/product.service";
 import { Subscription } from "rxjs";
 import { Observable } from "rxjs/Rx";
 import { ActivatedRoute } from "@angular/router";
 import { Location } from '@angular/common';
 import { TabsService } from "../../../../services/tabs.service";
+import { FilesService } from "../../../../services/files.service";
 import { CategoryService } from "../../../../services/category.service";
 import { ManufacturerService } from "../../../../services/manufacturer.service";
+import { ProductService } from "../../../../services/product.service";
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { messages } from "../../../../helpers/messages";
-import {productHelper} from "../../../../helpers/productHelper";
+import { productHelper } from "../../../../helpers/productHelper";
 
 @Component({
     selector: 'product-edit',
@@ -26,6 +27,7 @@ export class ProductEditComponent {
     private parsedImages:Array<any>;
     private allocatedCategories = [];
     private _subscription: Subscription;
+    public openFileUploader: boolean = true;
     public id: number;
     public tabs:Array<any> = [
         {title: 'General', content: '', active: true, linked: 'general'},
@@ -38,6 +40,7 @@ export class ProductEditComponent {
         constructor(
         private _productService: ProductService,
         private _categoryService: CategoryService,
+        private _filesService: FilesService,
         private _manufacturerService: ManufacturerService,
         private _activatedRoute: ActivatedRoute,
         private _location: Location,
@@ -45,7 +48,6 @@ export class ProductEditComponent {
         private _toastr: ToastsManager
 
     ) {
-
 
         this._tabsService.emitter
             .subscribe((tab) => {
@@ -110,6 +112,10 @@ export class ProductEditComponent {
     removeCategory(category) {
         this.allocatedCategories.splice(this.findIndexOfObject(category, this.catsToShow), 1);
         this.catsToShow.push(category);
+    }
+
+    uploadOpen(filters) {
+        this._filesService.emitFileOverlayOpen(true, filters);
     }
 
     save() {

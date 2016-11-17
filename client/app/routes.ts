@@ -6,6 +6,6 @@ export var routes = {
         products: '/api/product',
         categories: '/api/categories',
         manufacturers: '/api/manufacturer',
-        files: '/api/upload'
+        files: '/api/files'
     }
 };

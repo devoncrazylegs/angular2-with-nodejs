@@ -12,10 +12,22 @@ var core_1 = require("@angular/core");
 var HttpInterceptor_service_1 = require("./HttpInterceptor.service");
 var HttpHelper_1 = require("../helpers/HttpHelper");
 var http_1 = require("@angular/http");
+var routes_1 = require("../routes");
+var StringHelper_1 = require("../helpers/StringHelper");
 var FilesService = (function () {
     function FilesService(_http) {
         this._http = _http;
+        this.emitter = new core_1.EventEmitter();
     }
+    FilesService.prototype.getFiles = function (filters) {
+        var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true, false);
+        var options = new http_1.RequestOptions({ headers: headers });
+        return this._http
+            .get(routes_1.routes.api.files + StringHelper_1.StringHelper.convertVarsToString(filters), options)
+            .map(function (response) {
+            return response.json();
+        });
+    };
     FilesService.prototype.sendFile = function (url, vars, files) {
         var formData = new FormData();
         if (files.length > 0) {
@@ -29,11 +41,18 @@ var FilesService = (function () {
             xhr.open('POST', '/', true);
             xhr.send(formData);
             return this._http
-                .post(url, formData, options)
+                .post('http://stdavids-brain.dev/upload', formData, options)
                 .map(function (res) {
                 return res.json();
             });
         }
+    };
+    FilesService.prototype.emitFileOverlayOpen = function (open, filters) {
+        var payload = {
+            open: open,
+            filters: filters
+        };
+        this.emitter.emit(payload);
     };
     FilesService = __decorate([
         core_1.Injectable(), 
