@@ -23,13 +23,18 @@ export class FilesService {
             });
     }
 
-    sendFile(url: String, vars: Array<String>, files: FileList):Observable<any> {
+    sendFile(url: String, vars, files: FileList):Observable<any> {
         let formData:FormData = new FormData();
+        let id:number;
         if(files.length > 0) {
             for(let i = 0;  i < files.length; i++) {
                 formData.append('files', files[i]);
             }
-            //formData.append('_method', 'POST');
+            id = vars.options.id;
+            formData.append('_method', 'POST');
+            formData.append('type', vars.fileType);
+            formData.append('id', id);
+            formData.append('assoc', vars.type);
 
             let headers = HttpHelper.createAuthorizationHeader(true, true);
             let options = new RequestOptions({ headers: headers });
@@ -37,7 +42,7 @@ export class FilesService {
             xhr.open('POST', '/', true);
             xhr.send(formData);
             return this._http
-                .post('http://stdavids-brain.dev/upload', formData, options)
+                .post('http://stdavids-brain.dev/api/v1/files', formData, options)
                 .map((res) => {
                     return res.json();
                 });

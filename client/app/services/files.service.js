@@ -30,18 +30,23 @@ var FilesService = (function () {
     };
     FilesService.prototype.sendFile = function (url, vars, files) {
         var formData = new FormData();
+        var id;
         if (files.length > 0) {
             for (var i = 0; i < files.length; i++) {
                 formData.append('files', files[i]);
             }
-            //formData.append('_method', 'POST');
+            id = vars.options.id;
+            formData.append('_method', 'POST');
+            formData.append('type', vars.fileType);
+            formData.append('id', id);
+            formData.append('assoc', vars.type);
             var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true, true);
             var options = new http_1.RequestOptions({ headers: headers });
             var xhr = new XMLHttpRequest;
             xhr.open('POST', '/', true);
             xhr.send(formData);
             return this._http
-                .post('http://stdavids-brain.dev/upload', formData, options)
+                .post('http://stdavids-brain.dev/api/v1/files', formData, options)
                 .map(function (res) {
                 return res.json();
             });

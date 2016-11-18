@@ -39,7 +39,7 @@ export class FileUploaderDirective {
     }
 
     upload() {
-        this._filesService.sendFile(routes.api.files, [], this._filesToUpload)
+        this._filesService.sendFile(routes.api.files, this.fileUploaderScope, this._filesToUpload)
             .subscribe((result) => {
                 console.log(result);
             }, (error) => {

@@ -27,7 +27,7 @@ var FileUploaderDirective = (function () {
         this._filesToUpload = fileInput.target.files;
     };
     FileUploaderDirective.prototype.upload = function () {
-        this._filesService.sendFile(routes_1.routes.api.files, [], this._filesToUpload)
+        this._filesService.sendFile(routes_1.routes.api.files, this.fileUploaderScope, this._filesToUpload)
             .subscribe(function (result) {
             console.log(result);
         }, function (error) {

@@ -554,18 +554,56 @@ file-upload {
 
     @include box-sizing(border-box);
 
-    .image {
-      img {
+    .image-file-wrap {
+      a {
+        cursor:pointer;
+        display:inline-block;
+        float:left;
         max-width:150px;
+        height:150px;
         width:100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat:no-repeat;
+        position:relative;
+        text-decoration: none;
+      }
+
+      a:hover {
+        background-color:$gray;
+        opacity:0.5;
+      }
+      .image {
+        padding:7px;
+        img {
+          max-width:150px;
+          width:100%;
+        }
+      }
+      .file {
+        padding:7px;
+        background-image:url('../img/very-basic-file-icon.png');
+        @include box-sizing(border-box);
+        .file-details {
+          overflow:hidden;
+          bottom:0px;
+          padding:5px;
+          @include box-sizing(border-box);
+          min-height:50px;
+          background-color:#fff;
+          z-index:200;
+          width:100%;
+          color:#000;
+        }
       }
       cursor:pointer;
+
       display:inline-block;
       float:left;
       max-width:150px;
       height:150px;
       width:100%;
-      padding:7px;
+
       border:1px solid $gray;
       margin:5px;
     }

@@ -12,12 +12,13 @@ var core_1 = require('@angular/core');
 var files_service_1 = require("./services/files.service");
 var AppComponent = (function () {
     function AppComponent(_filesService) {
-        var _this = this;
         this._filesService = _filesService;
         this.openFileUploader = false;
-        _filesService.emitter.subscribe(function (stream) {
-            _this.fileUploaderScope = stream.options;
-            _this.openFileUploader = stream.open;
+        var self = this;
+        this._filesService.emitter
+            .subscribe(function (response) {
+            self.fileUploaderScope = response.filters;
+            self.openFileUploader = response.open;
         }, function () {
         }, function () {
         });

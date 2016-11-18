@@ -3,8 +3,13 @@
     <h3>Media Library</h3>
     <div class='file-gallery'>
         <div *ngIf='!filesLoaded' class='spinner'></div>
-        <div *ngFor='let file of files' class='image'>
-            <img *ngIf='file.type === "image"' src="{{file.url | APIUrl: 'image'}}" />
+        <div class='image-file-wrap' *ngFor='let file of files'>
+            <a *ngIf='file.type === "image"' class='image'>
+                <img  src="{{file.url | APIUrl: 'image'}}" />
+            </a>
+            <a *ngIf='file.type === "file"' class='file'>
+               <div class='file-details'>{{ file.filename }}</div>
+            </a>
         </div>
     </div>
     <div class='file-gallery'>

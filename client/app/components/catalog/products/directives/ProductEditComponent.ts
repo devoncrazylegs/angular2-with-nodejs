@@ -37,7 +37,7 @@ export class ProductEditComponent {
     ];
     private selectedTab: Object = this.tabs[0];
 
-        constructor(
+    constructor(
         private _productService: ProductService,
         private _categoryService: CategoryService,
         private _filesService: FilesService,

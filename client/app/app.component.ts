@@ -8,16 +8,17 @@ import { FilesService } from "./services/files.service";
 })
 
 export class AppComponent {
-    openFileUploader: boolean = false;
-    fileUploaderScope:any;
+    public openFileUploader: boolean = false;
+    public fileUploaderScope:any;
 
     constructor (
         private _filesService: FilesService
     ) {
-        _filesService.emitter.subscribe(
-            (stream) => {
-                this.fileUploaderScope = stream.options;
-                this.openFileUploader = stream.open;
+       let self = this;
+       this._filesService.emitter
+            .subscribe((response) => {
+                self.fileUploaderScope = response.filters;
+                self.openFileUploader = response.open;
             },
             () => {
 
