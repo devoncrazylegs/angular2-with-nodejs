@@ -41,6 +41,7 @@ var FilesService = (function () {
             formData.append('id', id);
             formData.append('assoc', vars.type);
             var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true, true);
+            headers['Cookie'] = 'XDEBUG_SESSION=PHPSTORM';
             var options = new http_1.RequestOptions({ headers: headers });
             var xhr = new XMLHttpRequest;
             xhr.open('POST', '/', true);

@@ -394,7 +394,10 @@ file-upload {
         background-position: center;
         background-repeat: no-repeat;
         position: relative;
-        text-decoration: none; }
+        text-decoration: none;
+        overflow: hidden; }
+      file-upload .file-gallery .image-file-wrap .selected {
+        border: 5px solid #b00930; }
       file-upload .file-gallery .image-file-wrap a:hover {
         background-color: #ededed;
         opacity: 0.5; }
@@ -402,7 +405,8 @@ file-upload {
         padding: 7px; }
         file-upload .file-gallery .image-file-wrap .image img {
           max-width: 150px;
-          width: 100%; }
+          width: 100%;
+          height: 100%; }
       file-upload .file-gallery .image-file-wrap .file {
         padding: 7px;
         background-image: url("../img/very-basic-file-icon.png");
@@ -437,6 +441,9 @@ file-upload {
     background-color: #fff; }
   file-upload input[type='submit'], file-upload input[type='file'] {
     width: auto; }
+  file-upload .file-form-wrap {
+    display: inline-block;
+    width: 100%; }
 
 .files-wrapper {
   padding: 10px; }

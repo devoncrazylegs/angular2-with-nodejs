@@ -37,6 +37,7 @@ export class FilesService {
             formData.append('assoc', vars.type);
 
             let headers = HttpHelper.createAuthorizationHeader(true, true);
+            headers['Cookie'] = 'XDEBUG_SESSION=PHPSTORM';
             let options = new RequestOptions({ headers: headers });
             var xhr = new XMLHttpRequest;
             xhr.open('POST', '/', true);

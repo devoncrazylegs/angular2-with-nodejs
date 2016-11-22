@@ -32,6 +32,10 @@ exports.messages = {
         },
         products: {
             productEdited: 'Product edited successfully'
+        },
+        files: {
+            uploadSuccess: 'File uploaded successfully',
+            uploadError: 'There was an error uploading your file'
         }
     }
 };

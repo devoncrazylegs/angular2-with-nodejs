@@ -10,6 +10,15 @@ exports.productHelper = {
             });
         }
         return products;
+    },
+    processLinkedFiles: function (products, files) {
+        for (var i = 0; i < products.length; i++) {
+            products['productsIdArray'] = files.filter(function (file) {
+                if (file.id === products[i].id) {
+                    return file.id;
+                }
+            });
+        }
     }
 };
 //# sourceMappingURL=productHelper.js.map

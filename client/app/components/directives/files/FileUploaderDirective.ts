@@ -2,6 +2,8 @@ import { Component, Input } from "@angular/core";
 import { routes } from "../../../routes";
 import { FilesService } from "../../../services/files.service";
 import { File } from "../../../../../classes/File.class";
+import { ToastsManager } from "ng2-toastr/ng2-toastr";
+import { messages } from "../../../helpers/messages";
 
 @Component({
     selector    : 'file-upload',
@@ -12,14 +14,17 @@ import { File } from "../../../../../classes/File.class";
 export class FileUploaderDirective {
     _filesToUpload: FileList;
     filesLoaded:boolean = false;
+    fileUploaded:boolean = true;
     @Input() fileUploaderScope;
     files: File[];
+    selectedFiles:Number[];
     payload:Object = {
 
     };
 
     constructor(
-        private _filesService: FilesService
+        private _filesService: FilesService,
+        private _toastr: ToastsManager
     ) {
 
     }
@@ -28,7 +33,32 @@ export class FileUploaderDirective {
         var self = this;
         this._filesService.getFiles(filters)
             .subscribe(
-                files    => { this.files = files },
+                files    => {
+                    /*files = files.map((file) => {
+                        if(files) {
+
+                        }
+                    });*/
+                    files.forEach((file) => {
+                        this.fileUploaderScope.options.files.forEach((assignedFile) => {
+                            if(file.id === assignedFile.id) {
+                                file.assigned = true;
+                            }
+                        });
+                    });
+
+                    if(this.fileUploaderScope.fileType === 'file') {
+                        this.files = files.filter((file) => {
+                            return file.type === 'file';
+                        });
+                    } else if(this.fileUploaderScope.fileType === 'image')  {
+                        this.files = files.filter((file) => {
+                            return file.type === 'image';
+                        });
+                    } else {
+                        this.files = files;
+                    }
+                },
                 error    => {  },
                 ()       => { this.filesLoaded = true }
             );
@@ -39,12 +69,28 @@ export class FileUploaderDirective {
     }
 
     upload() {
+        this.fileUploaded = false;
         this._filesService.sendFile(routes.api.files, this.fileUploaderScope, this._filesToUpload)
             .subscribe((result) => {
-                console.log(result);
+                this.files.push(result.body.file);
+                this._toastr.success(messages.messages.files.uploadSuccess, messages.titles.general.success);
             }, (error) => {
-                console.log(error);
+                this._toastr.error(messages.messages.files.uploadError, messages.titles.general.error);
+            }, () => {
+                this.fileUploaded = true;
             });
+    }
+
+    mouseOverFile(element) {
+        console.log(event)
+    }
+
+    selectFile(file) {
+        file.assigned = !file.assigned;
+    }
+
+    saveSelectedFiles() {
+
     }
 
     closeOverlay() {
@@ -53,5 +99,9 @@ export class FileUploaderDirective {
 
     ngOnInit() {
         this.getFiles(this.payload);
+    }
+
+    private selectedFiles(filesToCheck) {
+
     }
 }
