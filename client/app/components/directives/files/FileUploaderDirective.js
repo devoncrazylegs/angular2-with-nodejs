@@ -26,11 +26,6 @@ var FileUploaderDirective = (function () {
         var self = this;
         this._filesService.getFiles(filters)
             .subscribe(function (files) {
-            /*files = files.map((file) => {
-                if(files) {
-
-                }
-            });*/
             files.forEach(function (file) {
                 _this.fileUploaderScope.options.files.forEach(function (assignedFile) {
                     if (file.id === assignedFile.id) {
@@ -76,6 +71,11 @@ var FileUploaderDirective = (function () {
         file.assigned = !file.assigned;
     };
     FileUploaderDirective.prototype.saveSelectedFiles = function () {
+        this.selectedFiles = this.files.filter(function (file) {
+            return file.assigned == true;
+        });
+        this._filesService.emitSelectedFiles(this.selectedFiles, this.fileUploaderScope.fileType);
+        this._filesService.emitFileOverlayOpen(false, {});
     };
     FileUploaderDirective.prototype.closeOverlay = function () {
         this._filesService.emitFileOverlayOpen(false, {});

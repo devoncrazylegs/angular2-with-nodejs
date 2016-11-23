@@ -9,6 +9,7 @@ import { StringHelper } from "../helpers/StringHelper";
 @Injectable()
 export class FilesService {
     public emitter: EventEmitter<any> = new EventEmitter();
+    public filesEmitter: EventEmitter<Object> = new EventEmitter();
     constructor(private _http: HttpInterceptor) {
 
     }
@@ -57,4 +58,14 @@ export class FilesService {
         };
         this.emitter.emit(payload);
     }
+
+    public emitSelectedFiles(files, type):void {
+        let payload = {
+            files,
+            type
+        };
+        this.filesEmitter.emit(payload);
+    }
+
+
 }

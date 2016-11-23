@@ -62,6 +62,16 @@ export class ProductEditComponent {
 
             });
 
+        this._filesService.filesEmitter
+            .subscribe((response) => {
+                if(response.type === 'file') {
+                    this.product.downloads = response.files;
+                } else if(response.type.images === 'images') {
+                    this.product.images = response.files;
+                }
+                this.product.files = this.product.downloads.concat(this.product.images);
+            });
+
     }
 
     getProduct() {

@@ -15,6 +15,7 @@ export class FileUploaderDirective {
     _filesToUpload: FileList;
     filesLoaded:boolean = false;
     fileUploaded:boolean = true;
+    selectedFiles:File[];
     @Input() fileUploaderScope;
     files: File[];
     selectedFiles:Number[];
@@ -33,12 +34,7 @@ export class FileUploaderDirective {
         var self = this;
         this._filesService.getFiles(filters)
             .subscribe(
-                files    => {
-                    /*files = files.map((file) => {
-                        if(files) {
-
-                        }
-                    });*/
+                files => {
                     files.forEach((file) => {
                         this.fileUploaderScope.options.files.forEach((assignedFile) => {
                             if(file.id === assignedFile.id) {
@@ -90,7 +86,11 @@ export class FileUploaderDirective {
     }
 
     saveSelectedFiles() {
-
+        this.selectedFiles = this.files.filter((file) => {
+            return file.assigned == true;
+        });
+        this._filesService.emitSelectedFiles(this.selectedFiles, this.fileUploaderScope.fileType);
+        this._filesService.emitFileOverlayOpen(false, {})
     }
 
     closeOverlay() {

@@ -18,6 +18,7 @@ var FilesService = (function () {
     function FilesService(_http) {
         this._http = _http;
         this.emitter = new core_1.EventEmitter();
+        this.filesEmitter = new core_1.EventEmitter();
     }
     FilesService.prototype.getFiles = function (filters) {
         var headers = HttpHelper_1.HttpHelper.createAuthorizationHeader(true, false);
@@ -59,6 +60,13 @@ var FilesService = (function () {
             filters: filters
         };
         this.emitter.emit(payload);
+    };
+    FilesService.prototype.emitSelectedFiles = function (files, type) {
+        var payload = {
+            files: files,
+            type: type
+        };
+        this.filesEmitter.emit(payload);
     };
     FilesService = __decorate([
         core_1.Injectable(), 

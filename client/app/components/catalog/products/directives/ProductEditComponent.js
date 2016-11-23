@@ -53,6 +53,16 @@ var ProductEditComponent = (function () {
         }, function () {
         }, function () {
         });
+        this._filesService.filesEmitter
+            .subscribe(function (response) {
+            if (response.type === 'file') {
+                _this.product.downloads = response.files;
+            }
+            else if (response.type.images === 'images') {
+                _this.product.images = response.files;
+            }
+            _this.product.files = _this.product.downloads.concat(_this.product.images);
+        });
     }
     ProductEditComponent.prototype.getProduct = function () {
         var self = this;
