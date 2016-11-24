@@ -66,7 +66,7 @@ export class ProductEditComponent {
             .subscribe((response) => {
                 if(response.type === 'file') {
                     this.product.downloads = response.files;
-                } else if(response.type.images === 'images') {
+                } else if(response.type === 'image') {
                     this.product.images = response.files;
                 }
                 this.product.files = this.product.downloads.concat(this.product.images);

@@ -67,7 +67,7 @@
 
                     </div>
 
-                    <a (click)='uploadOpen({ type: "product", options: product, fileType: "file"})'>Add files</a>
+                    <a (click)='uploadOpen({ type: "product", options: product, fileType: "file"})'>Edit files</a>
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
         <div id='images' class='tab-pane' *ngIf='selectedTab.linked == "images"'>
             <div class='form-group'>
                 <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-                    <div *ngIf='product.images.length' class='images-wrapper'>
+                    <div class='images-wrapper'>
                         <h3>Selected Images</h3>
                         <div class='image add-image' (click)='uploadOpen({ type: "product", "options": product, fileType: "image"})'>Add Images</div>
                         <div class='image' *ngFor='let image of product.images'>

@@ -560,7 +560,7 @@ file-upload {
         display:inline-block;
         float:left;
         max-width:150px;
-        height:150px;
+        min-height:150px;
         width:100%;
         background-size: cover;
         background-position: center;
@@ -607,7 +607,7 @@ file-upload {
       display:inline-block;
       float:left;
       max-width:150px;
-      height:150px;
+      min-height:150px;
       width:100%;
 
       border:1px solid $gray;
@@ -647,6 +647,14 @@ file-upload {
     color:#fff;
     background-color:$gray;
     cursor:pointer;
+    margin-left:7px;
+    border:1px solid $darkGray;
+    display:inline-block;
+    text-decoration: none;
+  }
+
+  .file:hover {
+    background-color:$darkGray;
   }
 
   .removeFile {

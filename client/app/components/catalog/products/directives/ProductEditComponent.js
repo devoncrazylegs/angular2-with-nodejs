@@ -58,7 +58,7 @@ var ProductEditComponent = (function () {
             if (response.type === 'file') {
                 _this.product.downloads = response.files;
             }
-            else if (response.type.images === 'images') {
+            else if (response.type === 'image') {
                 _this.product.images = response.files;
             }
             _this.product.files = _this.product.downloads.concat(_this.product.images);

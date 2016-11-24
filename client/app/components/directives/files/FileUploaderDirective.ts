@@ -37,7 +37,7 @@ export class FileUploaderDirective {
                 files => {
                     files.forEach((file) => {
                         this.fileUploaderScope.options.files.forEach((assignedFile) => {
-                            if(file.id === assignedFile.id) {
+                            if(parseInt(file.id) == assignedFile.id) {
                                 file.assigned = true;
                             }
                         });
@@ -78,7 +78,7 @@ export class FileUploaderDirective {
     }
 
     mouseOverFile(element) {
-        console.log(event)
+
     }
 
     selectFile(file) {

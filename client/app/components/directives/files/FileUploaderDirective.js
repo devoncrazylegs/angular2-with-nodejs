@@ -28,7 +28,7 @@ var FileUploaderDirective = (function () {
             .subscribe(function (files) {
             files.forEach(function (file) {
                 _this.fileUploaderScope.options.files.forEach(function (assignedFile) {
-                    if (file.id === assignedFile.id) {
+                    if (parseInt(file.id) == assignedFile.id) {
                         file.assigned = true;
                     }
                 });
@@ -65,7 +65,6 @@ var FileUploaderDirective = (function () {
         });
     };
     FileUploaderDirective.prototype.mouseOverFile = function (element) {
-        console.log(event);
     };
     FileUploaderDirective.prototype.selectFile = function (file) {
         file.assigned = !file.assigned;

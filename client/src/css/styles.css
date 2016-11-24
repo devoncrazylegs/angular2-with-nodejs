@@ -379,7 +379,7 @@ file-upload {
       display: inline-block;
       float: left;
       max-width: 150px;
-      height: 150px;
+      min-height: 150px;
       width: 100%;
       border: 1px solid #ededed;
       margin: 5px; }
@@ -388,7 +388,7 @@ file-upload {
         display: inline-block;
         float: left;
         max-width: 150px;
-        height: 150px;
+        min-height: 150px;
         width: 100%;
         background-size: cover;
         background-position: center;
@@ -453,7 +453,13 @@ file-upload {
     padding: 15px;
     color: #fff;
     background-color: #ededed;
-    cursor: pointer; }
+    cursor: pointer;
+    margin-left: 7px;
+    border: 1px solid #b5b5b5;
+    display: inline-block;
+    text-decoration: none; }
+  .files-wrapper .file:hover {
+    background-color: #b5b5b5; }
   .files-wrapper .removeFile {
     margin-left: 10px;
     border-left: 1px solid #000000; }
