@@ -4,15 +4,21 @@
     <div class='file-gallery'>
         <div *ngIf='!filesLoaded' class='spinner'></div>
         <div class='image-file-wrap' *ngFor='let file of files'>
-            <a *ngIf='file.type === "image"' [ngClass]="{ selected: file.assigned }" class='image' (click)='selectFile(file)' (mouseover)='mouseOverFile($event.target)'>
+            <a *ngIf='file.type === "image"' [ngClass]="{ selected: file.assigned }" class='image' (mouseover)='mouseOverFile($event.target)'>
                 <img src="{{file.url | APIUrl: 'image'}}" />
             </a>
             <a *ngIf='file.type === "file"' [ngClass]="{ selected: file.assigned }" class='file' (click)='selectFile(file)' (mouseover)='mouseOverFile($event)'>
                <div class='file-details'>{{ file.filename }}</div>
             </a>
             <div class='file-overlay'>
-                open document
-                select
+                <div class='button-wrap'>
+                    <a (click)='selectFile(file)'>
+                        <i *ngIf='file.assigned' class='glyphicon-ok glyphicon'></i>
+                        <i *ngIf='!file.assigned' class='glyphicon-plus glyphicon'></i>
+                    </a>
+                    <a ng-href='file.url'><i class='glyphicon-open glyphicon'></i></a>
+                    <a (click)='deleteFile()'><i class='glyphicon-remove glyphicon'></i></a>
+                </div>
             </div>
         </div>
     </div>

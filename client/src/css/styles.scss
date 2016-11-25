@@ -555,12 +555,21 @@ file-upload {
     @include box-sizing(border-box);
 
     .image-file-wrap {
-      a {
+      cursor:pointer;
+      display:inline-block;
+      float:left;
+      max-width:150px;
+      height:150px;
+      width:100%;
+      position:relative;
+      border:1px solid $gray;
+      margin:5px;
+      > a {
         cursor:pointer;
         display:inline-block;
         float:left;
         max-width:150px;
-        min-height:150px;
+        height:150px;
         width:100%;
         background-size: cover;
         background-position: center;
@@ -602,16 +611,25 @@ file-upload {
           color:#000;
         }
       }
-      cursor:pointer;
+    }
 
-      display:inline-block;
-      float:left;
-      max-width:150px;
-      min-height:150px;
+    .file-overlay {
+      position:Absolute;
+      left:0px;
       width:100%;
+      bottom:0px;
+      height:40px;
+      background-color:$stdavids-purple;
+      padding:7px;
+      .button-wrap {
+        float:right;
+        margin-top:5px;
+        a {
+          color:#fff;
+          margin-left:3px;
+        }
+      }
 
-      border:1px solid $gray;
-      margin:5px;
     }
   }
 
@@ -634,6 +652,9 @@ file-upload {
   .file-form-wrap {
     display:inline-block;
     width:100%;
+    margin-top:20px;
+    margin-bottom:20px;
+    @include box-sizing(border-box);
   }
 }
 

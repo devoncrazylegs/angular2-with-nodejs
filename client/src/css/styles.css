@@ -379,16 +379,17 @@ file-upload {
       display: inline-block;
       float: left;
       max-width: 150px;
-      min-height: 150px;
+      height: 150px;
       width: 100%;
+      position: relative;
       border: 1px solid #ededed;
       margin: 5px; }
-      file-upload .file-gallery .image-file-wrap a {
+      file-upload .file-gallery .image-file-wrap > a {
         cursor: pointer;
         display: inline-block;
         float: left;
         max-width: 150px;
-        min-height: 150px;
+        height: 150px;
         width: 100%;
         background-size: cover;
         background-position: center;
@@ -427,6 +428,20 @@ file-upload {
           z-index: 200;
           width: 100%;
           color: #000; }
+    file-upload .file-gallery .file-overlay {
+      position: Absolute;
+      left: 0px;
+      width: 100%;
+      bottom: 0px;
+      height: 40px;
+      background-color: #b00930;
+      padding: 7px; }
+      file-upload .file-gallery .file-overlay .button-wrap {
+        float: right;
+        margin-top: 5px; }
+        file-upload .file-gallery .file-overlay .button-wrap a {
+          color: #fff;
+          margin-left: 3px; }
   file-upload .file-upload-wrapper {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -443,7 +458,13 @@ file-upload {
     width: auto; }
   file-upload .file-form-wrap {
     display: inline-block;
-    width: 100%; }
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box; }
 
 .files-wrapper {
   padding: 10px; }
