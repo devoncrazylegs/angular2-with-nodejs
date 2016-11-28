@@ -642,6 +642,13 @@ file-upload {
     padding:20px;
     margin:20px;
     background-color:#fff;
+
+    .close {
+      position:fixed;
+      top: 25px;
+      right:50px;
+      z-index:300;
+    }
   }
 
   input[type='submit'], input[type='file'] {
@@ -661,7 +668,7 @@ file-upload {
 .files-wrapper {
   padding:10px;
   .close {
-    cusror:pointer;
+    cursor:pointer;
   }
   .file {
     padding:15px;
