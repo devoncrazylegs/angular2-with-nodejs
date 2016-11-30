@@ -6,6 +6,7 @@
         <div class='image-file-wrap' *ngFor='let file of files'>
             <a *ngIf='file.type === "image"' [ngClass]="{ selected: file.assigned }" class='image' (mouseover)='mouseOverFile($event.target)'>
                 <img src="{{file.url | APIUrl: 'image'}}" />
+                <div class='image-details'>{{ file.filename }}</div>
             </a>
             <a *ngIf='file.type === "file"' [ngClass]="{ selected: file.assigned }" class='file' (click)='selectFile(file)' (mouseover)='mouseOverFile($event)'>
                <div class='file-details'>{{ file.filename }}</div>

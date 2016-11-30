@@ -29,7 +29,7 @@ export class FilesService {
         let id:number;
         if(files.length > 0) {
             for(let i = 0;  i < files.length; i++) {
-                formData.append('files', files[i]);
+                formData.append('files[]', files[i]);
             }
             id = vars.options.id;
             formData.append('_method', 'POST');

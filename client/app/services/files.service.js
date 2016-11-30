@@ -34,7 +34,7 @@ var FilesService = (function () {
         var id;
         if (files.length > 0) {
             for (var i = 0; i < files.length; i++) {
-                formData.append('files', files[i]);
+                formData.append('files[]', files[i]);
             }
             id = vars.options.id;
             formData.append('_method', 'POST');

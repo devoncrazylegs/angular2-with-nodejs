@@ -68,7 +68,10 @@ export class FileUploaderDirective {
         this.fileUploaded = false;
         this._filesService.sendFile(routes.api.files, this.fileUploaderScope, this._filesToUpload)
             .subscribe((result) => {
-                this.files.push(result.body.file);
+                for(let i = 0; i < result.body.length; i++) {
+                    this.files.push(result.body[i]);
+                }
+
                 this._toastr.success(messages.messages.files.uploadSuccess, messages.titles.general.success);
             }, (error) => {
                 this._toastr.error(messages.messages.files.uploadError, messages.titles.general.error);

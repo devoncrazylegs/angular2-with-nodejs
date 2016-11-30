@@ -403,11 +403,26 @@ file-upload {
         background-color: #ededed;
         opacity: 0.5; }
       file-upload .file-gallery .image-file-wrap .image {
-        padding: 7px; }
+        padding: 7px;
+        position: relative; }
         file-upload .file-gallery .image-file-wrap .image img {
           max-width: 150px;
           width: 100%;
           height: 100%; }
+        file-upload .file-gallery .image-file-wrap .image .image-details {
+          overflow: hidden;
+          top: 0px;
+          padding: 5px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          box-sizing: border-box;
+          min-height: 50px;
+          background-color: #fff;
+          z-index: 200;
+          position: absolute;
+          width: 100%;
+          color: #000; }
       file-upload .file-gallery .image-file-wrap .file {
         padding: 7px;
         background-image: url("../img/very-basic-file-icon.png");

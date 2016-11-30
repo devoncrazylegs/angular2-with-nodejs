@@ -56,7 +56,9 @@ var FileUploaderDirective = (function () {
         this.fileUploaded = false;
         this._filesService.sendFile(routes_1.routes.api.files, this.fileUploaderScope, this._filesToUpload)
             .subscribe(function (result) {
-            _this.files.push(result.body.file);
+            for (var i = 0; i < result.body.length; i++) {
+                _this.files.push(result.body[i]);
+            }
             _this._toastr.success(messages_1.messages.messages.files.uploadSuccess, messages_1.messages.titles.general.success);
         }, function (error) {
             _this._toastr.error(messages_1.messages.messages.files.uploadError, messages_1.messages.titles.general.error);
