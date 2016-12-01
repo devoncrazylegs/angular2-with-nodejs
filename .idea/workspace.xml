@@ -4,20 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/routes/api.js" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39ac3ac7-13f9-4442-bab1-b6f6b5e1eb7a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.js" afterPath="$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.js.map" afterPath="$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.ts" afterPath="$PROJECT_DIR$/client/app/components/directives/files/FileUploaderDirective.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/services/files.service.js" afterPath="$PROJECT_DIR$/client/app/services/files.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/services/files.service.js.map" afterPath="$PROJECT_DIR$/client/app/services/files.service.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/services/files.service.ts" afterPath="$PROJECT_DIR$/client/app/services/files.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/views/directives/files/file-upload.html" afterPath="$PROJECT_DIR$/client/app/views/directives/files/file-upload.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/css/styles.css" afterPath="$PROJECT_DIR$/client/assets/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/css/styles.css" afterPath="$PROJECT_DIR$/client/src/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/css/styles.css.map" afterPath="$PROJECT_DIR$/client/src/css/styles.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/css/styles.scss" afterPath="$PROJECT_DIR$/client/src/css/styles.scss" />
-    </list>
+    <list default="true" id="39ac3ac7-13f9-4442-bab1-b6f6b5e1eb7a" name="Default" comment="" />
     <ignored path="skeleton-ang2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -712,12 +699,12 @@
       <workItem from="1479213464413" duration="12208000" />
       <workItem from="1479303431575" duration="34166000" />
       <workItem from="1479468897495" duration="30165000" />
-      <workItem from="1479898804987" duration="37699000" />
+      <workItem from="1479898804987" duration="38304000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="629521000" />
+    <option name="totallyTimeSpent" value="630126000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -741,7 +728,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34020618" sideWeight="0.4978701" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34020618" sideWeight="0.4978701" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33814433" sideWeight="0.4978701" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1177,7 +1164,7 @@
         <state relative-caret-position="378">
           <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
           <folding>
-            <element signature="e#0#49#0" expanded="true" />
+            <element signature="e#0#49#0" expanded="false" />
           </folding>
         </state>
       </provider>
